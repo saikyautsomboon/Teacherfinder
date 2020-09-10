@@ -10,4 +10,8 @@ class BackendController extends Controller
 	{
 		return view('Backend.dashboard');
 	}
+	public function reportfun($value='')
+	{
+		return view('Backend.report');
+	}
 }

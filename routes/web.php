@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
 
+Route::get('report','BackendController@reportfun')->name('reportpage');
+
 
 
