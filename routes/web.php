@@ -12,15 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    /*return view('welcome');*/
-    return 'Hello Team 321!';
-});
-
-
-
-Route::resource('student','StudentController');
+Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
 
 
 
