@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
+Route::get('/','PageController@mainfun')->name('mainpage');
+
 
 Route::get('report','BackendController@reportfun')->name('reportpage');
 
