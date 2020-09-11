@@ -2,6 +2,9 @@
 @section('content')
 <link href="{{asset('backend/css/pages/reports.css')}}" rel="stylesheet">
 
+    <link href="{{asset('backend/http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600')}}" rel="stylesheet">
+
+
 <div class="main">
 	
 	<div class="main-inner">
