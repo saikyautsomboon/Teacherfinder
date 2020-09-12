@@ -5,27 +5,27 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inner Page - Rapid Bootstrap Template</title>
+  <title>Rapid Bootstrap Template - Index</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{asset('frontend/teacher/assets/img/favicon.png')}}" rel="icon">
+  <link href="{{asset('frontend/teacher/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="{{asset('frontend/teacher/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/teacher/assets/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/teacher/assets/vendor/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/teacher/assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/teacher/assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/teacher/assets/vendor/aos/aos.css')}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{{asset('frontend/teacher/assets/css/style.css')}}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Rapid - v2.2.0
@@ -38,7 +38,7 @@
 <body>
 
   <!-- ======= Top Bar ======= -->
-  <div id="topbar" class="d-none d-lg-flex align-items-end fixed-top ">
+  <div id="topbar" class="d-none d-lg-flex align-items-end fixed-top topbar-transparent">
     <div class="container d-flex justify-content-end">
       <div class="social-links">
         <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
@@ -50,7 +50,7 @@
   </div>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
+  <header id="header" class="fixed-top header-transparent">
     <div class="container d-flex align-items-center">
 
       <h1 class="logo mr-auto"><a href="index.html">Rapid</a></h1>
@@ -88,30 +88,27 @@
     </div>
   </header><!-- End Header -->
 
-  <main id="main">
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center" data-aos="fade-up">
+        <div class="col-md-6 intro-info order-md-first order-last" data-aos="zoom-in" data-aos-delay="100">
+          <h2>Rapid Solutions<br>for Your <span>Business!</span></h2>
+          <div>
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+          </div>
+        </div>
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Inner Page</li>
-        </ol>
-        <h2>Inner Page</h2>
-
+        <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
+          <img src="assets/img/intro-img.svg" alt="" class="img-fluid">
+        </div>
       </div>
-    </section><!-- End Breadcrumbs -->
 
-    <section class="inner-page pt-4">
-      <div class="container">
-        <p>
-          Example inner page template
-        </p>
-      </div>
-    </section>
+    </div>
+  </section><!-- End Hero -->
 
-  </main><!-- End #main -->
+  @yield('content')
+  <!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="section-bg">
@@ -239,19 +236,19 @@
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/counterup/counterup.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/venobox/venobox.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/aos/aos.js')}}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{asset('frontend/teacher/assets/js/main.js')}}"></script>
 
 </body>
 

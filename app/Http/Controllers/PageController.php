@@ -6,10 +6,21 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+
+    public function teacherfun($value='')
+    {
+    	return view('Frontend.teachers.teacher');
+    }
+    public function profoliofun($value='')
+    {
+    	return view('Frontend.teachers.profolio');
+    }
+
     public function mainfun($value='')
 	{
 		return view('Frontend.main');
 	}
+<<<<<<< HEAD
 	public function aboutfun($value='')
 	{
 		return view('Frontend.about');
@@ -26,4 +37,7 @@ class PageController extends Controller
 	{
 		return view('Frontend.elements');
 	}
+=======
+
+>>>>>>> 785b0d28918c01240ddbac3faeecf5db5d11645c
 }
