@@ -20,3 +20,6 @@ Route::get('report','BackendController@reportfun')->name('reportpage');
 
 Route::get('teacher','PageController@teacherfun')->name('teacherpage');
 Route::get('profolio','PageController@profoliofun')->name('profoliopage');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
