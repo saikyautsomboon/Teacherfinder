@@ -16,5 +16,5 @@ Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
 
 Route::get('report','BackendController@reportfun')->name('reportpage');
 
-
-
+Route::get('teacher','PageController@teacherfun')->name('teacherpage');
+Route::get('profolio','PageController@profoliofun')->name('profoliopage');
