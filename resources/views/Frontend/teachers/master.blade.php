@@ -1,282 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Dashboard - Bootstrap Admin Template</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
-        rel="stylesheet">
-<link href="css/font-awesome.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/pages/dashboard.css" rel="stylesheet">
-<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Rapid Bootstrap Template - Index</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{asset('frontend/teacher/assets/img/favicon.png')}}" rel="icon">
+  <link href="{{asset('frontend/teacher/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{asset('frontend/teacher/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/teacher/assets/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/teacher/assets/vendor/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/teacher/assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/teacher/assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/teacher/assets/vendor/aos/aos.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{asset('frontend/teacher/assets/css/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Rapid - v2.2.0
+  * Template URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
+
 <body>
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
-                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="index.html">Bootstrap Admin Template </a>
-      <div class="nav-collapse">
-        <ul class="nav pull-right">
-          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                            class="icon-cog"></i> Account <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="javascript:;">Settings</a></li>
-              <li><a href="javascript:;">Help</a></li>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-none d-lg-flex align-items-end fixed-top topbar-transparent">
+    <div class="container d-flex justify-content-end">
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="index.html">Rapid</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="main-nav d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                            class="icon-user"></i> EGrappler.com <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="javascript:;">Profile</a></li>
-              <li><a href="javascript:;">Logout</a></li>
-            </ul>
-          </li>
+          <li><a href="#footer">Contact Us</a></li>
         </ul>
-        <form class="navbar-search pull-right">
-          <input type="text" class="search-query" placeholder="Search">
-        </form>
+      </nav><!-- .main-nav-->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center" data-aos="fade-up">
+        <div class="col-md-6 intro-info order-md-first order-last" data-aos="zoom-in" data-aos-delay="100">
+          <h2>Rapid Solutions<br>for Your <span>Business!</span></h2>
+          <div>
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
+          <img src="assets/img/intro-img.svg" alt="" class="img-fluid">
+        </div>
       </div>
-      <!--/.nav-collapse --> 
+
     </div>
-    <!-- /container --> 
-  </div>
-  <!-- /navbar-inner --> 
-</div>
-<!-- /navbar -->
-<div class="subnavbar">
-  <div class="subnavbar-inner">
-    <div class="container">
-      <ul class="mainnav">
-        <li class="active"><a href="index.html"><i class="icon-dashboard"></i><span>Dashboard</span> </a> </li>
-        <li><a href="reports.html"><i class="icon-list-alt"></i><span>Reports</span> </a> </li>
-        <li><a href="guidely.html"><i class="icon-facetime-video"></i><span>App Tour</span> </a></li>
-        <li><a href="charts.html"><i class="icon-bar-chart"></i><span>Charts</span> </a> </li>
-        <li><a href="shortcodes.html"><i class="icon-code"></i><span>Shortcodes</span> </a> </li>
-        <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-long-arrow-down"></i><span>Drops</span> <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="icons.html">Icons</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="pricing.html">Pricing Plans</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Signup</a></li>
-            <li><a href="error.html">404</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <!-- /container --> 
-  </div>
-  <!-- /subnavbar-inner --> 
-</div>
-<!-- /subnavbar -->
-@yield('content')
-<!-- /main -->
-<div class="extra">
-  <div class="extra-inner">
-    <div class="container">
-      <div class="row">
-                    <div class="span3">
-                        <h4>
-                            About Free Admin Template</h4>
-                        <ul>
-                            <li><a href="javascript:;">EGrappler.com</a></li>
-                            <li><a href="javascript:;">Web Development Resources</a></li>
-                            <li><a href="javascript:;">Responsive HTML5 Portfolio Templates</a></li>
-                            <li><a href="javascript:;">Free Resources and Scripts</a></li>
-                        </ul>
-                    </div>
-                    <!-- /span3 -->
-                    <div class="span3">
-                        <h4>
-                            Support</h4>
-                        <ul>
-                            <li><a href="javascript:;">Frequently Asked Questions</a></li>
-                            <li><a href="javascript:;">Ask a Question</a></li>
-                            <li><a href="javascript:;">Video Tutorial</a></li>
-                            <li><a href="javascript:;">Feedback</a></li>
-                        </ul>
-                    </div>
-                    <!-- /span3 -->
-                    <div class="span3">
-                        <h4>
-                            Something Legal</h4>
-                        <ul>
-                            <li><a href="javascript:;">Read License</a></li>
-                            <li><a href="javascript:;">Terms of Use</a></li>
-                            <li><a href="javascript:;">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <!-- /span3 -->
-                    <div class="span3">
-                        <h4>
-                            Open Source jQuery Plugins</h4>
-                        <ul>
-                            <li><a href="">Open Source jQuery Plugins</a></li>
-                            <li><a href="">HTML5 Responsive Tempaltes</a></li>
-                            <li><a href="">Free Contact Form Plugin</a></li>
-                            <li><a href="">Flat UI PSD</a></li>
-                        </ul>
-                    </div>
-                    <!-- /span3 -->
+  </section><!-- End Hero -->
+
+  @yield('content')
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="section-bg">
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+
+              <div class="col-sm-6">
+
+                <div class="footer-info">
+                  <h3>Rapid</h3>
+                  <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
                 </div>
-      <!-- /row --> 
-    </div>
-    <!-- /container --> 
-  </div>
-  <!-- /extra-inner --> 
-</div>
-<!-- /extra -->
-<div class="footer">
-  <div class="footer-inner">
-    <div class="container">
-      <div class="row">
-        <div class="span12"> &copy; 2013 <a href="#">Bootstrap Responsive Admin Template</a>. </div>
-        <!-- /span12 --> 
+
+                <div class="footer-newsletter">
+                  <h4>Our Newsletter</h4>
+                  <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem.</p>
+                  <form action="" method="post">
+                    <input type="email" name="email"><input type="submit" value="Subscribe">
+                  </form>
+                </div>
+
+              </div>
+
+              <div class="col-sm-6">
+                <div class="footer-links">
+                  <h4>Useful Links</h4>
+                  <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer-links">
+                  <h4>Contact Us</h4>
+                  <p>
+                    A108 Adam Street <br>
+                    New York, NY 535022<br>
+                    United States <br>
+                    <strong>Phone:</strong> +1 5589 55488 55<br>
+                    <strong>Email:</strong> info@example.com<br>
+                  </p>
+                </div>
+
+                <div class="social-links">
+                  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                  <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="form">
+
+              <h4>Send us a message</h4>
+              <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p>
+
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validate"></div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+
+                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
-      <!-- /row --> 
     </div>
-    <!-- /container --> 
-  </div>
-  <!-- /footer-inner --> 
-</div>
-<!-- /footer --> 
-<!-- Le javascript
-================================================== --> 
-<!-- Placed at the end of the document so the pages load faster --> 
-<script src="js/jquery-1.7.2.min.js"></script> 
-<script src="js/excanvas.min.js"></script> 
-<script src="js/chart.min.js" type="text/javascript"></script> 
-<script src="js/bootstrap.js"></script>
-<script language="javascript" type="text/javascript" src="js/full-calendar/fullcalendar.min.js"></script>
- 
-<script src="js/base.js"></script> 
-<script>     
 
-        var lineChartData = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
-            datasets: [
-        {
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "rgba(220,220,220,1)",
-            pointColor: "rgba(220,220,220,1)",
-            pointStrokeColor: "#fff",
-            data: [65, 59, 90, 81, 56, 55, 40]
-        },
-        {
-            fillColor: "rgba(151,187,205,0.5)",
-            strokeColor: "rgba(151,187,205,1)",
-            pointColor: "rgba(151,187,205,1)",
-            pointStrokeColor: "#fff",
-            data: [28, 48, 40, 19, 96, 27, 100]
-        }
-      ]
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Rapid</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
+      -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
 
-        }
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-        var myLine = new Chart(document.getElementById("area-chart").getContext("2d")).Line(lineChartData);
+  <!-- Vendor JS Files -->
+  <script src="{{asset('frontend/teacher/assets/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/counterup/counterup.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/venobox/venobox.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+  <script src="{{asset('frontend/teacher/assets/vendor/aos/aos.js')}}"></script>
 
+  <!-- Template Main JS File -->
+  <script src="{{asset('frontend/teacher/assets/js/main.js')}}"></script>
 
-        var barChartData = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
-            datasets: [
-        {
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "rgba(220,220,220,1)",
-            data: [65, 59, 90, 81, 56, 55, 40]
-        },
-        {
-            fillColor: "rgba(151,187,205,0.5)",
-            strokeColor: "rgba(151,187,205,1)",
-            data: [28, 48, 40, 19, 96, 27, 100]
-        }
-      ]
-
-        }    
-
-        $(document).ready(function() {
-        var date = new Date();
-        var d = date.getDate();
-        var m = date.getMonth();
-        var y = date.getFullYear();
-        var calendar = $('#calendar').fullCalendar({
-          header: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'month,agendaWeek,agendaDay'
-          },
-          selectable: true,
-          selectHelper: true,
-          select: function(start, end, allDay) {
-            var title = prompt('Event Title:');
-            if (title) {
-              calendar.fullCalendar('renderEvent',
-                {
-                  title: title,
-                  start: start,
-                  end: end,
-                  allDay: allDay
-                },
-                true // make the event "stick"
-              );
-            }
-            calendar.fullCalendar('unselect');
-          },
-          editable: true,
-          events: [
-            {
-              title: 'All Day Event',
-              start: new Date(y, m, 1)
-            },
-            {
-              title: 'Long Event',
-              start: new Date(y, m, d+5),
-              end: new Date(y, m, d+7)
-            },
-            {
-              id: 999,
-              title: 'Repeating Event',
-              start: new Date(y, m, d-3, 16, 0),
-              allDay: false
-            },
-            {
-              id: 999,
-              title: 'Repeating Event',
-              start: new Date(y, m, d+4, 16, 0),
-              allDay: false
-            },
-            {
-              title: 'Meeting',
-              start: new Date(y, m, d, 10, 30),
-              allDay: false
-            },
-            {
-              title: 'Lunch',
-              start: new Date(y, m, d, 12, 0),
-              end: new Date(y, m, d, 14, 0),
-              allDay: false
-            },
-            {
-              title: 'Birthday Party',
-              start: new Date(y, m, d+1, 19, 0),
-              end: new Date(y, m, d+1, 22, 30),
-              allDay: false
-            },
-            {
-              title: 'EGrappler.com',
-              start: new Date(y, m, 28),
-              end: new Date(y, m, 29),
-              url: 'http://EGrappler.com/'
-            }
-          ]
-        });
-      });
-    </script><!-- /Calendar -->
 </body>
+
 </html>

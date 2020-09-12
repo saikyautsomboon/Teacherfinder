@@ -1,24 +1,6 @@
 @extends('Frontend.teachers.master')
 @section('content')
-	<section id="hero" class="clearfix">
-    <div class="container d-flex h-100">
-      <div class="row justify-content-center align-self-center" data-aos="fade-up">
-        <div class="col-md-6 intro-info order-md-first order-last" data-aos="zoom-in" data-aos-delay="100">
-          <h2>Rapid Solutions<br>for Your <span>Business!</span></h2>
-          <div>
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-          </div>
-        </div>
-
-        <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
-          <img src="{{asset('frontend/teacher/assets/img/intro-img.svg')}}" alt="" class="img-fluid">
-        </div>
-      </div>
-
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
+<main id="main">
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -91,7 +73,7 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200"">
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
         <div class=" box">
             <div class="icon" style="background: #e1eeff;"><i class="ion-ios-world-outline" style="color: #2282ff;"></i></div>
             <h4 class="title"><a href="">Nemo Enim</a></h4>
@@ -279,7 +261,7 @@
                 <p>App</p>
                 <div>
                   <a href="{{asset('frontend/teacher/assets/img/portfolio/app1.jpg')}}" data-gall="portfolioGallery" title="App 1" class="link-preview venobox"><i class="ion ion-eye"></i></a>
-                  <a href="{{asset('frontend/teacher/portfolio-details.html')}}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                  <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
             </div>
@@ -357,12 +339,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/card1.jpg" class="img-fluid" alt="">
+              <img src="{{asset('frontend/teacher/assets/img/portfolio/card1.jpg')}}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="portfolio-details.html">Card 1</a></h4>
                 <p>Card</p>
                 <div>
-                  <a href="assets/img/portfolio/card1.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Card 1"><i class="ion ion-eye"></i></a>
+                  <a href="{{asset('frontend/teacher/assets/img/portfolio/card1.jpg')}}" class="link-preview venobox" data-gall="portfolioGallery" title="Card 1"><i class="ion ion-eye"></i></a>
                   <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -371,12 +353,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/card3.jpg" class="img-fluid" alt="">
+              <img src="{{asset('frontend/teacher/assets/img/portfolio/card3.jpg')}}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="portfolio-details.html">Card 3</a></h4>
                 <p>Card</p>
                 <div>
-                  <a href="assets/img/portfolio/card3.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Card 3"><i class="ion ion-eye"></i></a>
+                  <a href="{{asset('frontend/teacher/assets/img/portfolio/card3.jpg')}}" class="link-preview venobox" data-gall="portfolioGallery" title="Card 3"><i class="ion ion-eye"></i></a>
                   <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -385,12 +367,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/web1.jpg" class="img-fluid" alt="">
+              <img src="{{asset('frontend/teacher/assets/img/portfolio/web1.jpg')}}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="portfolio-details.html">Web 1</a></h4>
                 <p>Web</p>
                 <div>
-                  <a href="assets/img/portfolio/web1.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Web 1"><i class="ion ion-eye"></i></a>
+                  <a href="{{asset('frontend/teacher/assets/img/portfolio/web1.jpg')}}" class="link-preview venobox" data-gall="portfolioGallery" title="Web 1"><i class="ion ion-eye"></i></a>
                   <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -416,7 +398,7 @@
             <div class="owl-carousel testimonials-carousel">
 
               <div class="testimonial-item">
-                <img src="assets/img/testimonial-1.jpg" class="testimonial-img" alt="">
+                <img src="{{asset('frontend/teacher/assets/img/testimonial-1.jpg')}}" class="testimonial-img" alt="">
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
                 <p>
@@ -425,7 +407,7 @@
               </div>
 
               <div class="testimonial-item">
-                <img src="assets/img/testimonial-2.jpg" class="testimonial-img" alt="">
+                <img src="{{asset('frontend/teacher/assets/img/testimonial-2.jpg')}}" class="testimonial-img" alt="">
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
                 <p>
@@ -434,7 +416,7 @@
               </div>
 
               <div class="testimonial-item">
-                <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
+                <img src="{{asset('frontend/teacher/assets/img/testimonial-3.jpg')}}" class="testimonial-img" alt="">
                 <h3>Jena Karlis</h3>
                 <h4>Store Owner</h4>
                 <p>
@@ -443,7 +425,7 @@
               </div>
 
               <div class="testimonial-item">
-                <img src="assets/img/testimonial-4.jpg" class="testimonial-img" alt="">
+                <img src="{{asset('frontend/teacher/assets/img/testimonial-4.jpg')}}" class="testimonial-img" alt="">
                 <h3>Matt Brandon</h3>
                 <h4>Freelancer</h4>
                 <p>
@@ -471,7 +453,7 @@
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <img src="assets/img/team-1.jpg" class="img-fluid" alt="">
+              <img src="{{asset('frontend/teacher/assets/img/team-1.jpg')}}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Walter White</h4>
@@ -489,7 +471,7 @@
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
-              <img src="assets/img/team-2.jpg" class="img-fluid" alt="">
+              <img src="{{asset('frontend/teacher/assets/img/team-2.jpg')}}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Sarah Jhonson</h4>
@@ -507,7 +489,7 @@
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <img src="assets/img/team-3.jpg" class="img-fluid" alt="">
+              <img src="{{asset('frontend/teacher/assets/img/team-3.jpg')}}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>William Anderson</h4>
@@ -525,7 +507,7 @@
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
-              <img src="assets/img/team-4.jpg" class="img-fluid" alt="">
+              <img src="{{asset('frontend/teacher/assets/img/team-4.jpg')}}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Amanda Jepson</h4>
@@ -555,14 +537,14 @@
         </header>
 
         <div class="owl-carousel clients-carousel">
-          <img src="assets/img/clients/client-1.png" alt="">
-          <img src="assets/img/clients/client-2.png" alt="">
-          <img src="assets/img/clients/client-3.png" alt="">
-          <img src="assets/img/clients/client-4.png" alt="">
-          <img src="assets/img/clients/client-5.png" alt="">
-          <img src="assets/img/clients/client-6.png" alt="">
-          <img src="assets/img/clients/client-7.png" alt="">
-          <img src="assets/img/clients/client-8.png" alt="">
+          <img src="{{asset('frontend/teacher/assets/img/clients/client-1.png')}}" alt="">
+          <img src="{{asset('frontend/teacher/assets/img/clients/client-2.png')}}" alt="">
+          <img src="{{asset('frontend/teacher/assets/img/clients/client-3.png')}}" alt="">
+          <img src="{{asset('frontend/teacher/assets/img/clients/client-4.png')}}" alt="">
+          <img src="{{asset('frontend/teacher/assets/img/clients/client-5.png')}}" alt="">
+          <img src="{{asset('frontend/teacher/assets/img/clients/client-6.png')}}" alt="">
+          <img src="{{asset('frontend/teacher/assets/img/clients/client-7.png')}}" alt="">
+          <img src="{{asset('frontend/teacher/assets/img/clients/client-8.png')}}" alt="">
         </div>
 
       </div>
@@ -717,4 +699,4 @@
     </section><!-- End F.A.Q Section -->
 
   </main>
-@endsection
+  @endsection
