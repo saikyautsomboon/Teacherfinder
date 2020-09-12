@@ -10,4 +10,21 @@ class PageController extends Controller
 	{
 		return view('Frontend.main');
 	}
+
+	 public function blogfun($value='')
+	{
+		return view('Frontend.blog');
+	}
+
+	 public function blogdetailfun($value='')
+	{
+		return view('Frontend.blogdetail');
+	}
+
+	public function contactfun($value='')
+	{
+		return view('Frontend.contact');
+	}
+
+
 }

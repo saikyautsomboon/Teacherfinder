@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
 Route::get('/','PageController@mainfun')->name('mainpage');
+Route::get('blog','PageController@blogfun')->name('blogpage');
+Route::get('blogdetail','PageController@blogdetailfun')->name('blogdetailpage');
+Route::get('contact','PageController@contactfun')->name('contactpage');
 
 
 Route::get('report','BackendController@reportfun')->name('reportpage');

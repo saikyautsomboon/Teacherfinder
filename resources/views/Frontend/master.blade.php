@@ -67,7 +67,7 @@
             >
               <ul class="nav navbar-nav menu_nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home</a>
+                  <a class="nav-link" href="{{route('mainpage')}}">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="about-us.html">About</a>
@@ -108,17 +108,17 @@
                   >
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a class="nav-link" href="blog.html">Blog</a>
+                      <a class="nav-link" href="{{route('blogpage')}}">Blog</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="single-blog.html"
+                      <a class="nav-link" href="{{route('blogdetailpage')}}"
                         >Blog Details</a
                       >
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
+                  <a class="nav-link" href="{{route('contactpage')}}">Contact</a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link search" id="search">
