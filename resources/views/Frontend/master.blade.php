@@ -45,8 +45,8 @@
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="index.html"
-              ><img src="img/logo.png" alt=""
+            <a class="navbar-brand logo_h" href="{{route('mainpage')}}"
+              ><img src="{{asset('frontend/img/logo.png')}}" alt=""
             /></a>
             <button
               class="navbar-toggler"
@@ -67,10 +67,10 @@
             >
               <ul class="nav navbar-nav menu_nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home</a>
+                  <a class="nav-link" href="{{route('mainpage')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about-us.html">About</a>
+                  <a class="nav-link" href="{{route('aboutpage')}}">About</a>
                 </li>
                 <li class="nav-item submenu dropdown">
                   <a
@@ -84,15 +84,15 @@
                   >
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a class="nav-link" href="courses.html">Courses</a>
+                      <a class="nav-link" href="{{route('coursespage')}}">Courses</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="course-details.html"
+                      <a class="nav-link" href="{{route('coursedetailspage')}}"
                         >Course Details</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="elements.html">Elements</a>
+                      <a class="nav-link" href="{{route('elementspage')}}">Elements</a>
                     </li>
                   </ul>
                 </li>
@@ -230,17 +230,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="js/owl-carousel-thumb.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/mail-script.js"></script>
+    <script src="{{asset('frontend/js/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{asset('frontend/js/popper.js')}}"></script>
+    <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('frontend/vendors/nice-select/js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{asset('frontend/vendors/owl-carousel/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('frontend/js/owl-carousel-thumb.min.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{asset('frontend/js/mail-script.js')}}"></script>
     <!--gmaps Js-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-    <script src="js/gmaps.min.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="{{asset('frontend/js/gmaps.min.js')}}"></script>
+    <script src="{{asset('frontend/js/theme.js')}}"></script>
   </body>
 </html>
