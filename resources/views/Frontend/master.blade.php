@@ -120,6 +120,14 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{route('contactpage')}}">Contact</a>
                 </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{{route('loginpage')}}">Login</a>|
+                  <a class="nav-link" href="{{route('registerpage')}}">Signup</a>
+
+                </li>
+
+
                 <li class="nav-item">
                   <a href="#" class="nav-link search" id="search">
                     <i class="ti-search"></i>

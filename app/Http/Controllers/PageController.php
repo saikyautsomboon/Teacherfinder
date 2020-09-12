@@ -37,7 +37,15 @@ class PageController extends Controller
 		return view('Frontend.contact');
 	}
 
+	public function registerfun($value='')
+	{
+		return view('Frontend.register');
+	}
 
+	public function loginfun($value='')
+	{
+		return view('Frontend.login');
+	}
 
 	public function aboutfun($value='')
 	{

@@ -18,6 +18,8 @@ Route::get('/','PageController@mainfun')->name('mainpage');
 Route::get('blog','PageController@blogfun')->name('blogpage');
 Route::get('blogdetail','PageController@blogdetailfun')->name('blogdetailpage');
 Route::get('contact','PageController@contactfun')->name('contactpage');
+Route::get('registerpage','PageController@registerfun')->name('registerpage');
+Route::get('loginpage','PageController@loginfun')->name('loginpage');
 
 
 
