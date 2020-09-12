@@ -13,13 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
+
 Route::get('/','PageController@mainfun')->name('mainpage');
+Route::get('blog','PageController@blogfun')->name('blogpage');
+Route::get('blogdetail','PageController@blogdetailfun')->name('blogdetailpage');
+Route::get('contact','PageController@contactfun')->name('contactpage');
+
 
 
 Route::get('report','BackendController@reportfun')->name('reportpage');
 
+
+
+Route::get('about','PageController@aboutfun')->name('aboutpage');
+Route::get('courses','PageController@coursesfun')->name('coursespage');
+Route::get('coursedetails','PageController@coursedetailsfun')->name('coursedetailspage');
+Route::get('elements','PageController@elementsfun')->name('elementspage');
+
+
+
 Route::get('teacher','PageController@teacherfun')->name('teacherpage');
 Route::get('profolio','PageController@profoliofun')->name('profoliopage');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+

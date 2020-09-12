@@ -1,137 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="icon" href="img/favicon.png" type="image/png" />
-    <title>Elements</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/themify-icons.css" />
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
-    <!-- main css -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-
-  <body>
-    <!--================ Start Header Menu Area =================-->
-    <header class="header_area white-header">
-      <div class="main_menu">
-        <div class="search_input" id="search_input_box">
-          <div class="container">
-            <form class="d-flex justify-content-between" method="" action="">
-              <input
-                type="text"
-                class="form-control"
-                id="search_input"
-                placeholder="Search Here"
-              />
-              <button type="submit" class="btn"></button>
-              <span
-                class="ti-close"
-                id="close_search"
-                title="Close Search"
-              ></span>
-            </form>
-          </div>
-        </div>
-
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand" href="index.html">
-              <img class="logo-2" src="img/logo2.png" alt="" />
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="icon-bar"></span> <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div
-              class="collapse navbar-collapse offset"
-              id="navbarSupportedContent"
-            >
-              <ul class="nav navbar-nav menu_nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about-us.html">About</a>
-                </li>
-                <li class="nav-item submenu dropdown active">
-                  <a
-                    href="#"
-                    class="nav-link dropdown-toggle"
-                    data-toggle="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Pages</a
-                  >
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a class="nav-link" href="courses.html">Courses</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="course-details.html"
-                        >Course Details</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="elements.html">Elements</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item submenu dropdown">
-                  <a
-                    href="#"
-                    class="nav-link dropdown-toggle"
-                    data-toggle="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Blog</a
-                  >
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="single-blog.html"
-                        >Blog Details</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link search" id="search">
-                    <i class="ti-search"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!--================ End Header Menu Area =================-->
+@extends ('Frontend.master')
+@section ('content')
 
     <!--================Home Banner Area =================-->
     <section class="banner_area">
@@ -143,8 +11,8 @@
               <div class="banner_content text-center">
                 <h2>Elements</h2>
                 <div class="page_link">
-                  <a href="index.html">Home</a>
-                  <a href="elements.html">Elements</a>
+                  <a href="{{route('mainpage')}}">Home</a>
+                  <a href="{{route('elementspage')}}">Elements</a>
                 </div>
               </div>
             </div>
@@ -278,7 +146,7 @@
 				<h3 class="mb-30 title_color">Left Aligned</h3>
 				<div class="row">
 					<div class="col-md-3">
-						<img src="img/elements/d.jpg" alt="" class="img-fluid">
+						<img src="{{asset('img/elements/d.jpg')}}" alt="" class="img-fluid">
 					</div>
 					<div class="col-md-9 mt-sm-20 left-align-p">
 						<p>Recently, the US Federal government banned online casinos from operating in America by making it illegal to
@@ -307,7 +175,7 @@
 							talk a little about what symptoms</p>
 					</div>
 					<div class="col-md-3">
-						<img src="img/elements/d.jpg" alt="" class="img-fluid">
+						<img src="{{asset('img/elements/d.jpg')}}" alt="" class="img-fluid">
 					</div>
 				</div>
 			</div>
@@ -369,7 +237,7 @@
 						</div>
 						<div class="table-row">
 							<div class="serial">01</div>
-							<div class="country"> <img src="img/elements/f1.jpg" alt="flag">Canada</div>
+							<div class="country"> <img src="{{asset('frontend/img/elements/f1.jpg')}}" alt="flag">Canada</div>
 							<div class="visit">645032</div>
 							<div class="percentage">
 								<div class="progress">
@@ -380,7 +248,7 @@
 						</div>
 						<div class="table-row">
 							<div class="serial">02</div>
-							<div class="country"> <img src="img/elements/f2.jpg" alt="flag">Canada</div>
+							<div class="country"> <img src="{{asset('frontend/img/elements/f2.jpg')}}" alt="flag">Canada</div>
 							<div class="visit">645032</div>
 							<div class="percentage">
 								<div class="progress">
@@ -391,7 +259,7 @@
 						</div>
 						<div class="table-row">
 							<div class="serial">03</div>
-							<div class="country"> <img src="img/elements/f3.jpg" alt="flag">Canada</div>
+							<div class="country"> <img src="{{asset('frontend/img/elements/f3.jpg')}}" alt="flag">Canada</div>
 							<div class="visit">645032</div>
 							<div class="percentage">
 								<div class="progress">
@@ -402,7 +270,7 @@
 						</div>
 						<div class="table-row">
 							<div class="serial">04</div>
-							<div class="country"> <img src="img/elements/f4.jpg" alt="flag">Canada</div>
+							<div class="country"> <img src="{{asset('frontend/img/elements/f4.jpg')}}" alt="flag">Canada</div>
 							<div class="visit">645032</div>
 							<div class="percentage">
 								<div class="progress">
@@ -413,7 +281,7 @@
 						</div>
 						<div class="table-row">
 							<div class="serial">05</div>
-							<div class="country"> <img src="img/elements/f5.jpg" alt="flag">Canada</div>
+							<div class="country"> <img src="{{asset('frontend/img/elements/f5.jpg')}}" alt="flag">Canada</div>
 							<div class="visit">645032</div>
 							<div class="percentage">
 								<div class="progress">
@@ -424,7 +292,7 @@
 						</div>
 						<div class="table-row">
 							<div class="serial">06</div>
-							<div class="country"> <img src="img/elements/f6.jpg" alt="flag">Canada</div>
+							<div class="country"> <img src="{{asset('frontend/img/elements/f6.jpg')}}" alt="flag">Canada</div>
 							<div class="visit">645032</div>
 							<div class="percentage">
 								<div class="progress">
@@ -435,7 +303,7 @@
 						</div>
 						<div class="table-row">
 							<div class="serial">07</div>
-							<div class="country"> <img src="img/elements/f7.jpg" alt="flag">Canada</div>
+							<div class="country"> <img src="{{asset('frontend/img/elements/f7.jpg')}}" alt="flag">Canada</div>
 							<div class="visit">645032</div>
 							<div class="percentage">
 								<div class="progress">
@@ -446,7 +314,7 @@
 						</div>
 						<div class="table-row">
 							<div class="serial">08</div>
-							<div class="country"> <img src="img/elements/f8.jpg" alt="flag">Canada</div>
+							<div class="country"> <img src="{{asset('frontend/img/elements/f8.jpg')}}" alt="flag">Canada</div>
 							<div class="visit">645032</div>
 							<div class="percentage">
 								<div class="progress">
@@ -462,43 +330,43 @@
 				<h3 class="title_color">Image Gallery</h3>
 				<div class="row gallery-item">
 					<div class="col-md-4">
-						<a href="img/elements/g1.jpg" class="img-gal">
-							<div class="single-gallery-image" style="background: url(img/elements/g1.jpg);"></div>
+						<a href="{{asset('frontend/img/elements/g1.jpg')}}" class="img-gal">
+							<div class="single-gallery-image" style="background: url({{asset('frontend/img/elements/g1.jpg')}});"></div>
 						</a>
 					</div>
 					<div class="col-md-4">
-						<a href="img/elements/g2.jpg" class="img-gal">
-							<div class="single-gallery-image" style="background: url(img/elements/g2.jpg);"></div>
+						<a href="{{asset('frontend/img/elements/g2.jpg')}}" class="img-gal">
+							<div class="single-gallery-image" style="background: url({{asset('frontend/img/elements/g2.jpg')}});"></div>
 						</a>
 					</div>
 					<div class="col-md-4">
-						<a href="img/elements/g3.jpg" class="img-gal">
-							<div class="single-gallery-image" style="background: url(img/elements/g3.jpg);"></div>
+						<a href="{{asset('frontend/img/elements/g3.jpg')}}" class="img-gal">
+							<div class="single-gallery-image" style="background: url({{asset('frontend/img/elements/g3.jpg')}});"></div>
 						</a>
 					</div>
 					<div class="col-md-6">
-						<a href="img/elements/g4.jpg" class="img-gal">
-							<div class="single-gallery-image" style="background: url(img/elements/g4.jpg);"></div>
+						<a href="{{asset('frontend/img/elements/g4.jpg')}}" class="img-gal">
+							<div class="single-gallery-image" style="background: url({{asset('frontend/img/elements/g4.jpg')}});"></div>
 						</a>
 					</div>
 					<div class="col-md-6">
-						<a href="img/elements/g5.jpg" class="img-gal">
-							<div class="single-gallery-image" style="background: url(img/elements/g5.jpg);"></div>
+						<a href="{{asset('frontend/img/elements/g5.jpg')}}" class="img-gal">
+							<div class="single-gallery-image" style="background: url({{asset('frontend/img/elements/g5.jpg')}});"></div>
 						</a>
 					</div>
 					<div class="col-md-4">
-						<a href="img/elements/g6.jpg" class="img-gal">
-							<div class="single-gallery-image" style="background: url(img/elements/g6.jpg);"></div>
+						<a href="{{asset('frontend/img/elements/g6.jpg')}}" class="img-gal">
+							<div class="single-gallery-image" style="background: url({{asset('frontend/img/elements/g6.jpg')}});"></div>
 						</a>
 					</div>
 					<div class="col-md-4">
-						<a href="img/elements/g7.jpg" class="img-gal">
-							<div class="single-gallery-image" style="background: url(img/elements/g7.jpg);"></div>
+						<a href="{{asset('frontend/img/elements/g7.jpg')}}" class="img-gal">
+							<div class="single-gallery-image" style="background: url({{asset('frontend/img/elements/g7.jpg')}});"></div>
 						</a>
 					</div>
 					<div class="col-md-4">
-						<a href="img/elements/g8.jpg" class="img-gal">
-							<div class="single-gallery-image" style="background: url(img/elements/g8.jpg);"></div>
+						<a href="{{asset('frontend/img/elements/g8.jpg')}}" class="img-gal">
+							<div class="single-gallery-image" style="background: url({{asset('frontend/img/elements/g8.jpg')}});"></div>
 						</a>
 					</div>
 				</div>
@@ -749,112 +617,4 @@
 	</div>
 	<!-- End Align Area -->
 
-	<!--================ Start footer Area  =================-->
-    <footer class="footer-area section_gap">
-			<div class="container">
-			  <div class="row">
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-				  <h4>Top Products</h4>
-				  <ul>
-					<li><a href="#">Managed Website</a></li>
-					<li><a href="#">Manage Reputation</a></li>
-					<li><a href="#">Power Tools</a></li>
-					<li><a href="#">Marketing Service</a></li>
-				  </ul>
-				</div>
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-				  <h4>Quick Links</h4>
-				  <ul>
-					<li><a href="#">Jobs</a></li>
-					<li><a href="#">Brand Assets</a></li>
-					<li><a href="#">Investor Relations</a></li>
-					<li><a href="#">Terms of Service</a></li>
-				  </ul>
-				</div>
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-				  <h4>Features</h4>
-				  <ul>
-					<li><a href="#">Jobs</a></li>
-					<li><a href="#">Brand Assets</a></li>
-					<li><a href="#">Investor Relations</a></li>
-					<li><a href="#">Terms of Service</a></li>
-				  </ul>
-				</div>
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-				  <h4>Resources</h4>
-				  <ul>
-					<li><a href="#">Guides</a></li>
-					<li><a href="#">Research</a></li>
-					<li><a href="#">Experts</a></li>
-					<li><a href="#">Agencies</a></li>
-				  </ul>
-				</div>
-				<div class="col-lg-4 col-md-6 single-footer-widget">
-				  <h4>Newsletter</h4>
-				  <p>You can trust us. we only send promo offers,</p>
-				  <div class="form-wrap" id="mc_embed_signup">
-					<form
-					  target="_blank"
-					  action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-					  method="get"
-					  class="form-inline"
-					>
-					  <input
-						class="form-control"
-						name="EMAIL"
-						placeholder="Your Email Address"
-						onfocus="this.placeholder = ''"
-						onblur="this.placeholder = 'Your Email Address'"
-						required=""
-						type="email"
-					  />
-					  <button class="click-btn btn btn-default">
-						<span>subscribe</span>
-					  </button>
-					  <div style="position: absolute; left: -5000px;">
-						<input
-						  name="b_36c4fd991d266f23781ded980_aefe40901a"
-						  tabindex="-1"
-						  value=""
-						  type="text"
-						/>
-					  </div>
-	  
-					  <div class="info"></div>
-					</form>
-				  </div>
-				</div>
-			  </div>
-			  <div class="row footer-bottom d-flex justify-content-between">
-				<p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
-				  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				</p>
-				<div class="col-lg-4 col-sm-12 footer-social">
-				  <a href="#"><i class="ti-facebook"></i></a>
-				  <a href="#"><i class="ti-twitter"></i></a>
-				  <a href="#"><i class="ti-dribbble"></i></a>
-				  <a href="#"><i class="ti-linkedin"></i></a>
-				</div>
-			  </div>
-			</div>
-		  </footer>
-		  <!--================ End footer Area  =================-->
-	  
-		  <!-- Optional JavaScript -->
-		  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		  <script src="js/jquery-3.2.1.min.js"></script>
-		  <script src="js/popper.js"></script>
-		  <script src="js/bootstrap.min.js"></script>
-		  <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-		  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-		  <script src="js/owl-carousel-thumb.min.js"></script>
-		  <script src="js/jquery.ajaxchimp.min.js"></script>
-		  <script src="js/mail-script.js"></script>
-		  <!--gmaps Js-->
-		  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-		  <script src="js/gmaps.min.js"></script>
-		  <script src="js/theme.js"></script>
-		</body>
-	  </html>
+	@endsection
