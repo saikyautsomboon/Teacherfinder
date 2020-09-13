@@ -38,16 +38,7 @@
 <body>
 
   <!-- ======= Top Bar ======= -->
-  <div id="topbar" class="d-none d-lg-flex align-items-end fixed-top topbar-transparent">
-    <div class="container d-flex justify-content-end">
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-      </div>
-    </div>
-  </div>
+  
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-transparent">
@@ -82,6 +73,40 @@
             </ul>
           </li>
           <li><a href="#footer">Contact Us</a></li>
+          <li>
+           @guest
+                            <li class="nav-item @if(\Route::current()->uri == 'loginpage'){{'active'}}@endif">
+                                <a class="nav-link" href="{{ route('loginpage') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item @if(\Route::current()->uri == 'registerpage'){{'active'}}@endif">
+                                    <a class="nav-link" href="{{ route('registerpage') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+
+                                </a>
+                                <img class="img-profile rounded-circle ml-3" src="{{Auth::user()->profile}}" width="40" height="40">
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+
+
+          </li>
         </ul>
       </nav><!-- .main-nav-->
 
