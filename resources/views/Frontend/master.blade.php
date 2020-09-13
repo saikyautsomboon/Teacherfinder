@@ -9,7 +9,7 @@
     />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="{{asset('frontend/img/favicon.png')}}" type="image/png" />
-    <title>Edustage Education</title>
+    <title>TeacherFinder</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}" />
     <link rel="stylesheet" href="{{asset('frontend/css/flaticon.css')}}" />
