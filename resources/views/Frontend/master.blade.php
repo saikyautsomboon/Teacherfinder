@@ -132,11 +132,11 @@
 
                 <li class="nav-item">
                  @guest
-                            <li class="nav-item">
+                            <li class="nav-item @if(\Route::current()->uri == 'loginpage'){{'active'}}@endif">
                                 <a class="nav-link" href="{{ route('loginpage') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
-                                <li class="nav-item">
+                                <li class="nav-item @if(\Route::current()->uri == 'registerpage'){{'active'}}@endif">
                                     <a class="nav-link" href="{{ route('registerpage') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
