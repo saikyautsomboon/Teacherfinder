@@ -127,11 +127,9 @@
                   <a class="nav-link" href="{{route('contactpage')}}">Contact</a>
                 </li>
 
-<<<<<<< HEAD
-                <li class="nav-item @if(\Route::current()->uri == 'loginpage'){{'active'}}@endif">
-                  <a class="nav-link" href="{{route('loginpage')}}">Login</a>
-                  </li>
-=======
+
+                
+
                 <li class="nav-item">
                  @guest
                             <li class="nav-item">
@@ -163,11 +161,9 @@
                                 </div>
                             </li>
                         @endguest
->>>>>>> eac8bc5835d7147a8b5e11b63fd407ca4bfb0ea1
 
-                  <li class="nav-item @if(\Route::current()->uri == 'registerpage'){{'active'}}@endif">
-                  <a class="nav-link" href="{{route('registerpage')}}">Signup</a>
-                </li>
+
+                  
 
 
       

@@ -12,13 +12,12 @@
   <div class="container my-5">
     <div class="row justify-content-center">
       <div class="col-8">
-<<<<<<< HEAD
-        <form action="{{-- {{ route('teacher') }} --}}" method="POST" enctype="multipart/form-data">
-          {{-- @csrf --}}
-=======
+
+        
+
         <form action="{{route('register')}}" method="POST" enctype="multipart/form-data">
            @csrf 
->>>>>>> eac8bc5835d7147a8b5e11b63fd407ca4bfb0ea1
+
                   <div class="form-row">
                     <div class="col-md-6">
                         <div class="form-group">
