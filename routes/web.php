@@ -18,7 +18,7 @@ Route::get('/','PageController@mainfun')->name('mainpage');
 Route::get('blog','PageController@blogfun')->name('blogpage');
 Route::get('blogdetail','PageController@blogdetailfun')->name('blogdetailpage');
 Route::get('contact','PageController@contactfun')->name('contactpage');
-Route::get('registerpage','PageController@registerfun')->name('registerpage');
+
 Route::get('loginpage','PageController@loginfun')->name('loginpage');
 
 
@@ -38,7 +38,5 @@ Route::get('teacher','PageController@teacherfun')->name('teacherpage');
 Route::get('profolio','PageController@profoliofun')->name('profoliopage');
 
 Auth::routes();
-
+Route::get('registerpage','PageController@registerfun')->name('registerpage');
 Route::get('/home', 'HomeController@index')->name('home');
-
-

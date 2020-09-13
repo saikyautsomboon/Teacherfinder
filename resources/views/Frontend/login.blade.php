@@ -15,8 +15,8 @@
 
     <div class="row justify-content-center">
       <div class="col-5">
-        <form action="{{-- {{ route('login') }} --}}" method="POST">
-          {{-- @csrf --}}
+        <form action="{{route('login')}} " method="POST">
+          @csrf 
               <div class="form-group">
                 <label class="small mb-1" for="inputEmailAddress">Email</label>
                 <input class="form-control py-4 @error('email') is-invalid @enderror" name="email" value="{{-- {{ old('email') }} --}}" id="inputEmailAddress" type="email" placeholder="Enter email address" name="email" />
@@ -59,7 +59,7 @@
           </form>
 
           <div class=" mt-3 text-center ">
-            <a href="{{-- {{route('registerpage')}} --}}" class="loginLink text-decoration-none">Need an account? Sign Up!</a>
+            <a href="{{route('registerpage')}}" class="loginLink text-decoration-none">Need an account? Sign Up!</a>
           </div>
       </div>
     </div>
