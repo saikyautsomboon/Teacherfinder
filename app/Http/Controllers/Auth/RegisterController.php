@@ -84,9 +84,26 @@ class RegisterController extends Controller
 
         ]);
         
-        $user=new User;
+        
        $user->assignRole('User');
        return $user;
         //datainsert
+    }
+    protected function redirectTo()
+    {
+        $roles = auth()->user()->getRoleNames();
+
+        // Check user role
+        switch ($roles[0]) {
+            case 'Admin':
+                    return 'dashboard';
+                break;
+            case 'Teacher':
+                    return 'teacher';
+                break;
+            default:
+                    return '/';  
+                break;
+        }
     }
 }
