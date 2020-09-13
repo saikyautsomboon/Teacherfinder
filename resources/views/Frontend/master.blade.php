@@ -7,6 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="{{asset('frontend/img/favicon.png')}}" type="image/png" />
     <title>Edustage Education</title>
     <!-- Bootstrap CSS -->
@@ -126,9 +127,43 @@
                   <a class="nav-link" href="{{route('contactpage')}}">Contact</a>
                 </li>
 
+<<<<<<< HEAD
                 <li class="nav-item @if(\Route::current()->uri == 'loginpage'){{'active'}}@endif">
                   <a class="nav-link" href="{{route('loginpage')}}">Login</a>
                   </li>
+=======
+                <li class="nav-item">
+                 @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('loginpage') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('registerpage') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+
+                                </a>
+                                <img class="img-profile rounded-circle ml-3" src="{{Auth::user()->profile}}" width="40" height="40">
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+>>>>>>> eac8bc5835d7147a8b5e11b63fd407ca4bfb0ea1
 
                   <li class="nav-item @if(\Route::current()->uri == 'registerpage'){{'active'}}@endif">
                   <a class="nav-link" href="{{route('registerpage')}}">Signup</a>
