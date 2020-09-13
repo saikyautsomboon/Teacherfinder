@@ -4,7 +4,7 @@
   <!-- Subcategory Title -->
   <div class="jumbotron jumbotron-fluid subtitle">
       <div class="container mt-5">
-        <h1 class="text-center"> Create Account </h1>
+        <h1 class="text-center">Register Teacher Account </h1>
       </div>
   </div>
   
@@ -59,7 +59,7 @@
                         </div>
                     </div>
 
-                     <div class="form-row">
+                     {{-- <div class="form-row">
                         <div class="col-md-6">
                           <div class="form-group">
                               <label class="small mb-1" for="inputrole">Role</label><br>
@@ -70,7 +70,7 @@
 
                             </div>
                         </div>
-                      </div>
+                      </div> --}}
 
                     <div class="form-row">
                       <div class="col-md-6">

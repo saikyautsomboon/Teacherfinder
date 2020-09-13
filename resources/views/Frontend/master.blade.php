@@ -66,13 +66,16 @@
               id="navbarSupportedContent"
             >
               <ul class="nav navbar-nav menu_nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item  @if(\Route::current()->uri == '/'){{'active'}}@endif">
                   <a class="nav-link" href="{{route('mainpage')}}">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item @if(\Route::current()->uri == 'about'){{'active'}}@endif">
                   <a class="nav-link" href="{{route('aboutpage')}}">About</a>
                 </li>
-                <li class="nav-item submenu dropdown">
+                <li class="nav-item submenu dropdown
+                @if(\Route::current()->uri == 'elements'){{'active'}}@endif
+                @if(\Route::current()->uri == 'coursedetails'){{'active'}}@endif 
+                @if(\Route::current()->uri == 'courses' ){{'active'}}@endif">
                   <a
                     href="#"
                     class="nav-link dropdown-toggle"
@@ -96,7 +99,9 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item submenu dropdown">
+                <li class="nav-item submenu dropdown
+                  @if(\Route::current()->uri == 'blogdetail'){{'active'}}@endif
+                  @if(\Route::current()->uri == 'blog'){{'active'}}@endif">
                   <a
                     href="#"
                     class="nav-link dropdown-toggle"
@@ -117,15 +122,21 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item  @if(\Route::current()->uri == 'contact'){{'active'}}@endif">
                   <a class="nav-link" href="{{route('contactpage')}}">Contact</a>
                 </li>
 
-                <li class="nav-item">
-                  <a class="nav-link" href="{{route('loginpage')}}">Login</a>|
-                  <a class="nav-link" href="{{route('registerpage')}}">Signup</a>
+                <li class="nav-item @if(\Route::current()->uri == 'loginpage'){{'active'}}@endif">
+                  <a class="nav-link" href="{{route('loginpage')}}">Login</a>
+                  </li>
 
+                  <li class="nav-item @if(\Route::current()->uri == 'registerpage'){{'active'}}@endif">
+                  <a class="nav-link" href="{{route('registerpage')}}">Signup</a>
                 </li>
+
+
+      
+                
 
 
                 <li class="nav-item">
@@ -133,6 +144,9 @@
                     <i class="ti-search"></i>
                   </a>
                 </li>
+
+                 
+
               </ul>
             </div>
           </div>

@@ -20,7 +20,8 @@ Route::get('blogdetail','PageController@blogdetailfun')->name('blogdetailpage');
 Route::get('contact','PageController@contactfun')->name('contactpage');
 Route::get('registerpage','PageController@registerfun')->name('registerpage');
 Route::get('loginpage','PageController@loginfun')->name('loginpage');
-
+Route::get('teacherregister','PageController@teacherregisterfun')->name('teacherregisterpage');
+Route::get('freecourse','PageController@freecoursefun')->name('freecoursepage');
 
 
 Route::get('report','BackendController@reportfun')->name('reportpage');
