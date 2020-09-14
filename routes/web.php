@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
+
 
 Route::get('/','PageController@mainfun')->name('mainpage');
 Route::get('blog','PageController@blogfun')->name('blogpage');
@@ -26,6 +26,14 @@ Route::get('freecourse','PageController@freecoursefun')->name('freecoursepage');
 
 Route::get('report','BackendController@reportfun')->name('reportpage');
 
+Route::middleware('role:Admin')->group(function ()
+{
+	Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
+});
+Route::middleware('role:Teacher')->group(function ()
+{
+	Route::get('teacher','PageController@teacherfun')->name('teacher');
+});
 
 
 Route::get('about','PageController@aboutfun')->name('aboutpage');
@@ -35,7 +43,7 @@ Route::get('elements','PageController@elementsfun')->name('elementspage');
 
 
 
-Route::get('teacher','PageController@teacherfun')->name('teacherpage');
+Route::get('teachers','PageController@teachersfun')->name('teacherpage');
 Route::get('profolio','PageController@profoliofun')->name('profoliopage');
 
 Auth::routes();
