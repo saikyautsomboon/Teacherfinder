@@ -43,7 +43,7 @@ class TeacherRegisterController extends Controller
         $request->validate([
                 "dob"=>'required',
                 "cv"=>'required|mimes:docx,pdf',
-                "porfolio"=>'nullable|mimes:.me,.com,.net,.co,.life,.link',
+                "porfolio"=>'',
                 
             ]);
 
@@ -53,13 +53,6 @@ class TeacherRegisterController extends Controller
 
             $path= 'teachercv/'.$cv;
 
-            $porfolio=time().'.'.$request->porfolio->extension();
-
-            $request->porfolio->move(public_path('porfolio'),$porfolio);//file upload
-
-            $path1= 'porfolio/'.$cv;
-
-
         // if include file,upload file
         //datainsert
 
@@ -68,7 +61,7 @@ class TeacherRegisterController extends Controller
           
             $teachers->dob=$request->dob;
             $teachers->cv=$path;
-            $teachers->porfolio=$path1;
+            $teachers->porfolio=$request->profolio;
             $teachers->status=0;
             $teachers->save();
         //redirect
