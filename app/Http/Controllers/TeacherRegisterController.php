@@ -43,7 +43,7 @@ class TeacherRegisterController extends Controller
         $request->validate([
                 "dob"=>'required',
                 "cv"=>'required|mimes:docx,pdf',
-                "porfolio"=>'nullable|mimes:me,com,net,co,life,link',
+                "porfolio"=>'nullable',
                 
             ]);
 
