@@ -30,18 +30,26 @@ Route::get('report','BackendController@reportfun')->name('reportpage');
 Route::middleware('role:Admin')->group(function ()
 {
 	Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
+<<<<<<< HEAD
+=======
+	Route::resource('subject_teachers','SubjectTeacherController');
+>>>>>>> 64118ded50e0789be92bc28082b674de8b47001f
 
 	Route::get('accept/{id}','BackendController@accept')->name('accept');
 
 	Route::get('teacherreq','BackendController@teacherreqfun')->name('teacherreq');
+<<<<<<< HEAD
+
+=======
+>>>>>>> 64118ded50e0789be92bc28082b674de8b47001f
 
 
-Route::resource('subjects','SubjectController');
-Route::resource('subject_teachers','SubjectTeacherController');
+	Route::resource('subjects','SubjectController');
+	
+
 
 
 	Route::resource('students','StudentController');
-	Route::resource('subjects','SubjectController');
 	Route::resource('teach','TeacherController');
 
 	

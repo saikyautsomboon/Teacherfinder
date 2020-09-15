@@ -23,14 +23,14 @@
                     </div>
                     <!-- .stat -->
                     
-                    <div class="stat"> <p style="font-size: 20px;"><b>Students</b></p>
+                    <div class="stat"> <a href="{{route('students.index')}}"><p style="font-size: 20px;"><b>Students</b></p></a>
                       <span class="value">
                         
                       </span>
                     </div>
                     <!-- .stat -->
                     
-                    <div class="stat"> <p style="font-size: 20px;"><b>Subject</b></p>
+                    <div class="stat"><a href="{{route('subjects.index')}}"><p style="font-size: 20px;"><b>Subject</b></p></a>
                       <span class="value">
                         
                       </span> 
@@ -45,6 +45,7 @@
           </div>
 
           
+
 
           <!-- /widget -->
           
