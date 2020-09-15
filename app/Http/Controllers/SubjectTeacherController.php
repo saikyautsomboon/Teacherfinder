@@ -14,7 +14,9 @@ class SubjectTeacherController extends Controller
      */
     public function index()
     {
-        //
+        $subject_teachers = Subject_Teacher::all();
+        // dd($subject_teachers);
+        return view('Backend.subject_teachers.index',compact('subject_teachers'));
     }
 
     /**
@@ -24,7 +26,8 @@ class SubjectTeacherController extends Controller
      */
     public function create()
     {
-        //
+         return view('Backend.subject_teachers.create');
+        
     }
 
     /**
@@ -35,7 +38,28 @@ class SubjectTeacherController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+        "subject_id" => 'required',
+        "teacher_id" => 'required',
+        "description" => 'required',
+        "price" => 'required',
+        "pdf" => 'required',
+        "video" => 'required',
+        
+    ]);
+     $subject_Teacher= new Subject_Teacher;
+    // col name from database
+    $subject_Teacher->subject_id = $request->subject_id;
+    $subject_Teacher->teacher_id = $request->teacher_id;
+    $subject_Teacher->description = $request->description;
+    $subject_Teacher->price = $request->price;
+    $subject_Teacher->pdf = $request->pdf;
+    $subject_Teacher->video = $request->video;
+    
+    $subject_Teacher->save();
+
+    // redirect
+    return redirect()->route('subject_teachers.index');
     }
 
     /**
@@ -57,7 +81,7 @@ class SubjectTeacherController extends Controller
      */
     public function edit(Subject_Teacher $subject_Teacher)
     {
-        //
+        return view('Backend.subject_teachers.edit',compact('subject_Teacher'));
     }
 
     /**
@@ -69,7 +93,29 @@ class SubjectTeacherController extends Controller
      */
     public function update(Request $request, Subject_Teacher $subject_Teacher)
     {
-        //
+         $request->validate([
+        "subject_id" => 'required',
+        "teacher_id" => 'required',
+        "description" => 'required',
+        "price" => 'required',
+        "pdf" => 'required',
+        "video" => 'required',
+        
+    ]);
+     $subject_Teacher= new Subject_Teacher;
+    // col name from database
+    $subject_Teacher->subject_id = $request->subject_id;
+    $subject_Teacher->teacher_id = $request->teacher_id;
+    $subject_Teacher->description = $request->description;
+    $subject_Teacher->price = $request->price;
+    $subject_Teacher->pdf = $request->pdf;
+    $subject_Teacher->video = $request->video;
+    
+    $subject_Teacher->save();
+
+    // redirect
+    return redirect()->route('subject_teachers.index');
+        
     }
 
     /**
@@ -80,6 +126,7 @@ class SubjectTeacherController extends Controller
      */
     public function destroy(Subject_Teacher $subject_Teacher)
     {
-        //
+        $subject_Teacher->delete();
+        return redirect()->route('subject_teachers.index');
     }
 }

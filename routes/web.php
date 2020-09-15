@@ -31,7 +31,8 @@ Route::middleware('role:Admin')->group(function ()
 {
 	Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
 Route::resource('subjects','SubjectController');
-	
+Route::resource('subject_teachers','SubjectTeacherController');
+
 });
 Route::middleware('role:Teacher')->group(function ()
 {
