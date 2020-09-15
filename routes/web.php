@@ -32,16 +32,25 @@ Route::middleware('role:Admin')->group(function ()
 	Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
 	Route::resource('subject_teachers','SubjectTeacherController');
 
+	Route::get('accept/{id}','BackendController@accept')->name('accept');
+
+	Route::get('teacherreq','BackendController@teacherreqfun')->name('teacherreq');
+
+
+	Route::resource('subjects','SubjectController');
+	
+
+
 
 	Route::resource('students','StudentController');
-	Route::resource('subjects','SubjectController');
 	Route::resource('teach','TeacherController');
 
 	
+
 });
 Route::middleware('role:Teacher')->group(function ()
 {
-	Route::get('teacher','PageController@teacherfun')->name('teacher');
+	Route::resource('teacher','TeacherController');
 });
 
 
