@@ -14,7 +14,12 @@ class SubjectController extends Controller
      */
     public function index()
     {
-        return view('Backend.subject');
+
+       
+
+         $subjects = Subject::all();
+        // dd($items);
+        return view('Backend.subjects.index',compact('subjects'));
     }
 
     /**
@@ -23,8 +28,9 @@ class SubjectController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {    
+
+         return view('Backend.subjects.create');
     }
 
     /**
@@ -35,7 +41,22 @@ class SubjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+
+        // Validation
+    $request->validate([
+        "name" => 'required',
+        
+    ]);
+     $subject = new Subject;
+    // col name from database
+    $subject->name = $request->name;
+    
+    $subject->save();
+
+    // redirect
+    return redirect()->route('subjects.index');
+
     }
 
     /**
@@ -46,7 +67,7 @@ class SubjectController extends Controller
      */
     public function show(Subject $subject)
     {
-        //
+        
     }
 
     /**
@@ -57,7 +78,7 @@ class SubjectController extends Controller
      */
     public function edit(Subject $subject)
     {
-        //
+        return view('Backend.subjects.edit',compact('subject'));
     }
 
     /**
@@ -69,7 +90,20 @@ class SubjectController extends Controller
      */
     public function update(Request $request, Subject $subject)
     {
-        //
+        $request->validate([
+            "name" => 'required',
+            
+        ]);
+
+        
+
+        // data update
+        $subject->name = $request->name;
+        
+        $subject->save();
+
+        // redirect
+        return redirect()->route('subjects.index');
     }
 
     /**
@@ -80,6 +114,7 @@ class SubjectController extends Controller
      */
     public function destroy(Subject $subject)
     {
-        //
+        $subject->delete();
+        return redirect()->route('subjects.index');
     }
 }
