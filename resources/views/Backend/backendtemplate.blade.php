@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link href="{{asset('backend/css/bootstrap.min.css')}}" rel="stylesheet">
 <link href="{{asset('backend/css/bootstrap-responsive.min.css')}}" rel="stylesheet">
-<link href="{{asset('backend/http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600')}}"
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
         rel="stylesheet">
 <link href="{{asset('backend/css/font-awesome.css')}}" rel="stylesheet">
 <link href="{{asset('backend/css/style.css')}}" rel="stylesheet">
@@ -18,9 +18,11 @@
     <![endif]-->
 </head>
 <body>
+
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
-    <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
+    <div class="container"> 
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
                     class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="index.html">{{Auth::user()->name}} </a>
                 <div class="nav-collapse">
                   <ul class="nav pull-right">
@@ -65,7 +67,45 @@
   <!-- /navbar-inner --> 
 </div>
 <!-- /navbar -->
+<div class="container">
+  <div class="widget widget-nopad">
+  <div class="widget-header"> <i class="icon-list-alt"></i>
+    <h3> Today's Stats</h3>
+  </div>
+  <!-- /widget-header -->
+  <div class="widget-content">
+    <div class="widget big-stats-container">
+      <div class="widget-content">
+        <h6 class="bigstats">A fully responsive premium quality admin template built on Twitter Bootstrap by <a href="http://www.egrappler.com" target="_blank">EGrappler.com</a>.  These are some dummy lines to fill the area.</h6>
+        <div id="big_stats" class="cf">
+          <div class="stat"><a href="{{route('teach.index')}}" style="font-size: 40px;color: gray">Teacher</a></p> 
+            <span class="value">
+              90000
+            </span> 
+          </div>
+          <!-- .stat -->
 
+          <div class="stat"> <a href="{{route('students.index')}}" style="font-size: 40px;color: gray">Students</a></p>
+            <span class="value">
+              8000
+            </span>
+          </div>
+          <!-- .stat -->
+
+          <div class="stat"><a href="{{route('subjects.index')}}" style="font-size: 40px;color: gray">Students</a></p>
+            <span class="value">
+              80000
+            </span> 
+          </div>
+          <!-- .stat --> 
+        </div>
+      </div>
+      <!-- /widget-content --> 
+
+    </div>
+  </div>
+  </div>
+</div>
 <!-- /subnavbar -->
   @yield('content')
 <!-- /extra -->

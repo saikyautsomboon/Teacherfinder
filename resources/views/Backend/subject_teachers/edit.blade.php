@@ -1,0 +1,82 @@
+@extends('Backend.backendtemplate')
+
+@section('content')
+	<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    	<div class="row">
+    		<div class="col">
+      		<h1 class="h3 mb-0 text-gray-800">Subject Edit Form</h1>
+    		</div>
+    	</div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+      	<div class="col-md-12">
+      		<form action="{{route('subject_teachers.update',$subject_Teacher->id)}}" method="post" enctype="multipart/form-data">
+			      @csrf
+			      @method('PUT')
+			      
+			      <div class="form-group row {{ $errors->has('subject_id') ? 'has-error' : '' }}">
+			        <label for="subid" class="col-sm-2 col-form-label">Subject_ID</label>
+			        <div class="col-sm-5">
+			          <input type="text" class="form-control" id="subid" name="subid" value="{{$subject_Teacher->subject_id}}">
+			          <span class="text-danger">{{ $errors->first('subject_id') }}</span>
+			        </div>
+			      </div>
+
+			      <div class="form-group row {{ $errors->has('teacher_id') ? 'has-error' : '' }}">
+			        <label for="tecid" class="col-sm-2 col-form-label">Teacher_ID</label>
+			        <div class="col-sm-5">
+			          <input type="text" class="form-control" id="tecid" name="tecid" value="{{$subject_Teacher->teacher_id}}">
+			          <span class="text-danger">{{ $errors->first('teacher_id') }}</span>
+			        </div>
+			      </div>
+
+			      <div class="form-group row {{ $errors->has('description') ? 'has-error' : '' }}">
+			        <label for="dec" class="col-sm-2 col-form-label">Description</label>
+			        <div class="col-sm-5">
+			          <input type="text" class="form-control" id="dec" name="dec" value="{{$subject_Teacher->description}}">
+			          <span class="text-danger">{{ $errors->first('description') }}</span>
+			        </div>
+			      </div>
+
+			      <div class="form-group row {{ $errors->has('price') ? 'has-error' : '' }}">
+			        <label for="pric" class="col-sm-2 col-form-label">Price</label>
+			        <div class="col-sm-5">
+			          <input type="text" class="form-control" id="pric" name="pric" value="{{$subject_Teacher->price}}">
+			          <span class="text-danger">{{ $errors->first('price') }}</span>
+			        </div>
+			      </div>
+
+			      <div class="form-group row {{ $errors->has('pdf') ? 'has-error' : '' }}">
+			        <label for="pdf" class="col-sm-2 col-form-label">PDF</label>
+			        <div class="col-sm-5">
+			          <input type="text" class="form-control" id="pdf" name="pdf" value="{{$subject_Teacher->pdf}}">
+			          <span class="text-danger">{{ $errors->first('pdf') }}</span>
+			        </div>
+			      </div>
+
+			      <div class="form-group row {{ $errors->has('video') ? 'has-error' : '' }}">
+			        <label for="video" class="col-sm-2 col-form-label">Video</label>
+			        <div class="col-sm-5">
+			          <input type="text" class="form-control" id="video" name="video" value="{{$subject_Teacher->video}}">
+			          <span class="text-danger">{{ $errors->first('video') }}</span>
+			        </div>
+			      </div>video
+
+			      
+			      
+			     
+			      <div class="form-group row">
+			        <div class="col-sm-5">
+			          <input type="submit" class="btn btn-primary" name="btnsubmit" value="Update">
+			        </div>
+			      </div>
+			    </form>
+      	</div>
+      </div>
+    </div>
+ 	</div>
+@endsection

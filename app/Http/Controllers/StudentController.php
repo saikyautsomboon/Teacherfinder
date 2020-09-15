@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Student;
+use App\User;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -13,8 +14,17 @@ class StudentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return 'This is Student List Page';
+    {   
+        $users = User::all();
+      $userList = array();
+      foreach ($users as $user){
+        if ($user->hasRole('User')){
+            $userList[] = $user;
+        }
+      }
+      //dd($userList);
+
+         return view('Backend.student',compact('userList'));
     }
 
     /**
@@ -46,7 +56,7 @@ class StudentController extends Controller
      */
     public function show(Student $student)
     {
-        //
+       
     }
 
     /**
