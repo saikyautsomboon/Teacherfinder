@@ -42,26 +42,37 @@ class TeacherRegisterController extends Controller
         
         $request->validate([
                 "dob"=>'required',
-                "cv"=>'required',
-                "porfolio"=>'required',
+                "cv"=>'required|mimes:docx,pdf',
+                "porfolio"=>'nullable|mimes:.me,.com,.net,.co,.life,.link',
                 
             ]);
 
+            $cv=time().'.'.$request->cv->extension();
+
+            $request->cv->move(public_path('teachercv'),$cv);//file upload
+
+            $path= 'teachercv/'.$cv;
+
+            $porfolio=time().'.'.$request->porfolio->extension();
+
+            $request->porfolio->move(public_path('porfolio'),$porfolio);//file upload
+
+            $path1= 'porfolio/'.$cv;
+
+
         // if include file,upload file
-            
         //datainsert
-        
 
             $teachers=new Teacher;
             $teachers->user_id=Auth::id();
           
             $teachers->dob=$request->dob;
-            $teachers->cv=$request->cv;
-            $teachers->porfolio=$request->porfolio;
+            $teachers->cv=$path;
+            $teachers->porfolio=$path1;
             $teachers->status=0;
             $teachers->save();
         //redirect
-        //return redirect()->route('tregister.index');
+        return view('Backend.teacher');
     }
 
     /**

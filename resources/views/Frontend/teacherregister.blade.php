@@ -30,7 +30,7 @@
                       <div class="col-md-6">
                           <div class="form-group">
                             <label class="small mb-1" for="inputPhone"> Porfolio </label>
-                            <input class="form-control-file py-4 @error('porfolio') is-invalid @enderror input_photo" name="porfolio" value="{{-- {{ old('photo') }} --}}" id="porfolio" type="file" placeholder="Enter Phone" />
+                            <input class="form-control-file py-4 @error('porfolio') is-invalid @enderror input_photo" name="porfolio" value="{{-- {{ old('photo') }} --}}" id="porfolio" type="text" placeholder="Enter Your Porfoilo Link" />
 
                             @error('porfolio')
                               <span class="invalid-feedback" role="alert">
