@@ -14,6 +14,9 @@ class SubjectController extends Controller
      */
     public function index()
     {
+
+       
+
          $subjects = Subject::all();
         // dd($items);
         return view('Backend.subjects.index',compact('subjects'));
