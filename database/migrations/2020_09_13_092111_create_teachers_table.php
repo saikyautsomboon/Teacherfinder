@@ -15,10 +15,10 @@ class CreateTeachersTable extends Migration
     {
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->date('dob');
             $table->unsignedBigInteger('user_id');
-            $table->string('experience');
+            $table->date('dob');
+            $table->text('cv');
+            $table->text('porfolio');
             $table->tinyInteger('status')->deafult(0);
             $table->timestamps();
 

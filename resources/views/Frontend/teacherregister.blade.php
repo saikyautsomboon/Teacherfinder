@@ -12,103 +12,39 @@
   <div class="container my-5">
     <div class="row justify-content-center">
       <div class="col-8">
-        <form action="{{-- {{ route('teacher') }} --}}" method="POST" enctype="multipart/form-data">
-          {{-- @csrf --}}
-                  <div class="form-row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="small mb-1" for="inputName"> Name</label>
-                          <input class="form-control py-4 @error('name') is-invalid @enderror" name="name" value="{{-- {{ old('name') }} --}}" id="inputName" type="text" placeholder="Enter Name" />
+        <form action="{{route('tregister.store') }}" method="POST" enctype="multipart/form-data">
+          @csrf 
+                      <div class="form-row">
+                         <div class="col-md-12">
+                          <label class="small mb-1" for="inputEmailAddress">Date Of Birth</label>
+                           <input class="form-control py-4 @error('phone') is-invalid @enderror" name="dob" value="{{-- {{ old('phone') }} --}}" id="dob" type="date" />
+                            @error('dob')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
                         </div>
-                    </div>
-                        
+                      </div>
                     
-
-                    <div class="col-md-6">
-                        <label class="small mb-1" for="inputEmailAddress">Email</label>
-                        <input class="form-control py-4 @error('email') is-invalid @enderror" name="email" value="{{-- {{ old('email') }} --}}" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter email address"  />
-                        @error('name')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-                  </div>
-                    <div class="form-row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                              <label class="small mb-1" for="inputPassword">Password</label>
-                              <input class="form-control py-4 @error('password') is-invalid @enderror" name="password" id="inputPassword" type="password" placeholder="Enter password"  />
-                              <font id="error" color="red"></font>
-
-                              @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                              <label class="small mb-1" for="inputConfirmPassword">Confirm Password</label>
-                              <input class="form-control py-4" id="inputConfirmPassword" type="password" placeholder="Confirm password" name="password_confirmation" />
-                              <font id="cerror" color="red"></font>
-
-                            </div>
-                        </div>
-                    </div>
-
-                     {{-- <div class="form-row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                              <label class="small mb-1" for="inputrole">Role</label><br>
-                              <label>Student</label>
-                              <input name="role" id="inputrole" type="radio" />
-                              <label class="ml-5">Teacher</label>
-                               <input  name="role" id="inputrole" type="radio" />
-
-                            </div>
-                        </div>
-                      </div> --}}
-
-                    <div class="form-row">
+                     <div class="form-row">
                       <div class="col-md-6">
                           <div class="form-group">
-                            <label class="small mb-1" for="inputPhone"> Phone</label>
-                            <input class="form-control py-4 @error('phone') is-invalid @enderror" name="phone" value="{{-- {{ old('phone') }} --}}" id="inputPhone" type="text" placeholder="Enter Phone" />
-                            @error('phone')
+                            <label class="small mb-1" for="inputPhone"> Porfolio </label>
+                            <input class="form-control-file py-4 @error('porfolio') is-invalid @enderror input_photo" name="porfolio" value="{{-- {{ old('photo') }} --}}" id="porfolio" type="file" placeholder="Enter Phone" />
+
+                            @error('porfolio')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
                               </span>
                           @enderror
                           </div>
                       </div>
-                          
-                      
-
-                      <div class="col-md-6">
-                          <label class="small mb-1" for="inputEmailAddress">Address</label>
-                          <textarea class="form-control @error('address') is-invalid @enderror" name="address" value="{{-- {{ old('address') }} --}}" id="inputEmailAddress" >
-                            @error('address')
-                              <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $message }}</strong>
-                              </span>
-                          @enderror
-                          </textarea>
-
-                          
-                      </div>
-                    </div>
-
-
-                     <div class="form-row">
                       <div class="col-md-6">
                           <div class="form-group">
-                            <label class="small mb-1" for="inputPhone"> Photo </label>
-                            <input class="form-control-file py-4 @error('photo') is-invalid @enderror input_photo" name="photo" value="{{-- {{ old('photo') }} --}}" id="inputPhone" type="file" placeholder="Enter Phone" />
+                            <label class="small mb-1" for="inputPhone"> CV Form </label>
+                            <input class="form-control-file py-4 @error('cv') is-invalid @enderror" name="cv" value="{{-- {{ old('photo') }} --}}" id="inputcv" type="file" placeholder="CV" />
 
-                            @error('photo')
+                            @error('cv')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
                               </span>
@@ -124,7 +60,22 @@
                     
                     </div>
 
-                   
+                   {{-- <div class="form-row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="small mb-1" for="inputPassword">Experience Year</label>
+                              <input class="form-control py-4 @error('experience') is-invalid @enderror" name="experience" id="experience" type="number"  />
+                              <font id="error" color="red"></font>
+
+                              @error('experience')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div> 
+                    </div> --}}
+                    
               
               <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                 

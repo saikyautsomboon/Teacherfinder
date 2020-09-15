@@ -68,18 +68,7 @@
                         </div>
                     </div>
 
-                     <div class="form-row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                              <label class="small mb-1" for="inputrole">Role</label><br>
-                              <label>Student</label>
-                              <input name="role" id="inputrole" type="radio" />
-                              <label class="ml-5">Teacher</label>
-                               <input  name="role" id="inputrole" type="radio" />
-
-                            </div>
-                        </div>
-                      </div>
+                    
 
                     <div class="form-row">
                       <div class="col-md-6">

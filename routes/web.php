@@ -23,6 +23,7 @@ Route::get('loginpage','PageController@loginfun')->name('loginpage');
 Route::get('teacherregister','PageController@teacherregisterfun')->name('teacherregisterpage');
 Route::get('freecourse','PageController@freecoursefun')->name('freecoursepage');
 
+Route::resource('tregister','TeacherRegisterController');
 
 Route::get('report','BackendController@reportfun')->name('reportpage');
 
@@ -47,5 +48,6 @@ Route::get('teachers','PageController@teachersfun')->name('teacherpage');
 Route::get('profolio','PageController@profoliofun')->name('profoliopage');
 
 Auth::routes();
+
 Route::get('registerpage','PageController@registerfun')->name('registerpage');
 Route::get('/home', 'HomeController@index')->name('home');
