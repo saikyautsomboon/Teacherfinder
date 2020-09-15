@@ -18,7 +18,7 @@ class CreateTeachersTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->date('dob');
             $table->text('cv');
-            $table->text('porfolio');
+            $table->text('porfolio')->nullable();
             $table->tinyInteger('status')->deafult(0);
             $table->timestamps();
 
