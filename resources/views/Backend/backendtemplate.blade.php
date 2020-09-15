@@ -67,45 +67,7 @@
   <!-- /navbar-inner --> 
 </div>
 <!-- /navbar -->
-<div class="container">
-  <div class="widget widget-nopad">
-  <div class="widget-header"> <i class="icon-list-alt"></i>
-    <h3> Today's Stats</h3>
-  </div>
-  <!-- /widget-header -->
-  <div class="widget-content">
-    <div class="widget big-stats-container">
-      <div class="widget-content">
-        <h6 class="bigstats">A fully responsive premium quality admin template built on Twitter Bootstrap by <a href="http://www.egrappler.com" target="_blank">EGrappler.com</a>.  These are some dummy lines to fill the area.</h6>
-        <div id="big_stats" class="cf">
-          <div class="stat"><a href="{{route('teach.index')}}" style="font-size: 40px;color: gray">Teacher</a></p> 
-            <span class="value">
-              90000
-            </span> 
-          </div>
-          <!-- .stat -->
 
-          <div class="stat"> <a href="{{route('students.index')}}" style="font-size: 40px;color: gray">Students</a></p>
-            <span class="value">
-              8000
-            </span>
-          </div>
-          <!-- .stat -->
-
-          <div class="stat"><a href="{{route('subjects.index')}}" style="font-size: 40px;color: gray">Students</a></p>
-            <span class="value">
-              80000
-            </span> 
-          </div>
-          <!-- .stat --> 
-        </div>
-      </div>
-      <!-- /widget-content --> 
-
-    </div>
-  </div>
-  </div>
-</div>
 <!-- /subnavbar -->
   @yield('content')
 <!-- /extra -->
