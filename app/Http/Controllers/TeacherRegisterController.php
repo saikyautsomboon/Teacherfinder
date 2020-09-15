@@ -56,16 +56,17 @@ class TeacherRegisterController extends Controller
         // if include file,upload file
         //datainsert
 
+            $porfolio='http://'.$request->porfolio.'/';
             $teachers=new Teacher;
             $teachers->user_id=Auth::id();
           
             $teachers->dob=$request->dob;
             $teachers->cv=$path;
-            $teachers->porfolio=$request->profolio;
-            $teachers->status=0;
+            $teachers->porfolio=$porfolio;
+            $teachers->status=1;
             $teachers->save();
         //redirect
-        return view('Backend.teacher');
+        return view('Frontend.main');
     }
 
     /**

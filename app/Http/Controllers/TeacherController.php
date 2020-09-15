@@ -14,7 +14,9 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        //
+        $teachers = Teacher::all();
+        //dd($teachers);
+        return view('Backend.teacher',compact('teachers'));
     }
 
     /**
@@ -35,7 +37,32 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /*$request->validate([
+                "dob"=>'required',
+                "cv"=>'required|mimes:docx,pdf',
+                "porfolio"=>'',
+                
+            ]);
+
+            $cv=time().'.'.$request->cv->extension();
+
+            $request->cv->move(public_path('teachercv'),$cv);//file upload
+
+            $path= 'teachercv/'.$cv;
+
+        // if include file,upload file
+        //datainsert
+
+            $teachers=new Teacher;
+            $teachers->user_id=Auth::id();
+          
+            $teachers->dob=$request->dob;
+            $teachers->cv=$path;
+            $teachers->porfolio=$request->porfolio;
+            $teachers->status=0;
+            $teachers->save();
+        //redirect
+        return view('Backend.teacher');*/
     }
 
     /**
@@ -46,7 +73,9 @@ class TeacherController extends Controller
      */
     public function show(Teacher $teacher)
     {
-        //
+        $teachers=Teacher::all();
+       /*dd($itemdetails);*/
+        return view('Backend.teacher',compact('teachers'));
     }
 
     /**
@@ -80,6 +109,7 @@ class TeacherController extends Controller
      */
     public function destroy(Teacher $teacher)
     {
-        //
+       $teacher->delete();
+        return redirect()->route('teacher.index');
     }
 }

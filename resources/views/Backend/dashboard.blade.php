@@ -15,7 +15,7 @@
                 <div class="widget-content">
                   <h6 class="bigstats">A fully responsive premium quality admin template built on Twitter Bootstrap by <a href="http://www.egrappler.com" target="_blank">EGrappler.com</a>.  These are some dummy lines to fill the area.</h6>
                   <div id="big_stats" class="cf">
-                    <div class="stat"> <p style="font-size: 20px;"><b>Teacher</b></p> 
+                    <div class="stat"><a href="{{route('teacherreq')}}"> <p style="font-size: 20px;"><b>Teacher</b></p></a> 
                       <span class="value">
                         
                       </span> 

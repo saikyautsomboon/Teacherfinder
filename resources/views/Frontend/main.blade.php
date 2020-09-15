@@ -15,8 +15,17 @@
                 find and join teacher 
                 </h2>
                 <div>
-                  <a href="{{route('teacherregisterpage')}}" class="primary-btn2 mt-3">Request To Become Teacher</a>
+                   {{-- @if(Auth::user()->getRoleNames()[0] == 'User')
+ <a href="{{route('freecoursepage')}}" class="primary-btn ml-sm-3 ml-0">see free course</a>
+                  --}}
+{{--{{ Auth::user()->getRoleNames()[0]}}
+                  --}}
+                  {{--  @endif
+                  @if(Auth::user()->getRoleNames()[0] == 'Teacher' && Auth::user()->getRoleNames()[0] == 'User')
+                   --}}<a href="{{route('teacherregisterpage')}}" class="primary-btn2 mt-3">Request to be Teacher</a>
                   <a href="{{route('freecoursepage')}}" class="primary-btn ml-sm-3 ml-0">see free course</a>
+                 
+                  {{-- @endif   --}}
                 </div>
               </div>
             </div>
