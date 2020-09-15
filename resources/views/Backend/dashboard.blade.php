@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row">
         <div class="span6">
-<<<<<<< HEAD
+
           <div class="widget widget-nopad">
             <div class="widget-header"> <i class="icon-list-alt"></i>
               <h3> Today's Stats</h3>
@@ -43,9 +43,9 @@
               </div>
             </div>
           </div>
-=======
+
           
->>>>>>> 130161cffb0e689a2f04742b6658024f216256cc
+
           <!-- /widget -->
           
           <!-- /widget -->
