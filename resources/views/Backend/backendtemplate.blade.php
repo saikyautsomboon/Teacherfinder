@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link href="{{asset('backend/css/bootstrap.min.css')}}" rel="stylesheet">
 <link href="{{asset('backend/css/bootstrap-responsive.min.css')}}" rel="stylesheet">
-<link href="{{asset('backend/http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600')}}"
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
         rel="stylesheet">
 <link href="{{asset('backend/css/font-awesome.css')}}" rel="stylesheet">
 <link href="{{asset('backend/css/style.css')}}" rel="stylesheet">

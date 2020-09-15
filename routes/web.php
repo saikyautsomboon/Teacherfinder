@@ -30,6 +30,8 @@ Route::get('report','BackendController@reportfun')->name('reportpage');
 Route::middleware('role:Admin')->group(function ()
 {
 	Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
+Route::resource('subjects','SubjectController');
+	
 });
 Route::middleware('role:Teacher')->group(function ()
 {
