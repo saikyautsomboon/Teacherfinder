@@ -46,11 +46,13 @@ class SubjectController extends Controller
         // Validation
     $request->validate([
         "name" => 'required',
+        "description" => 'required',
         
     ]);
      $subject = new Subject;
     // col name from database
     $subject->name = $request->name;
+    $subject->description = $request->description;
     
     $subject->save();
 
@@ -92,6 +94,8 @@ class SubjectController extends Controller
     {
         $request->validate([
             "name" => 'required',
+            "description" => 'required',
+
             
         ]);
 
@@ -99,6 +103,8 @@ class SubjectController extends Controller
 
         // data update
         $subject->name = $request->name;
+        $subject->description = $request->description;
+
         
         $subject->save();
 
