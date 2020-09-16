@@ -40,7 +40,7 @@
                         <li class="nav-item dropdown">
                           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="font-size: 20px">
                             {{ Auth::user()->name }}
-                            <img class="img-profile ml-3" src="{{Auth::user()->profile}}" style="border-radius: 100%; width: 40px ; height: 40px">
+                            <img class="img-profile ml-3" src="{{asset(Auth::user()->profile)}}" style="border-radius: 100%; width: 40px ; height: 40px">
                           </a>
 
 
