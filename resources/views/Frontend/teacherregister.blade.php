@@ -14,23 +14,37 @@
       <div class="col-8">
         <form action="{{route('tregister.store') }}" method="POST" enctype="multipart/form-data">
           @csrf 
-                      <div class="form-row">
-                         <div class="col-md-12">
-                          <label class="small mb-1" for="inputEmailAddress">Date Of Birth</label>
-                           <input class="form-control py-4 @error('phone') is-invalid @enderror" name="dob" value="{{-- {{ old('phone') }} --}}" id="dob" type="date" />
-                            @error('dob')
-                              <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $message }}</strong>
-                              </span>
-                          @enderror
-                        </div>
-                      </div>
+          <div class="form-row">
+           <div class="col-md-6">
+            <div class="form-group">
+              <label class="small mb-1" for="inputEmailAddress">Date Of Birth</label>
+              <input class="form-control py-4 @error('phone') is-invalid @enderror" name="dob" id="dob" type="date" />
+              @error('dob')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+              @enderror
+            </div>
+          </div>
+          <div class="col-md-6 mt-auto">
+            <div class="form-group">
+              <label class="" for="inputSubject">Subject</label>
+              <select class="form-control form-control-md @error('subject_id') is-invalid @enderror" id="inputSubject" name="subject_id">
+                <optgroup label="Choose Subject">
+                  @foreach($subjects as $subject)
+                  <option value="{{$subject->id}}">{{$subject->name}}</option>
+                  @endforeach
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>
                     
                      <div class="form-row">
-                      <div class="col-md-6">
+                      <div class=" col-md-6">
                           <div class="form-group">
                             <label class="small mb-1" for="inputPhone"> Porfolio </label>
-                            <input class="form-control-file py-4 @error('porfolio') is-invalid @enderror input_photo" name="porfolio" value="{{-- {{ old('photo') }} --}}" id="porfolio" type="text" placeholder="Enter Your Porfoilo Link" />
+                            <input class="form-control-file py-4 @error('porfolio') is-invalid @enderror input_photo" name="porfolio" id="porfolio" type="text" placeholder="Enter Your Porfoilo Link" />
 
                             @error('porfolio')
                               <span class="invalid-feedback" role="alert">

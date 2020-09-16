@@ -124,7 +124,7 @@
                                     {{ Auth::user()->name }}
 
                                 </a>
-                                <img class="img-profile rounded-circle ml-3" src="{{Auth::user()->profile}}" width="40" height="40">
+                                <img class="img-profile rounded-circle ml-3" src="{{asset(Auth::user()->profile)}}" width="40" height="40">
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"

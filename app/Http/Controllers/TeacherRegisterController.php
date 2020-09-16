@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Teacher;
 use App\User;
+use App\Subject;
 use Auth;
 class TeacherRegisterController extends Controller
 {
@@ -27,7 +28,9 @@ class TeacherRegisterController extends Controller
      */
     public function create()
     {
-        //
+        $subjects=Subject::all();
+        //dd($subjects);
+        return view('Frontend.teacherregister',compact('subjects'));
     }
 
     /**
@@ -43,6 +46,7 @@ class TeacherRegisterController extends Controller
         $request->validate([
                 "dob"=>'required',
                 "cv"=>'required|mimes:docx,pdf',
+                "subject_id"=>'required',
                 "porfolio"=>'',
                 
             ]);
@@ -65,6 +69,7 @@ class TeacherRegisterController extends Controller
             $teachers->dob=$request->dob;
             $teachers->cv=$path;
             $teachers->porfolio=$porfolio;
+            $teachers->subject_id=$request->subject_id;
             $teachers->status=1;
             $teachers->save();
         //redirect

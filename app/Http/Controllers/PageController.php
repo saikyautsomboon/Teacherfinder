@@ -52,10 +52,7 @@ class PageController extends Controller
 		return view('Frontend.login');
 	}
 
-	public function teacherregisterfun($value='')
-	{
-		return view('Frontend.teacherregister');
-	}
+	
 
 	public function freecoursefun($value='')
 	{
