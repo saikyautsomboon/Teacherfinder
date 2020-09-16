@@ -14,13 +14,15 @@ class TeacherController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
+
         $teachers = Teacher::all();
+        $teacherlists=Teacher::where('status',0)->get();
+        
         //dd($teachers);
-        return view('Backend.teacher',compact('teachers'));
-=======
-        return view('Backend.teacher');
->>>>>>> 130161cffb0e689a2f04742b6658024f216256cc
+        return view('Backend.teacher',compact('teachers','teacherlists'));
+
+        
+
     }
 
     /**

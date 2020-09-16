@@ -15,18 +15,28 @@
                 find and join teacher 
                 </h2>
                 <div>
-                   {{-- @if(Auth::user()->getRoleNames()[0] == 'User')
- <a href="{{route('freecoursepage')}}" class="primary-btn ml-sm-3 ml-0">see free course</a>
-                  --}}
+                  
+                  @if(Auth::check())
+
+                  @if(Auth::user()->getRoleNames()[0] == 'User')
+
+                     <a href="{{route('teacherregisterpage')}}" class="primary-btn2 mt-3">Request to become Teacher</a>
+                     <a href="{{route('freecoursepage')}}" class="primary-btn ml-sm-3 ml-0">see free course</a>
+                 
 {{--{{ Auth::user()->getRoleNames()[0]}}
                   --}}
-                  {{--  @endif
-                  @if(Auth::user()->getRoleNames()[0] == 'Teacher' && Auth::user()->getRoleNames()[0] == 'User')
-                   --}}<a href="{{route('teacherregisterpage')}}" class="primary-btn2 mt-3">Request to be Teacher</a>
+                 @endif
+                  @if(Auth::user()->getRoleNames()[0] == 'Teacher')
+                   <a href="{{route('teacherdetail')}}" class="primary-btn2 mt-3">Go To Teacher List</a>
                   <a href="{{route('freecoursepage')}}" class="primary-btn ml-sm-3 ml-0">see free course</a>
                  
-                  {{-- @endif   --}}
-                </div>
+                 @endif 
+                  @else
+                    <a href="{{route('teacherregisterpage')}}" class="primary-btn2 mt-3">Request to become Teacher</a>
+                     <a href="{{route('freecoursepage')}}" class="primary-btn ml-sm-3 ml-0">see free course</a>
+                 @endif
+          
+                 </div>
               </div>
             </div>
           </div>

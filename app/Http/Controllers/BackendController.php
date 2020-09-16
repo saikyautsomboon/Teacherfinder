@@ -17,9 +17,12 @@ class BackendController extends Controller
 		return view('Backend.report');
 	}
 	public function teacherreqfun(){
-
 		$teachers=Teacher::where('status',1)->get();
 		return view('Backend.teacher',compact('teachers'));
+	}
+	public function teacherlistfun(){
+		$teacherlists=Teacher::where('status',0)->get();
+		return view('Backend.teacherlist',compact('teacherlists'));
 	}
 	public function accept(Request $Request,$id)
 	{
@@ -34,4 +37,6 @@ class BackendController extends Controller
 		return redirect()->route('teacherreq');
 		//dd($user);
 	}
+
+	
 }

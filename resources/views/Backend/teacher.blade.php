@@ -3,7 +3,7 @@
 
    <div class="container-fluid">
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800"> Teacher Lists</h1>
+    <h1 class="h3 mb-0 text-gray-800" > Teacher Request Lists</h1>
   </div>
   <div class="container-fluid">
 
@@ -39,7 +39,7 @@
               <td><a href="{{$teacher->porfolio}}" target="_blank">{{$teacher->porfolio}}</a></td>
               <td>{{$teacher->user->phone}}</td>
               <td>{{$teacher->user->address}}</td>
-              <td><a href="{{-- {{route('items.show',$item->id)}} --}}" class="btn btn-info mx-2 mb-3">Detail</a>
+              <td>{{-- <a href="{{route('items.show',$item->id)}}" class="btn btn-info mx-2 mb-3">Detail</a> --}}
                 <a href="{{route('accept',$teacher->id)}}" class="btn btn-info mx-2 mb-3">Accept</a>
                {{--  <form action="{{route('teacher.destroy',$teacher->id)}}" method="POST" class="d-inline-block"><br>
                   @csrf
@@ -54,9 +54,6 @@
 
             </tbody>
           </table>
-
-
-
 
         </div>
       </div>
