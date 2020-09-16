@@ -31,35 +31,22 @@ Route::middleware('role:Admin')->group(function ()
 {
 	Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
 	Route::resource('subject_teachers','SubjectTeacherController');
-
 	Route::get('accept/{id}','BackendController@accept')->name('accept');
-
 	Route::get('teacherreq','BackendController@teacherreqfun')->name('teacherreq');
-
-
 	Route::resource('subjects','SubjectController');
-	
-
-
-
 	Route::resource('students','StudentController');
 	Route::resource('teach','TeacherController');
-
-	
-
 });
+
 Route::middleware('role:Teacher')->group(function ()
 {
 	Route::resource('teacher','TeacherController');
 });
 
-
 Route::get('about','PageController@aboutfun')->name('aboutpage');
 Route::get('courses','PageController@coursesfun')->name('coursespage');
 Route::get('coursedetails','PageController@coursedetailsfun')->name('coursedetailspage');
 Route::get('elements','PageController@elementsfun')->name('elementspage');
-
-
 
 Route::get('teachers','PageController@teachersfun')->name('teacherpage');
 Route::get('profolio','PageController@profoliofun')->name('profoliopage');
