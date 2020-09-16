@@ -48,8 +48,10 @@ class TeacherRegisterController extends Controller
             ]);
 
             $cv=time().'.'.$request->cv->extension();
+            
 
-            $request->cv->move(public_path('teachercv'),$cv);//file upload
+
+            $request->cv->move(public_path('cv/'),$cv);//file upload
 
             $path= 'teachercv/'.$cv;
 

@@ -31,16 +31,19 @@ Route::middleware('role:Admin')->group(function ()
 {
 	Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
 	Route::resource('subject_teachers','SubjectTeacherController');
+	Route::get('teacherlist','BackendController@teacherlistfun')->name('teacherlist');
 	Route::get('accept/{id}','BackendController@accept')->name('accept');
 	Route::get('teacherreq','BackendController@teacherreqfun')->name('teacherreq');
 	Route::resource('subjects','SubjectController');
 	Route::resource('students','StudentController');
 	Route::resource('teach','TeacherController');
+	Route::resource('teacher','TeacherController');
 });
 
 Route::middleware('role:Teacher')->group(function ()
-{
-	Route::resource('teacher','TeacherController');
+{   
+	Route::get('teacherdetail','BackendController@teacherlistfun')->name('teacherdetail');
+
 });
 
 Route::get('about','PageController@aboutfun')->name('aboutpage');
