@@ -27,6 +27,14 @@
 			          <span class="text-danger">{{ $errors->first('name') }}</span>
 			        </div>
 			      </div>
+
+			      <div class="form-group row {{ $errors->has('description') ? 'has-error' : '' }}">
+			        <label for="dec" class="col-sm-2 col-form-label">Description</label>
+			        <div class="col-sm-5">
+			          <input type="text" class="form-control" id="dec" name="dec" value="{{$subject->description}}">
+			          <span class="text-danger">{{ $errors->first('description') }}</span>
+			        </div>
+			      </div>
 			      
 			      
 			      

@@ -20,7 +20,16 @@ class TeacherController extends Controller
         
         //dd($teachers);
 
+
         return view('Backend.teacher',compact('teachers','teacherlists'));
+
+
+        
+
+        // return view('Backend.teacher',compact('teachers'));
+
+        // return view('Backend.teacher');
+
     }
 
     /**

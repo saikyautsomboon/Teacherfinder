@@ -27,10 +27,14 @@ Route::resource('tregister','TeacherRegisterController');
 
 Route::get('report','BackendController@reportfun')->name('reportpage');
 
+
 Route::middleware('role:Admin')->group(function ()
 {
 	Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
-
+	Route::resource('subject_teachers','SubjectTeacherController');
+	Route::get('accept/{id}','BackendController@accept')->name('accept');
+	Route::get('teacherreq','BackendController@teacherreqfun')->name('teacherreq');
+	Route::get('teacherlist','BackendController@teacherlistfun')->name('teacherlist');
 	Route::resource('subject_teachers','SubjectTeacherController');
 	Route::get('accept/{id}','BackendController@accept')->name('accept');
 	Route::get('teacherreq','BackendController@teacherreqfun')->name('teacherreq');
@@ -40,6 +44,7 @@ Route::middleware('role:Admin')->group(function ()
 	Route::resource('teach','TeacherController');
 	Route::resource('teacher','TeacherController');
 });
+
 
 
 Route::middleware('role:Teacher')->group(function ()

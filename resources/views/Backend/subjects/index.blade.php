@@ -18,6 +18,7 @@
     				<tr>
     					<th>No</th>
     					<th>Name</th>
+                        <th>Description</th>
     					<th>Actions</th>
     					
 
@@ -29,6 +30,7 @@
     				<tr>
     					<td>{{$i++}}</td>
     					<td>{{$subject->name}}</td>
+                        <td>{{$subject->description}}</td>
                         <td >
                             
                                 
