@@ -24,7 +24,8 @@ class TeacherController extends Controller
         return view('Backend.teacher',compact('teachers','teacherlists'));
         //return view('Backend.teacher',compact('teachers','teacherlists'));
 
-        
+
+        //return view('Backend.teacher',compact('teachers','teacherlists'));
 
         // return view('Backend.teacher',compact('teachers'));
 

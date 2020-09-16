@@ -47,8 +47,8 @@
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <a class="navbar-brand logo_h" href="{{route('mainpage')}}"
-              ><img src="{{asset('frontend/img/logo.png')}}" alt=""
-            /></a>
+              ><img src="{{asset('frontend/img/logo5.jpg')}}" style="width: 50px;height: 50px;border-radius: 50%;" alt=""
+            /><b>TEACHER FINDER</b></a>
             <button
               class="navbar-toggler"
               type="button"
@@ -68,10 +68,10 @@
             >
               <ul class="nav navbar-nav menu_nav ml-auto">
                 <li class="nav-item  @if(\Route::current()->uri == '/'){{'active'}}@endif">
-                  <a class="nav-link" href="{{route('mainpage')}}">Home</a>
+                  <a class="nav-link" href="{{route('mainpage')}}">HOME</a>
                 </li>
                 <li class="nav-item @if(\Route::current()->uri == 'about'){{'active'}}@endif">
-                  <a class="nav-link" href="{{route('aboutpage')}}">About</a>
+                  <a class="nav-link" href="{{route('aboutpage')}}">ABOUT</a>
                 </li>
                 <li class="nav-item submenu dropdown
                 @if(\Route::current()->uri == 'elements'){{'active'}}@endif
@@ -84,47 +84,25 @@
                     role="button"
                     aria-haspopup="true"
                     aria-expanded="false"
-                    >Pages</a
+                    >SUBJECT</a
                   >
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a class="nav-link" href="{{route('coursespage')}}">Courses</a>
+                      <a class="nav-link" href="{{route('coursespage')}}">IT</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="{{route('coursedetailspage')}}"
-                        >Course Details</a
+                        >HISTORY</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="{{route('elementspage')}}">Elements</a>
+                      <a class="nav-link" href="{{route('elementspage')}}">BUSINESS</a>
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item submenu dropdown
-                  @if(\Route::current()->uri == 'blogdetail'){{'active'}}@endif
-                  @if(\Route::current()->uri == 'blog'){{'active'}}@endif">
-                  <a
-                    href="#"
-                    class="nav-link dropdown-toggle"
-                    data-toggle="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Blog</a
-                  >
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{route('blogpage')}}">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{route('blogdetailpage')}}"
-                        >Blog Details</a
-                      >
-                    </li>
-                  </ul>
-                </li>
+               
                 <li class="nav-item  @if(\Route::current()->uri == 'contact'){{'active'}}@endif">
-                  <a class="nav-link" href="{{route('contactpage')}}">Contact</a>
+                  <a class="nav-link" href="{{route('contactpage')}}">CONTACT</a>
                 </li>
 
 
@@ -133,11 +111,11 @@
                 <li class="nav-item">
                  @guest
                             <li class="nav-item @if(\Route::current()->uri == 'loginpage'){{'active'}}@endif">
-                                <a class="nav-link" href="{{ route('loginpage') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('loginpage') }}">{{ __('LOGIN') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item @if(\Route::current()->uri == 'registerpage'){{'active'}}@endif">
-                                    <a class="nav-link" href="{{ route('registerpage') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('registerpage') }}">{{ __('REGISTER') }}</a>
                                 </li>
                             @endif
                         @else

@@ -7,56 +7,6 @@
   </div>
   <div class="container-fluid">
 
-
-
-  	<div class="col-lg-12">
-            <div class="owl-carousel active_course">
-              <div class="single_course">
-                <div class="course_head">
-                  <img class="img-fluid" src="img/courses/c1.jpg" alt="" />
-                </div>
-                <div class="course_content">
-                   <span class="meta_info"
-                        ><a href="#"> NAME:<i class="ti-heart mr-2"></i>35 </a></span
-                      >
-                   <span class="meta_info"
-                        ><a href="#"> EMAIL:<i class="ti-heart mr-2"></i>35 </a></span
-                      >
-                  <h4 class="mb-3">
-                     <span class="meta_info"
-                        ><a href="#"> CV:<i class="ti-heart mr-2"></i>35 </a></span
-                      >
-                  </h4>
-                  <p>
-                    One make creepeth man bearing their one firmament won't fowl
-                    meat over sea
-                  </p>
-                  <div
-                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
-                  >
-                    <div class="authr_meta">
-                      <img src="img/courses/author1.png" alt="" />
-                      <span class="d-inline-block ml-2">Cameron</span>
-                    </div>
-                    <div class="mt-lg-0 mt-3">
-                      <span class="meta_info mr-4">
-                        <a href="#"> PORTFOLIO:<i class="ti-user mr-2"></i>25 </a>
-                      </span>
-                      <span class="meta_info"
-                        ><a href="#"> PHONE:<i class="ti-heart mr-2"></i>35 </a></span
-                      >
-                       <span class="meta_info"
-                        ><a href="#"> ADDRESS:<i class="ti-heart mr-2"></i>35 </a></span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-      </div>
-
-    
-
     <div class="row">
       <div class="col-md-12">
         <br>
