@@ -67,7 +67,20 @@
   <!-- /navbar-inner --> 
 </div>
 <!-- /navbar -->
-
+<div class="subnavbar">
+  <div class="subnavbar-inner">
+    <div class="container">
+      <ul class="mainnav">
+        <li class="active"><a href="{{route('teacherreq')}}"><span>Teacher</span> </a> </li>
+        <li><a href="{{route('students.index')}}"><span>Students</span> </a> </li>
+        <li><a href="{{route('subjects.index')}}"><span>Subject</span> </a></li>
+        
+      </ul>
+    </div>
+    <!-- /container --> 
+  </div>
+  <!-- /subnavbar-inner --> 
+</div>
 <!-- /subnavbar -->
   @yield('content')
 <!-- /extra -->

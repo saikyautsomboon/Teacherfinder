@@ -15,7 +15,7 @@ class Subjectjoin extends Model
     }
     public function subject($value='')
     {
-    	return $this->hasMany('App\Subject');
+    	return $this->belongTo('App\Subject');
     }
     public function user($value='')
     {

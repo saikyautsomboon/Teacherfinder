@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Teacher extends Model
 {
     protected $fillable = [
-        'dob','user_id','cv','porfolio','status'
+        'dob','user_id','subject_id','cv','porfolio','status'
     ];
     public function subject($value='')
     {
