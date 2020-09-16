@@ -20,7 +20,7 @@ Route::get('blogdetail','PageController@blogdetailfun')->name('blogdetailpage');
 Route::get('contact','PageController@contactfun')->name('contactpage');
 
 Route::get('loginpage','PageController@loginfun')->name('loginpage');
-Route::get('teacherregister','PageController@teacherregisterfun')->name('teacherregisterpage');
+//Route::get('teacherregister','PageController@teacherregisterfun')->name('teacherregisterpage');
 Route::get('freecourse','PageController@freecoursefun')->name('freecoursepage');
 
 Route::resource('tregister','TeacherRegisterController');
@@ -30,10 +30,12 @@ Route::get('report','BackendController@reportfun')->name('reportpage');
 Route::middleware('role:Admin')->group(function ()
 {
 	Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
+
 	Route::resource('subject_teachers','SubjectTeacherController');
 	Route::get('teacherlist','BackendController@teacherlistfun')->name('teacherlist');
 	Route::get('accept/{id}','BackendController@accept')->name('accept');
 	Route::get('teacherreq','BackendController@teacherreqfun')->name('teacherreq');
+
 	Route::resource('subjects','SubjectController');
 	Route::resource('students','StudentController');
 	Route::resource('teach','TeacherController');
