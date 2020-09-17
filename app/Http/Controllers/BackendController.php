@@ -21,8 +21,10 @@ class BackendController extends Controller
 	}
 	public function teacherreqfun(){
 		$teachers=Teacher::where('status',1)->get();
+         $subjects = Subject::all();
 		
-		return view('Backend.teacher',compact('teachers'));
+		
+		return view('Backend.teacher',compact('teachers',compact('subjects')));
 	}
 	public function teacherlistfun(){
 		$teacherlists=Teacher::where('status',0)->get();

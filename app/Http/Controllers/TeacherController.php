@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Teacher;
+use App\Subject;
+
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
