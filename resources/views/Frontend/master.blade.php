@@ -94,7 +94,6 @@
                         {{$subject->name}}
                       <i class="icofont-rounded-right float-right"></i></a>
                     </li>
-                @endforeach 
 
 
                     {{-- <li class="nav-item">
