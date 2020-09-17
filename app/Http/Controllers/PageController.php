@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Teacher;
+use App\User;
 use Auth;
 
 class PageController extends Controller
@@ -12,8 +12,9 @@ class PageController extends Controller
     public function teachersfun()
     {   
     	$id=Auth::user()->id;
-    	$teachers=Teacher::find($id);
-    	return view('Frontend.teachers.teacher',compact('teachers'));
+    	$user=User::find($id);
+    	//dd($users);
+    	return view('Frontend.teachers.teacher',compact('user'));
     }
      public function teacherfun($value='')
     {

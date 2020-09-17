@@ -10,27 +10,37 @@
 
           <div class="col-lg-5 col-md-6">
             <div class="about-img" data-aos="fade-right" data-aos-delay="100">
-              <img src="{{asset('frontend/teacher/assets/img/about-img.jpg')}}" alt="">
+              <img src="{{$user->profile}}"  alt="">
             </div>
           </div>
 
           <div class="col-lg-7 col-md-6">
             <div class="about-content" data-aos="fade-left" data-aos-delay="100">
-              <h2>About Us</h2><p>
-                
-
-                
-                {{$teachers->user->name}}
-              
+              <h2>About Me</h2>
+              <p><span style="font-family: bold;">NAME:</span>
+                <span style="color: gold;">{{$user->name}}</span>
               </p>
-              <h3>Odio sed id eos et laboriosam consequatur eos earum soluta.</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p>Aut dolor id. Sint aliquam consequatur ex ex labore. Et quis qui dolor nulla dolores neque. Aspernatur consectetur omnis numquam quaerat. Sed fugiat nisi. Officiis veniam molestiae. Et vel ut quidem alias veritatis repudiandae ut fugit. Est ut eligendi aspernatur nulla voluptates veniam iusto vel quisquam. Fugit ut maxime incidunt accusantium totam repellendus eum error. Et repudiandae eum iste qui et ut ab alias.</p>
-              <ul>
-                <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="ion-android-checkmark-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-              </ul>
+              <p><span style="font-family: bold;">EMAIL:</span>
+                <a><span style="color: gold;">{{$user->email}}</span>
+              </p>
+              <p><span style="font-family: bold;">PHONE:</span>
+                <span style="color: gold;">{{$user->phone}}</span>
+              </p>
+              <p><span style="font-family: bold;">DOB:</span>
+                <span style="color: gold;">{{$user->teacher->dob}}</span>
+              </p>
+              <p><span style="font-family: bold;">ADDRESS:</span>
+                <span style="color: gold;">{{$user->address}}</span>
+              </p>
+              <p><span style="font-family: bold;">CV:</span>
+                <span style="color: gold;">{{$user->teacher->cv}}</span>
+              </p>
+              <p><span style="font-family: bold;">PORFOLIO:</span>
+                <span style="color: gold;">{{$user->teacher->porfolio}}</span>
+              </p>
+              <p><span style="font-family: bold;">SUBJECT:</span>
+                <span style="color: gold;">{{$user->teacher->subject->name}}</span>
+              </p>
             </div>
           </div>
         </div>
@@ -38,8 +48,127 @@
 
     </section><!-- End About Section -->
 
+
+
+
+<div class="container-fluid">
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0" > Student  Lists</h1>
+  </div>
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <table class="table table-bordered">
+          <thead class="table-info" >
+            <tr>
+              <th>No</th>
+              <th>Profile</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{-- @php $i=1; @endphp --}}
+           {{--  @foreach ($teacherlists as $teacherlist) --}}
+            <tr>
+            
+              <td>{{-- {{$i++}} --}}</td>
+              <td>{{-- <img src="{{$teacherlist->user->profile}}" width="150px" height="150px"> --}}</td>
+              <td>{{-- {{$teacherlist->user->name}} --}}</td>
+              <td>{{-- {{$teacherlist->user->email}} --}}</td>
+              <td>{{-- {{$teacherlist->user->phone}} --}}</td>
+              <td>{{-- {{$teacherlist->user->address}} --}}</td>
+              <td> 
+               {{--  <form action="{{route('teacher.destroy',$teacherlist->id)}}" method="POST" class="d-inline-block"><br>
+                  @csrf
+                  @method('DELETE') --}}
+                  <input type="submit" class="btn btn-danger  mt-2" value="Delete">
+                {{-- </form> --}}
+
+
+                </td>
+            </tr>
+           {{--  @endforeach 
+ --}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+   <div class="container-fluid">
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800" > Student Request Lists</h1>
+  </div>
+  <div class="container-fluid">
+
+    
+
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <table class="table table-bordered">
+          <thead class="table-info" >
+            <tr>
+              <th>No</th>
+              <th>Profile</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+          {{--   @php $i=1; @endphp --}}
+           {{--  @foreach ($teachers as $teacher) --}}
+            <tr>
+            
+              <td>{{-- {{$i++}} --}}</td>
+              <td>{{-- <img src="{{$teacher->user->profile}}" width="150px" height="150px"> --}}</td>
+              <td>{{-- {{$teacher->user->name}} --}}</td>
+              <td>{{-- {{$teacher->user->email}} --}}</td>
+              <td>{{-- {{$teacher->user->phone}} --}}</td>
+              <td>{{-- {{$teacher->user->address}} --}}</td>
+              <td>{{-- <a href="{{route('items.show',$item->id)}}" class="btn btn-info mx-2 mb-3">Detail</a> --}}
+                <a href="{{-- {{route('accept',$teacher->id)}} --}}" class="btn btn-info mx-2 mb-3">Accept</a>
+                
+               {{--  <form action="{{route('teacher.destroy',$teacher->id)}}" method="POST" class="d-inline-block"><br>
+                  @csrf
+                  @method('DELETE')
+                  <input type="submit" class="btn btn-danger  mt-2" value="Delete">
+                </form> --}}
+
+
+                </td>
+            </tr>
+            {{-- @endforeach --}}
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    {{-- <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
@@ -96,11 +225,11 @@
 
       </div>
 
-      </div>
-    </section><!-- End Services Section -->
+      </div> --}}
+    {{-- </section> --}}<!-- End Services Section -->
 
     <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
+    {{-- <section id="why-us" class="why-us">
       <div class="container-fluid" data-aos="fade-up">
 
         <header class="section-header">
@@ -178,10 +307,10 @@
         </div>
 
       </div>
-    </section><!-- End Why Us Section -->
+    </section> --}}<!-- End Why Us Section -->
 
     <!-- ======= Call To Action Section ======= -->
-    <section id="call-to-action" class="call-to-action">
+    {{-- <section id="call-to-action" class="call-to-action">
       <div class="container" data-aos="zoom-out">
         <div class="row">
           <div class="col-lg-9 text-center text-lg-left">
@@ -194,10 +323,10 @@
         </div>
 
       </div>
-    </section><!--  End Call To Action Section -->
+    </section> --}}<!--  End Call To Action Section -->
 
     <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
+    {{-- <section id="features" class="features">
       <div class="container" data-aos="fade-up">
 
         <div class="row feature-item">
@@ -236,9 +365,9 @@
         </div>
 
       </div>
-    </section><!-- End Features Section -->
+    </section><! End Features Section >
 
-    <!-- ======= Portfolio Section ======= -->
+    <! ======= Portfolio Section ======= >
     <section id="portfolio" class="portfolio section-bg">
       <div class="container" data-aos="fade-up">
 
@@ -388,10 +517,10 @@
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section> --}}<!-- End Portfolio Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
+    {{-- <section id="testimonials" class="testimonials">
       <div class="container" data-aos="zoom-in">
 
         <header class="section-header">
@@ -445,10 +574,10 @@
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section> --}}<!-- End Testimonials Section -->
 
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
+    {{-- <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h3>Team</h3>
@@ -532,10 +661,10 @@
         </div>
 
       </div>
-    </section><!-- End Team Section -->
+    </section> --}}<!-- End Team Section -->
 
     <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
+    {{-- <section id="clients" class="clients">
       <div class="container" data-aos="zoom-in">
 
         <header class="section-header">
@@ -554,9 +683,9 @@
         </div>
 
       </div>
-    </section><!-- End Clients Section -->
+    </section><! End Clients Section >
 
-    <!-- ======= Pricing Section ======= -->
+    <! ======= Pricing Section ======= >
     <section id="pricing" class="pricing section-bg wow fadeInUp">
 
       <div class="container" data-aos="fade-up">
@@ -568,7 +697,7 @@
 
         <div class="row flex-items-xs-middle flex-items-xs-center">
 
-          <!-- Basic Plan  -->
+          <!Basic Plan  >
           <div class="col-xs-12 col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="card">
               <div class="card-header">
@@ -589,7 +718,7 @@
             </div>
           </div>
 
-          <!-- Regular Plan  -->
+          <! Regular Plan  >
           <div class="col-xs-12 col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="card">
               <div class="card-header">
@@ -610,7 +739,7 @@
             </div>
           </div>
 
-          <!-- Premium Plan  -->
+          <! Premium Plan  >
           <div class="col-xs-12 col-lg-4" data-aos="fade-up" data-aos-delay="300">
             <div class="card">
               <div class="card-header">
@@ -634,10 +763,10 @@
         </div>
       </div>
 
-    </section><!-- End Pricing Section -->
+    </section> --}}<!-- End Pricing Section -->
 
     <!-- ======= F.A.Q Section ======= -->
-    <section id="faq" class="faq">
+   {{--  <section id="faq" class="faq">
       <div class="container" data-aos="fade-up">
         <header class="section-header">
           <h3>Frequently Asked Questions</h3>
@@ -702,7 +831,7 @@
         </ul>
 
       </div>
-    </section><!-- End F.A.Q Section -->
+    </section> --}}<!-- End F.A.Q Section -->
 
   </main>
   @endsection
