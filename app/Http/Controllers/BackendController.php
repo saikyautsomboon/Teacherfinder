@@ -22,6 +22,7 @@ class BackendController extends Controller
 	}
 	public function teacherlistfun(){
 		$teacherlists=Teacher::where('status',0)->get();
+		// dd($teacherlists);
 		return view('Backend.teacherlist',compact('teacherlists'));
 	}
 	public function teacherdetailfun(){

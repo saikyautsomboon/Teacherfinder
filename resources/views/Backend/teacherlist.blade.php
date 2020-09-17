@@ -18,6 +18,7 @@
               <th>Name</th>
               <th>Email</th>
               <th>CV</th>
+              <th>Subject</th>
               <th>Portfolio</th>
               <th>Phone</th>
               <th>Address</th>
@@ -33,7 +34,10 @@
               <td><img src="{{$teacherlist->user->profile}}" width="150px" height="150px"></td>
               <td>{{$teacherlist->user->name}}</td>
               <td>{{$teacherlist->user->email}}</td>
-              <td>{{$teacherlist->cv}}</td> 
+              <td>{{$teacherlist->cv}}</td>
+              <td>
+                {{$teacherlist->subject->name}}
+              </td>
               <td><a href="{{$teacherlist->porfolio}}" target="_blank">{{$teacherlist->porfolio}}</a></td>
               <td>{{$teacherlist->user->phone}}</td>
               <td>{{$teacherlist->user->address}}</td>
