@@ -17,10 +17,7 @@ class TeacherController extends Controller
 
         $teachers = Teacher::all();
         $teacherlists=Teacher::where('status',0)->get();
-        
         //dd($teachers);
-
-
         return view('Backend.teacher',compact('teachers','teacherlists'));
 
     }

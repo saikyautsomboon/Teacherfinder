@@ -211,81 +211,212 @@
     </div>
     <!--================ End Popular Courses Area =================-->
 
-    <!--================ Start Registration Area =================-->
-    <div class="section_gap registration_area">
+
+     <!--================ Start Popular Courses Area =================-->
+    <div class="popular_courses">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-7">
-            <div class="row clock_sec clockdiv" id="clockdiv">
-              <div class="col-lg-12">
-                <h1 class="mb-3">Register Now</h1>
-                <p>
-                  There is a moment in the life of any aspiring astronomer that
-                  it is time to buy that first telescope. It’s exciting to think
-                  about setting up your own viewing station.
-                </p>
-              </div>
-              <div class="col clockinner1 clockinner">
-                <h1 class="days">150</h1>
-                <span class="smalltext">Days</span>
-              </div>
-              <div class="col clockinner clockinner1">
-                <h1 class="hours">23</h1>
-                <span class="smalltext">Hours</span>
-              </div>
-              <div class="col clockinner clockinner1">
-                <h1 class="minutes">47</h1>
-                <span class="smalltext">Mins</span>
-              </div>
-              <div class="col clockinner clockinner1">
-                <h1 class="seconds">59</h1>
-                <span class="smalltext">Secs</span>
-              </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <div class="main_title">
+              <h2 class="mb-3">Our Free Courses</h2>
+              <p>
+                Many Free courses for you!
+              </p>
             </div>
           </div>
-          <div class="col-lg-4 offset-lg-1">
-            <div class="register_form">
-              <h3>Courses for Free</h3>
-              <p>It is high time for learning</p>
-              <form
-                class="form_area"
-                id="myForm"
-                action="mail.html"
-                method="post"
-              >
-                <div class="row">
-                  <div class="col-lg-12 form_group">
-                    <input
-                      name="name"
-                      placeholder="Your Name"
-                      required=""
-                      type="text"
-                    />
-                    <input
-                      name="name"
-                      placeholder="Your Phone Number"
-                      required=""
-                      type="tel"
-                    />
-                    <input
-                      name="email"
-                      placeholder="Your Email Address"
-                      pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
-                      required=""
-                      type="email"
-                    />
-                  </div>
-                  <div class="col-lg-12 text-center">
-                    <button class="primary-btn">Submit</button>
+        </div>
+        <div class="row">
+          <!-- single course -->
+          <div class="col-lg-12">
+            <div class="owl-carousel active_course">
+              <div class="single_course">
+                <div class="course_head">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/hBh_CC5y8-s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="course_content">
+                  <span class="price">$Free</span>
+                  <span class="tag mb-4 d-inline-block">JAVA</span>
+                  <div
+                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                  >
+                    <div class="authr_meta">
+                      <img src="{{asset('frontend/img/courses/author1.png')}}" alt="" />
+                      <span class="d-inline-block ml-2">Cameron</span>
+                    </div>
+                    <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                      <span class="meta_info"
+                        ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                      >
+                    </div>
                   </div>
                 </div>
-              </form>
+              </div>
+
+              <div class="single_course">
+                <div class="course_head">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/ImtZ5yENzgE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="course_content">
+                  <span class="price">$Free</span>
+                  <span class="tag mb-4 d-inline-block">LARAVEL</span>
+                  <div
+                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                  >
+                    <div class="authr_meta">
+                      <img src="{{asset('frontend/img/courses/author2.png')}}" alt="" />
+                      <span class="d-inline-block ml-2">Cameron</span>
+                    </div>
+                    <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                      <span class="meta_info"
+                        ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="single_course">
+                <div class="course_head">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/hx38tnlYGlA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="course_content">
+                  <span class="price">$Free</span>
+                  <span class="tag mb-4 d-inline-block">PHP</span>
+                  <div
+                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                  >
+                    <div class="authr_meta">
+                      <img src="{{asset('frontend/img/courses/author3.png')}}" alt="" />
+                      <span class="d-inline-block ml-2">Cameron</span>
+                    </div>
+                    <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                      <span class="meta_info"
+                        ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="single_course">
+                <div class="course_head">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/rfscVS0vtbw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="course_content">
+                  <span class="price">$Free</span>
+                  <span class="tag mb-4 d-inline-block">PYTHON</span>
+                  <div
+                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                  >
+                    <div class="authr_meta">
+                      <img src="{{asset('frontend/img/courses/author3.png')}}" alt="" />
+                      <span class="d-inline-block ml-2">Cameron</span>
+                    </div>
+                    <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                      <span class="meta_info"
+                        ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!--================ End Registration Area =================-->
+    <!--================ End Popular Courses Area =================-->
+
+    <!--================ Start Events Area =================-->
+    <div class="events_area">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <div class="main_title">
+              <h2 class="mb-3 text-white">Upcoming Events</h2>
+              <p>
+                Replenish man have thing gathering lights yielding shall you
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="single_event position-relative">
+              <div class="event_thumb">
+                <img src="{{asset('frontend/img/event/e1.jpg')}}" alt="" />
+              </div>
+              <div class="event_details">
+                <div class="d-flex mb-4">
+                  <div class="date"><span>15</span> Jun</div>
+
+                  <div class="time-location">
+                    <p>
+                      <span class="ti-time mr-2"></span> 12:00 AM - 12:30 AM
+                    </p>
+                    <p>
+                      <span class="ti-location-pin mr-2"></span> Hilton Quebec
+                    </p>
+                  </div>
+                </div>
+                <p>
+                  One make creepeth man for so bearing their firmament won't
+                  fowl meat over seas great
+                </p>
+                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="single_event position-relative">
+              <div class="event_thumb">
+                <img src="{{asset('frontend/img/event/e2.jpg')}}" alt="" />
+              </div>
+              <div class="event_details">
+                <div class="d-flex mb-4">
+                  <div class="date"><span>15</span> Jun</div>
+
+                  <div class="time-location">
+                    <p>
+                      <span class="ti-time mr-2"></span> 12:00 AM - 12:30 AM
+                    </p>
+                    <p>
+                      <span class="ti-location-pin mr-2"></span> Hilton Quebec
+                    </p>
+                  </div>
+                </div>
+                <p>
+                  One make creepeth man for so bearing their firmament won't
+                  fowl meat over seas great
+                </p>
+                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="text-center pt-lg-5 pt-3">
+              <a href="#" class="event-link">
+                View All Event <img src="{{asset('frontend/img/next.png')}}" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--================ End Events Area =================-->
 
     <!--================ Start Trainers Area =================-->
     <section class="trainer_area section_gap_top">
@@ -393,208 +524,5 @@
     </section>
     <!--================ End Trainers Area =================-->
 
-    <!--================ Start Events Area =================-->
-    <div class="events_area">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-5">
-            <div class="main_title">
-              <h2 class="mb-3 text-white">Upcoming Events</h2>
-              <p>
-                Replenish man have thing gathering lights yielding shall you
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <div class="single_event position-relative">
-              <div class="event_thumb">
-                <img src="{{asset('frontend/img/event/e1.jpg')}}" alt="" />
-              </div>
-              <div class="event_details">
-                <div class="d-flex mb-4">
-                  <div class="date"><span>15</span> Jun</div>
-
-                  <div class="time-location">
-                    <p>
-                      <span class="ti-time mr-2"></span> 12:00 AM - 12:30 AM
-                    </p>
-                    <p>
-                      <span class="ti-location-pin mr-2"></span> Hilton Quebec
-                    </p>
-                  </div>
-                </div>
-                <p>
-                  One make creepeth man for so bearing their firmament won't
-                  fowl meat over seas great
-                </p>
-                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <div class="single_event position-relative">
-              <div class="event_thumb">
-                <img src="{{asset('frontend/img/event/e2.jpg')}}" alt="" />
-              </div>
-              <div class="event_details">
-                <div class="d-flex mb-4">
-                  <div class="date"><span>15</span> Jun</div>
-
-                  <div class="time-location">
-                    <p>
-                      <span class="ti-time mr-2"></span> 12:00 AM - 12:30 AM
-                    </p>
-                    <p>
-                      <span class="ti-location-pin mr-2"></span> Hilton Quebec
-                    </p>
-                  </div>
-                </div>
-                <p>
-                  One make creepeth man for so bearing their firmament won't
-                  fowl meat over seas great
-                </p>
-                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-12">
-            <div class="text-center pt-lg-5 pt-3">
-              <a href="#" class="event-link">
-                View All Event <img src="{{asset('frontend/img/next.png')}}" alt="" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--================ End Events Area =================-->
-
-    <!--================ Start Testimonial Area =================-->
-    <div class="testimonial_area section_gap">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-5">
-            <div class="main_title">
-              <h2 class="mb-3">Client say about me</h2>
-              <p>
-                Replenish man have thing gathering lights yielding shall you
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="testi_slider owl-carousel">
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="{{asset('frontend/img/testimonials/t1.jpg')}}" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>Elite Martin</h4>
-                    <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="{{asset('frontend/img/testimonials/t2.jpg')}}" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>Davil Saden</h4>
-                    <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="{{asset('frontend/img/testimonials/t1.jpg')}}" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>Elite Martin</h4>
-                    <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="{{asset('frontend/img/testimonials/t2.jpg')}}" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>Davil Saden</h4>
-                    <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="{{asset('frontend/img/testimonials/t1.jpg')}}" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>Elite Martin</h4>
-                    <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="{{asset('frontend/img/testimonials/t2.jpg')}}" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>Davil Saden</h4>
-                    <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--================ End Testimonial Area =================-->
-
-
+   
 @endsection
