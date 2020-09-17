@@ -79,8 +79,20 @@
             {{ \App\Teacher::where('status',1)->count() }}
           </a>
          </li>
-        <li class="@if(\Route::current()->uri == 'students'){{'active'}}@endif"><a href="{{route('students.index')}}"><span>Students</span>  
-          {{ \App\User::all()->count() }}
+        <li class="@if(\Route::current()->uri == 'students'){{'active'}}@endif"><a href="{{route('students.index')}}"><span>Students</span> 
+          @php 
+
+          $users=\App\User::all();
+          $userList=array();
+          foreach($users as $user){
+            if ($user->hasRole('User')){
+              $userList[] = $user;
+            }
+          }
+          $user_count=count($userList);
+          @endphp
+
+            {{$user_count}}
           </a>
         </li>
         <li class="@if(\Route::current()->uri == 'subjects'){{'active'}}@endif"><a href="{{route('subjects.index')}}"><span>Subject</span>
