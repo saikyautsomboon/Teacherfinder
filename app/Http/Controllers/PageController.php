@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Subject;
 
 class PageController extends Controller
 {
@@ -22,8 +23,12 @@ class PageController extends Controller
 
     public function mainfun($value='')
 	{
-		return view('Frontend.main');
+    $subjects = Subject::all();
+
+		return view('Frontend.main',compact('subjects'));
 	}
+
+	 
 
 
 	 public function blogfun($value='')
@@ -38,42 +43,58 @@ class PageController extends Controller
 
 	public function contactfun($value='')
 	{
-		return view('Frontend.contact');
+    $subjects = Subject::all();
+
+		return view('Frontend.contact',compact('subjects'));
 	}
 
 	public function registerfun($value='')
 	{
-		return view('Frontend.register');
+    $subjects = Subject::all();
+
+		return view('Frontend.register',compact('subjects'));
 	}
 
 
 	public function loginfun($value='')
 	{
-		return view('Frontend.login');
+    $subjects = Subject::all();
+
+		return view('Frontend.login',compact('subjects'));
 	}
 
 	
 
 	public function freecoursefun($value='')
 	{
-		return view('Frontend.freecourse');
+    $subjects = Subject::all();
+
+		return view('Frontend.freecourse',compact('subjects'));
 	}
 
 	public function aboutfun($value='')
 	{
-		return view('Frontend.about');
+    $subjects = Subject::all();
+
+		return view('Frontend.about',compact('subjects'));
 	}
 	public function coursesfun($value='')
 	{
-		return view('Frontend.courses');
+    $subjects = Subject::all();
+
+		return view('Frontend.courses',compact('subjects'));
 	}
 	public function coursedetailsfun($value='')
 	{
-		return view('Frontend.coursedetails');
+    $subjects = Subject::all();
+
+		return view('Frontend.coursedetails',compact('subjects'));
 	}
 	public function elementsfun($value='')
 	{
-		return view('Frontend.elements');
+    $subjects = Subject::all();
+		
+		return view('Frontend.elements',compact('subjects'));
 	}
 
 }

@@ -9,11 +9,11 @@
           <div class="row justify-content-center">
             <div class="col-lg-6">
               <div class="banner_content text-center">
-                <h2>Course Details</h2>
+                <h2>Subject Details</h2>
                 <div class="page_link">
                   <a href="{{route('mainpage')}}">Home</a>
                   <a href="{{route('coursespage')}}">Courses</a>
-                  <a href="{{route('coursedetailspage')}}">Courses Details</a>
+                  <a href="{{route('coursedetailspage')}}">Subjects Details</a>
                 </div>
               </div>
             </div>

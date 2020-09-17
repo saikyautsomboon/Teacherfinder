@@ -87,17 +87,24 @@
                     >SUBJECT</a
                   >
                   <ul class="dropdown-menu">
+                @foreach($subjects as $subject)
+                    
                     <li class="nav-item">
-                      <a class="nav-link" href="{{route('coursespage')}}">IT</a>
+                      <a class="nav-link" href="{{route('coursedetailspage')}}">
+                        {{$subject->name}}
+                      <i class="icofont-rounded-right float-right"></i></a>
                     </li>
-                    <li class="nav-item">
+                @endforeach
+
+
+                    {{-- <li class="nav-item">
                       <a class="nav-link" href="{{route('coursedetailspage')}}"
                         >HISTORY</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="{{route('elementspage')}}">BUSINESS</a>
-                    </li>
+                      <a class="nav-link" href="{{route('coursedetailspage')}}">BUSINESS</a>
+                    </li> --}}
                   </ul>
                 </li>
                
