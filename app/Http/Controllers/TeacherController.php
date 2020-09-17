@@ -17,11 +17,12 @@ class TeacherController extends Controller
 
         $teachers = Teacher::all();
         $teacherlists=Teacher::where('status',0)->get();
+        $teacherdetails=Teacher::where('status',0)->get();
         
         //dd($teachers);
 
 
-        return view('Backend.teacher',compact('teachers','teacherlists'));
+        return view('Backend.teacher',compact('teachers','teacherlists','teacherdetails'));
 
         // return view('Backend.teacher',compact('teachers'));
 

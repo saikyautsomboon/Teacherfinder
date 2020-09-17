@@ -55,7 +55,7 @@ Route::middleware('role:Admin')->group(function ()
 
 Route::middleware('role:Teacher')->group(function ()
 {   
-	Route::get('teacherdetail','BackendController@teacherlistfun')->name('teacherdetail');
+	Route::get('teacherdetail','BackendController@teacherdetailfun')->name('teacherdetail');
 
 });
 
