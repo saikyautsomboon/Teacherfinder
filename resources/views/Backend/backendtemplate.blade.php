@@ -71,10 +71,10 @@
   <div class="subnavbar-inner">
     <div class="container">
       <ul class="mainnav">
-        <li class="active"><a href="{{route('teacherreq')}}"><span>Teacher</span> </a> </li>
-        <li><a href="{{route('students.index')}}"><span>Students</span> </a> </li>
-        <li><a href="{{route('subjects.index')}}"><span>Subject</span> </a></li>
-        
+        <li class="@if(\Route::current()->uri == 'teacherlist'){{'active'}}@endif"><a href="{{route('teacherlist')}}"><span>Teacher</span> </a> </li>
+        <li class="@if(\Route::current()->uri == 'teacherreq'){{'active'}}@endif"><a href="{{route('teacherreq')}}"><span>Teacher Request</span> </a> </li>
+        <li class="@if(\Route::current()->uri == 'students'){{'active'}}@endif"><a href="{{route('students.index')}}"><span>Students</span> </a> </li>
+        <li class="@if(\Route::current()->uri == 'subjects'){{'active'}}@endif"><a href="{{route('subjects.index')}}"><span>Subject</span> </a></li>
       </ul>
     </div>
     <!-- /container --> 

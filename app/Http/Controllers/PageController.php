@@ -3,14 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use App\Subject;
+=======
+use App\Teacher;
+use Auth;
+>>>>>>> 89dc38207ffe461f46c6b1ff04530ba57d0dabea
 
 class PageController extends Controller
 {
 
-    public function teachersfun($value='')
-    {
-    	return view('Frontend.teachers.teacher');
+    public function teachersfun()
+    {   
+    	$id=Auth::user()->id;
+    	$teachers=Teacher::find($id);
+    	return view('Frontend.teachers.teacher',compact('teachers'));
     }
      public function teacherfun($value='')
     {

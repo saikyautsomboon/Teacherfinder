@@ -9,10 +9,7 @@ class Subject extends Model
     protected $fillable = [
         'name','description',
     ];
-    public function teacher($value='')
-    {
-    	return $this->belongsTo('App\Teacher');
-    }
+    
     public function subjectjoin($value='')
 	{
 	    return $this->hasMany('App\subjectjoin');
