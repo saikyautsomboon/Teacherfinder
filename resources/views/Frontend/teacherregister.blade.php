@@ -75,13 +75,13 @@
                     </div>
 
                    {{-- <div class="form-row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
-                              <label class="small mb-1" for="inputPassword">Experience Year</label>
-                              <input class="form-control py-4 @error('experience') is-invalid @enderror" name="experience" id="experience" type="number"  />
+                              <label class="small mb-1" for="inputPassword">Enter Your Message To be a Teacher</label>
+                              <input class="form-control py-4 @error('request') is-invalid @enderror" name="request" id="request" type="text" placeholder="Enter Feedback" />
                               <font id="error" color="red"></font>
 
-                              @error('experience')
+                              @error('request')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

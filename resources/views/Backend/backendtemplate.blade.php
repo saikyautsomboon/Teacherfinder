@@ -23,7 +23,7 @@
   <div class="navbar-inner">
     <div class="container"> 
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
-                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="index.html">{{Auth::user()->name}} </a>
+                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="{{route('dashboardpage')}}">{{Auth::user()->name}} </a>
                 <div class="nav-collapse">
                   <ul class="nav pull-right">
                     <li class="dropdown">
@@ -71,10 +71,21 @@
   <div class="subnavbar-inner">
     <div class="container">
       <ul class="mainnav">
-        <li class="@if(\Route::current()->uri == 'teacherlist'){{'active'}}@endif"><a href="{{route('teacherlist')}}"><span>Teacher</span> </a> </li>
-        <li class="@if(\Route::current()->uri == 'teacherreq'){{'active'}}@endif"><a href="{{route('teacherreq')}}"><span>Teacher Request</span> </a> </li>
-        <li class="@if(\Route::current()->uri == 'students'){{'active'}}@endif"><a href="{{route('students.index')}}"><span>Students</span> </a> </li>
-        <li class="@if(\Route::current()->uri == 'subjects'){{'active'}}@endif"><a href="{{route('subjects.index')}}"><span>Subject</span> </a></li>
+        <li class="@if(\Route::current()->uri == 'teacherlist'){{'active'}}@endif"><a href="{{route('teacherlist')}}"><span>Teacher</span>
+            {{ \App\Teacher::where('status',0)->count() }}
+          </a>
+        </li>
+        <li class="@if(\Route::current()->uri == 'teacherreq'){{'active'}}@endif"><a href="{{route('teacherreq')}}"><span>Teacher Request</span> 
+            {{ \App\Teacher::where('status',1)->count() }}
+          </a>
+         </li>
+        <li class="@if(\Route::current()->uri == 'students'){{'active'}}@endif"><a href="{{route('students.index')}}"><span>Students</span>  
+          {{ \App\User::all()->count() }}
+          </a>
+        </li>
+        <li class="@if(\Route::current()->uri == 'subjects'){{'active'}}@endif"><a href="{{route('subjects.index')}}"><span>Subject</span>
+            {{ \App\Subject::all()->count() }}
+         </a></li>
       </ul>
     </div>
     <!-- /container --> 

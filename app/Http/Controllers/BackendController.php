@@ -10,7 +10,10 @@ class BackendController extends Controller
 {
 	public function dashboardfun($value='')
 	{
-		return view('Backend.dashboard');
+		$teacherlists=Teacher::where('status',0)->get();
+		$teachers=Teacher::where('status',1)->get();
+		$required='Want to be Teacher';
+		return view('Backend.dashboard',compact('teachers','required','teacherlists'));
 	}
 	public function reportfun($value='')
 	{
@@ -18,6 +21,7 @@ class BackendController extends Controller
 	}
 	public function teacherreqfun(){
 		$teachers=Teacher::where('status',1)->get();
+		
 		return view('Backend.teacher',compact('teachers'));
 	}
 	public function teacherlistfun(){
