@@ -18,5 +18,9 @@ class Subject extends Model
     {
     	return $this->hasMany('App\Subject_Teacher');
     }
+     public function user($value='')
+    {
+        return $this->belongsTo('App\User');
+    }
     
 }
