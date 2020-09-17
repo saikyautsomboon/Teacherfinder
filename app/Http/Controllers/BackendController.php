@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Teacher;
 use App\User;
+use App\Subject;
 
 class BackendController extends Controller
 {
@@ -22,7 +23,7 @@ class BackendController extends Controller
 	public function teacherreqfun(){
 		$teachers=Teacher::where('status',1)->get();
          $subjects = Subject::all();
-		
+
 		
 		return view('Backend.teacher',compact('teachers',compact('subjects')));
 	}
