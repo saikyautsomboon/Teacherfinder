@@ -95,6 +95,8 @@
                       <i class="icofont-rounded-right float-right"></i></a>
                     </li>
 
+                
+
 
                     {{-- <li class="nav-item">
                       <a class="nav-link" href="{{route('coursedetailspage')}}"
