@@ -3,12 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 use App\Subject;
-=======
 use App\Teacher;
 use Auth;
->>>>>>> 89dc38207ffe461f46c6b1ff04530ba57d0dabea
 
 class PageController extends Controller
 {

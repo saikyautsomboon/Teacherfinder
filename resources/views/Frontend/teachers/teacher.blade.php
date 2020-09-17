@@ -35,6 +35,7 @@
           </div>
         </div>
       </div>
+      <a href="{{route('subject_teachers.index')}}" class="btn btn-info float-right">Add New</a>
 
     </section><!-- End About Section -->
 

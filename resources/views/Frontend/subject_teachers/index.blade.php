@@ -1,4 +1,4 @@
-@extends('Backend.backendtemplate')
+@extends('Frontend.teachers.master')
 
 @section('content')
 	<div class="container">
@@ -6,7 +6,7 @@
   	<div class="row">
   		<div class="col-md-12 mb-3">
     		<h1 class="h3 mb-0 text-gray-800 d-inline-block">Subjects List With Teacher</h1>
-            {{-- <a href="{{route('subject_teachers.create')}}" class="btn btn-info float-right">Add New</a> --}}
+            <a href="{{route('subject_teachers.create')}}" class="btn btn-info float-right">Add New</a>
     		
   		</div>
   	</div>

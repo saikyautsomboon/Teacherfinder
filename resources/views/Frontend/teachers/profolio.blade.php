@@ -180,7 +180,7 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200"">
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
         <div class=" box">
             <div class="icon" style="background: #e1eeff;"><i class="ion-ios-world-outline" style="color: #2282ff;"></i></div>
             <h4 class="title"><a href="">Nemo Enim</a></h4>

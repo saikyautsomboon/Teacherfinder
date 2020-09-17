@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Subject_Teacher;
+use App\Subject;
 use Illuminate\Http\Request;
 
 class SubjectTeacherController extends Controller
@@ -16,7 +17,7 @@ class SubjectTeacherController extends Controller
     {
         $subject_teachers = Subject_Teacher::all();
         // dd($subject_teachers);
-        return view('Backend.subject_teachers.index',compact('subject_teachers'));
+        return view('Frontend.subject_teachers.index',compact('subject_teachers'));
     }
 
     /**
@@ -26,7 +27,10 @@ class SubjectTeacherController extends Controller
      */
     public function create()
     {
-         return view('Backend.subject_teachers.create');
+         $subjects = Subject::all();
+
+
+         return view('Frontend.subject_teachers.create',compact('subjects'));
         
     }
 
@@ -81,7 +85,7 @@ class SubjectTeacherController extends Controller
      */
     public function edit(Subject_Teacher $subject_Teacher)
     {
-        return view('Backend.subject_teachers.edit',compact('subject_Teacher'));
+        return view('Frontend.subject_teachers.edit',compact('subject_Teacher'));
     }
 
     /**
