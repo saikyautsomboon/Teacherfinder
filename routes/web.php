@@ -31,6 +31,7 @@ Route::get('report','BackendController@reportfun')->name('reportpage');
 Route::middleware('role:Admin')->group(function ()
 {
 	Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
+	Route::resource('subject_teachers','SubjectTeacherController');
 
 	Route::get('accept/{id}','BackendController@accept')->name('accept');
 	Route::get('teacherreq','BackendController@teacherreqfun')->name('teacherreq');
@@ -53,8 +54,6 @@ Route::middleware('role:Admin')->group(function ()
 Route::middleware('role:Teacher')->group(function ()
 {   
 	Route::get('teacherdetail','BackendController@teacherdetailfun')->name('teacherdetail');
-	Route::resource('subject_teachers','SubjectTeacherController');
-	
 
 });
 

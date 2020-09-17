@@ -15,15 +15,14 @@ class StudentController extends Controller
      */
     public function index()
     {   
-        $users = User::all();
-      $userList = array();
-      foreach ($users as $user){
+        $users =User::all();
+      $userList=array();
+      foreach($users as $user){
         if ($user->hasRole('User')){
             $userList[] = $user;
         }
       }
-      //dd($userList);
-
+      // dd($userList);
          return view('Backend.student',compact('userList'));
     }
 

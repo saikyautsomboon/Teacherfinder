@@ -87,14 +87,14 @@
                     >SUBJECT</a
                   >
                   <ul class="dropdown-menu">
-               {{--  @foreach($subjects as $subject)
+                @foreach($subjects as $subject)
                     
                     <li class="nav-item">
                       <a class="nav-link" href="{{route('coursedetailspage')}}">
                         {{$subject->name}}
                       <i class="icofont-rounded-right float-right"></i></a>
                     </li>
-                @endforeach --}}
+                @endforeach
 
 
                     {{-- <li class="nav-item">
