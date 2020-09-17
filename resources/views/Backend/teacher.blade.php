@@ -37,6 +37,9 @@
               <td>{{$teacher->user->email}}</td>
               <td>{{$teacher->cv}}</td> 
               <td><a href="{{$teacher->porfolio}}" target="_blank">{{$teacher->porfolio}}</a></td>
+
+              <td>{{$teacher->subject->name}}</td>
+
               <td>{{$teacher->user->phone}}</td>
               <td>{{$teacher->user->address}}</td>
               <td>{{-- <a href="{{route('items.show',$item->id)}}" class="btn btn-info mx-2 mb-3">Detail</a> --}}

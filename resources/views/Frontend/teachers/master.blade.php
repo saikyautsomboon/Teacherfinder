@@ -68,7 +68,7 @@
                                     {{ Auth::user()->name }}
 
                                 </a>
-                                <img class="img-profile rounded-circle ml-3" src="{{Auth::user()->profile}}" width="40" height="40">
+                                <img class="img-profile rounded-circle ml-3" src="{{asset(Auth::user()->profile)}}" width="40" height="40">
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
@@ -153,11 +153,13 @@
                 <div class="footer-links">
                   <h4>Contact Us</h4>
                   <p>
-                    A108 Adam Street <br>
-                    New York, NY 535022<br>
-                    United States <br>
-                    <strong>Phone:</strong> +1 5589 55488 55<br>
-                    <strong>Email:</strong> info@example.com<br>
+                    Kyaing Tong,
+                     <br>
+                    Shan East State,<br>
+                    Myanmar
+                     <br>
+                    <strong>Phone:</strong> +95 9257 7013 77<br>
+                    <strong>Email:</strong> kyahtaw609@gmail.com<br>
                   </p>
                 </div>
 
@@ -219,7 +221,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Rapid</strong>. All Rights Reserved
+        &copy; Copyright <strong></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!--
@@ -228,7 +230,7 @@
         Licensing information: https://bootstrapmade.com/license/
         Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
       -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://bootstrapmade.com/"></a>3Idiots
       </div>
     </div>
   </footer><!-- End  Footer -->
