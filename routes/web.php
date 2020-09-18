@@ -49,7 +49,6 @@ Route::middleware('role:Admin')->group(function ()
 	Route::resource('teacher','TeacherController');
 });
 
-
 Route::middleware('role:Teacher')->group(function ()
 {   
 
@@ -70,7 +69,7 @@ Route::get('elements','PageController@elementsfun')->name('elementspage');
 Route::get('profolio','PageController@profoliofun')->name('profoliopage');
 
 Auth::routes();
-
+Route::get('search','BackendController@searchfun');
 Route::get('registerpage','PageController@registerfun')->name('registerpage');
 Route::get('/home', 'HomeController@index')->name('home');
 
