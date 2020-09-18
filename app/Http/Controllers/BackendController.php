@@ -46,6 +46,12 @@ class BackendController extends Controller
 		return redirect()->route('teacherreq');
 		//dd($user);
 	}
+	public function searchfun($value='')
+	{
+		$search_text=$_GET['query'];
+		$userList=User::Where('name','LIKE','%'.$search_text.'%')->get();
 
+		return view('Backend.student',compact('userList'));
+	}
 	
 }

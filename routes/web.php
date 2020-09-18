@@ -50,7 +50,6 @@ Route::middleware('role:Admin')->group(function ()
 	Route::resource('teacher','TeacherController');
 });
 
-
 Route::middleware('role:Teacher')->group(function ()
 {   
 	Route::get('teacherdetail','BackendController@teacherdetailfun')->name('teacherdetail');
@@ -66,6 +65,6 @@ Route::get('teachers','PageController@teachersfun')->name('teacherpage');
 Route::get('profolio','PageController@profoliofun')->name('profoliopage');
 
 Auth::routes();
-
+Route::get('search','BackendController@searchfun');
 Route::get('registerpage','PageController@registerfun')->name('registerpage');
 Route::get('/home', 'HomeController@index')->name('home');
