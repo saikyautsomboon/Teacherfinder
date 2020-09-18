@@ -41,7 +41,7 @@
               <td><a href="{{$teacherlist->porfolio}}" target="_blank">{{$teacherlist->porfolio}}</a></td>
               <td>{{$teacherlist->user->phone}}</td>
               <td>{{$teacherlist->user->address}}</td>
-              <td><a href="{{-- {{route('items.show',$item->id)}} --}}" class="btn btn-info mx-2 mb-3">Detail</a>
+              <td><a href="{{route('teacherdetail',$teacherlist->id)}}" class="btn btn-info mx-2 mb-3">Detail</a>
                {{--  <a href="{{route('accept',$teacherlist->id)}}" class="btn btn-info mx-2 mb-3">Accept</a> --}}
                 <form action="{{route('teacher.destroy',$teacherlist->id)}}" method="POST" class="d-inline-block"><br>
                   @csrf

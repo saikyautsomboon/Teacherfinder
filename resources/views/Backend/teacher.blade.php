@@ -21,6 +21,7 @@
               <th>Email</th>
               <th>CV</th>
               <th>Portfolio</th>
+              <th>Subject</th>
               <th>Phone</th>
               <th>Address</th>
               <th>Action</th>
@@ -45,11 +46,11 @@
               <td>{{-- <a href="{{route('items.show',$item->id)}}" class="btn btn-info mx-2 mb-3">Detail</a> --}}
                 <a href="{{route('accept',$teacher->id)}}" class="btn btn-info mx-2 mb-3">Accept</a>
                 
-               {{--  <form action="{{route('teacher.destroy',$teacher->id)}}" method="POST" class="d-inline-block"><br>
+                <form action="{{route('teacher.destroy',$teacher->id)}}" method="POST" class="d-inline-block"><br>
                   @csrf
                   @method('DELETE')
                   <input type="submit" class="btn btn-danger  mt-2" value="Delete">
-                </form> --}}
+                </form>
 
 
                 </td>
