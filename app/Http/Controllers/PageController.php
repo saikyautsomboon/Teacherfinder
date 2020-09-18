@@ -10,6 +10,7 @@ use App\Subject;
 
 use App\Teacher;
 
+use App\Subjectjoin;
 use Auth;
 
 class PageController extends Controller
@@ -22,6 +23,26 @@ class PageController extends Controller
     	//dd($users);
     	return view('Frontend.teachers.teacher',compact('user'));
     }
+
+    public function stdrequestlistfun($id)
+    {   
+    	/*$id=Auth::user()->id;
+    	$user=User::find($id);*/
+    	//dd($id);
+    	$subjectjoins=Subjectjoin::where('teacher_id',$id)->get();
+    	//dd($subjectjoin);
+    	return view('Frontend.teachers.stdrequest',compact('subjectjoins'));
+    }
+
+    public function studentlistfun()
+    {   
+    	/*$id=Auth::user()->id;
+    	$user=User::find($id);*/
+    	//dd($users);
+    	return view('Frontend.teachers.studentlist'/*,compact('user')*/);
+    }
+
+
      public function teacherfun($value='')
     {
     	return view('Backend.teacher');
@@ -34,8 +55,9 @@ class PageController extends Controller
     public function mainfun($value='')
 	{
     $subjects = Subject::all();
+    $teacherlists=Teacher::where('status',0)->get();
 
-		return view('Frontend.main',compact('subjects'));
+		return view('Frontend.main',compact('subjects','teacherlists'));
 	}
 
 	 
@@ -105,6 +127,17 @@ class PageController extends Controller
     $subjects = Subject::all();
 		
 		return view('Frontend.elements',compact('subjects'));
+	}
+
+	public function subjectjoin($id1,$id2){
+		$user_id=Auth::user()->id;
+		
+        $subject_join=new Subjectjoin;
+        $subject_join->subject_jd=$id2;
+        $subject_join->teacher_id=$id1;
+        $subject_join->user_id=$user_id;
+        $subject_join->save();
+        return back();
 	}
 
 }

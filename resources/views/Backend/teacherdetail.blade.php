@@ -46,7 +46,8 @@
           </div>
         </div>
       </div>
-      <a href="{{route('subject_teachers.index')}}" class="btn btn-info float-right">Add New</a>
+      <a href="{{route('dashboardpage')}}" class="btn btn-info ml-5">Back to admin side</a>
+      
 
     </section><!-- End About Section -->
 
