@@ -14,7 +14,7 @@
     <div class="container">
       <div class="row">
       	<div class="col-md-12">
-      		<form action="{{route('subjects.update',$subject->id)}}" method="post" enctype="multipart/form-data">
+      		<form action="{{route('subjects.update',$subject->id)}} " method="post" enctype="multipart/form-data">
 			      @csrf
 			      @method('PUT')
 			      

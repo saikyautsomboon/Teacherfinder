@@ -1,6 +1,9 @@
 <?php
-
+//use Illuminate;
 use Illuminate\Support\Facades\Route;
+use App\Subject;
+use Illuminate\Http\Request;
+//use Illuminate\Support\Facades\Input;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +33,6 @@ Route::get('report','BackendController@reportfun')->name('reportpage');
 Route::middleware('role:Admin')->group(function ()
 {
 	Route::get('dashboard','BackendController@dashboardfun')->name('dashboardpage');
-	Route::resource('subject_teachers','SubjectTeacherController');
 	Route::get('accept/{id}','BackendController@accept')->name('accept');
 	Route::get('teacherreq','BackendController@teacherreqfun')->name('teacherreq');
 	Route::get('teacherlist','BackendController@teacherlistfun')->name('teacherlist');
@@ -45,7 +47,6 @@ Route::middleware('role:Admin')->group(function ()
 	Route::resource('teach','TeacherController');
 	Route::resource('teacher','TeacherController');
 });
-
 
 Route::middleware('role:Teacher')->group(function ()
 {   
@@ -71,6 +72,7 @@ Route::get('elements','PageController@elementsfun')->name('elementspage');
 Route::get('profolio','PageController@profoliofun')->name('profoliopage');
 
 Auth::routes();
-
+Route::get('search','BackendController@searchfun');
 Route::get('registerpage','PageController@registerfun')->name('registerpage');
 Route::get('/home', 'HomeController@index')->name('home');
+

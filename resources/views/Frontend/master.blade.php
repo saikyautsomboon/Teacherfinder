@@ -26,16 +26,18 @@
       <div class="main_menu">
         <div class="search_input" id="search_input_box">
           <div class="container">
-            <form class="d-flex justify-content-between" method="" action="">
+            <form class="d-flex justify-content-between" method="post" action="/search" role="search">
+              {{ csrf_field() }}
               <input
                 type="text"
                 class="form-control"
+                name="q"
                 id="search_input"
                 placeholder="Search Here"
               />
-              <button type="submit" class="btn"></button>
+              <button type="submit" class="btn btn-default mr-5">Search</button>
               <span
-                class="ti-close"
+                class="glyphicon glyphicon-search ml-5"
                 id="close_search"
                 title="Close Search"
               ></span>
@@ -94,6 +96,9 @@
                         {{$subject->name}}
                       <i class="icofont-rounded-right float-right"></i></a>
                     </li>
+
+                
+
 
                   @endforeach
                     {{-- <li class="nav-item">
