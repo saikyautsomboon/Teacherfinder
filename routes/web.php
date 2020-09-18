@@ -1,6 +1,9 @@
 <?php
-
+//use Illuminate;
 use Illuminate\Support\Facades\Route;
+use App\Subject;
+use Illuminate\Http\Request;
+//use Illuminate\Support\Facades\Input;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,3 +73,4 @@ Auth::routes();
 
 Route::get('registerpage','PageController@registerfun')->name('registerpage');
 Route::get('/home', 'HomeController@index')->name('home');
+
