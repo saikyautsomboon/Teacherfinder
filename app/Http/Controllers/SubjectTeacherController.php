@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Subject_Teacher;
 use App\Subject;
 use Illuminate\Http\Request;
-
+use App\Teacher;
 class SubjectTeacherController extends Controller
 {
     /**
@@ -42,22 +42,31 @@ class SubjectTeacherController extends Controller
      */
     public function store(Request $request)
     {
+       
         $request->validate([
         "subject_id" => 'required',
-        "teacher_id" => 'required',
-        "description" => 'required',
-        "price" => 'required',
+        "tecid" => 'required',
+        "dec" => 'required',
+        "pric" => 'required',
         "pdf" => 'required',
-        "video" => 'required',
+        "video" => 'sometimes',
         
     ]);
+    $pdfName=time().'.'.$request->pdf->extension();
+
+    $request->pdf->move(public_path('subjectpdf'),$pdfName);//file upload
+
+    $path= 'subjectpdf/'.$pdfName;
+    $teacher_id = Teacher::where('user_id',$request->tecid)->first();
+   // dd($teacher_id->id);
      $subject_Teacher= new Subject_Teacher;
+     //dd($subject_Teacher);
     // col name from database
     $subject_Teacher->subject_id = $request->subject_id;
-    $subject_Teacher->teacher_id = $request->teacher_id;
-    $subject_Teacher->description = $request->description;
-    $subject_Teacher->price = $request->price;
-    $subject_Teacher->pdf = $request->pdf;
+    $subject_Teacher->teacher_id = $teacher_id->id;
+    $subject_Teacher->description = $request->dec;
+    $subject_Teacher->price = $request->pric;
+    $subject_Teacher->pdf = $path;
     $subject_Teacher->video = $request->video;
     
     $subject_Teacher->save();

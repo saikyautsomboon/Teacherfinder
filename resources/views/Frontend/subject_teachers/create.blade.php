@@ -16,7 +16,6 @@
       	<div class="col-md-12">
       		<form action="{{route('subject_teachers.store')}}" method="post" enctype="multipart/form-data">
 			      @csrf
-			      @method('PUT')
 			      
 			      <div class="col-md-6 mt-auto">
 			      	<div class="form-group">
@@ -34,7 +33,7 @@
 			      <div class="form-group row {{ $errors->has('teacher_id') ? 'has-error' : '' }}">
 			        <label for="tecid" class="col-sm-2 col-form-label">Teacher_ID</label>
 			        <div class="col-sm-5">
-			          <input type="text" class="form-control" id="tecid" name="tecid" >
+			          <input type="text" class="form-control" id="tecid" name="tecid" value="{{Auth::user()->id}}" readonly="readonly">
 			          <span class="text-danger">{{ $errors->first('teacher_id') }}</span>
 			        </div>
 			      </div>
@@ -76,7 +75,7 @@
 			     
 			      <div class="form-group row">
 			        <div class="col-sm-5">
-			          <input type="submit" class="btn btn-primary" name="btnsubmit" value="Update">
+			          <input type="submit" class="btn btn-primary" name="btnsubmit" value="Create New Subject">
 			        </div>
 			      </div>
 			    </form>

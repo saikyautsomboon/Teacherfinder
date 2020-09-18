@@ -13,11 +13,11 @@ class CreateSubjectTeachersTable extends Migration
      */
     public function up()
     {
-        Schema::create('subject__teachers', function (Blueprint $table) {
+        Schema::create('subject_teachers', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('subject_id');
             $table->unsignedBigInteger('teacher_id');
-            $table->integer('description');
+            $table->text('description');
             $table->integer('price');
             $table->text('pdf');
             $table->text('video')->nullable();
@@ -42,6 +42,6 @@ class CreateSubjectTeachersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('subject__teachers');
+        Schema::dropIfExists('subject_teachers');
     }
 }

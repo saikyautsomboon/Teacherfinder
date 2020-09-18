@@ -43,12 +43,12 @@
                             
                                 
                                 
-                            <a href="{{route('subject_teachers.edit',$subject->id)}}" class="btn btn-success ml-5">Edit
-</a>
+                            {{-- <a href="{{route('subject_teachers.edit',$subject_teacher->id)}}" class="btn btn-success ml-5">Edit
+</a> --}}
                             <!-- delete function ko write yin form ko use y a tal -->
                             
                                 <br><br><br>
-                           <form action="{{route('subject_teachers.destroy',$subject->id)}}" method="POST" class="d-inline-block">
+                           <form action="{{route('subject_teachers.destroy',$subject_teacher->id)}}" method="POST" class="d-inline-block">
                                 @csrf
                                 @method('DELETE')
                                 <!-- delete lote yin method ka post nat ma ya buu dar kout method ko delete so pe change pay ya mal update lo myoe pot -->
