@@ -111,7 +111,7 @@
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="section-bg">
+  <footer id="footer" class="section-bg" >
     <div class="footer-top">
       <div class="container">
 
