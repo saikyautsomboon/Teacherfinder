@@ -55,9 +55,9 @@ class PageController extends Controller
     public function mainfun($value='')
 	{
     $subjects = Subject::all();
-    $teacherlists=Teacher::where('status',0)->get();
+    $teacher=Teacher::where('status',0)->get();
 
-		return view('Frontend.main',compact('subjects','teacherlists'));
+		return view('Frontend.main',compact('subjects','teacher'));
 	}
 
 	 

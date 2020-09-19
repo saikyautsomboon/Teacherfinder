@@ -74,8 +74,8 @@ class TeacherRegisterController extends Controller
             $teachers->save();
         //redirect
         $subjects=Subject::all();
-            
-        return view('Frontend.main',compact('subjects'));
+        $teacher=Teacher::where('status',0)->get();
+        return view('Frontend.main',compact('subjects','teacher'));
     }
 
     /**

@@ -22,9 +22,6 @@
 
                      <a href="{{route('tregister.create')}}" class="primary-btn2 mt-3">Request to become Teacher</a>
                      <a href="{{route('freecoursepage')}}" class="primary-btn ml-sm-3 ml-0">see free course</a>
-                 
-{{--{{ Auth::user()->getRoleNames()[0]}}
-                  --}}
                  @endif
                   @if(Auth::user()->getRoleNames()[0] == 'Teacher')
                    <a href="{{route('teacherpage')}}" class="primary-btn2 mt-3">view your detail</a>
@@ -434,7 +431,7 @@
         
 
         <div class="row justify-content-center d-flex align-items-center">
-          @foreach ($teacherlists as $teacherlist)
+          @foreach ($teacher as $teacherlist)
           <div class="col-lg-3 col-md-6 col-sm-12 single-trainer">
             <div class="thumb d-flex justify-content-sm-center">
               

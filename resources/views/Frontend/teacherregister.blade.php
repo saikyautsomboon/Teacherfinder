@@ -1,4 +1,3 @@
-
 @extends('Frontend.master') 
 @section('content')
   <!-- Subcategory Title -->
@@ -93,7 +92,7 @@
               
               <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                 
-                <button type="submit" class="btn btn-secondary mainfullbtncolor btn-block"> Create Account </button>
+                <button type="submit" class="btn btn-secondary mainfullbtncolor btn-block"> Request Account </button>
               </div>
           </form>
 
