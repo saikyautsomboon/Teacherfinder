@@ -29,10 +29,9 @@ class BackendController extends Controller
 		// dd($teacherlists);
 		return view('Backend.teacherlist',compact('teacherlists'));
 	}
-	public function teacherdetailfun($id){
-		
-		$teacherdetail=Teacher::find($id);
-		return view('Backend.teacherdetail',compact('teacherdetail'));
+	public function teacherdetailfun(){
+		$teacherlists=Teacher::where('status',0)->get();
+		return view('Backend.teacherdetail',compact('teacherlists'));
 	}
 	public function accept(Request $Request,$id)
 	{
@@ -47,12 +46,4 @@ class BackendController extends Controller
 		return redirect()->route('teacherreq');
 		//dd($user);
 	}
-	public function searchfun($value='')
-	{
-		$search_text=$_GET['query'];
-		$userList=User::Where('name','LIKE','%'.$search_text.'%')->get();
-
-		return view('Backend.student',compact('userList'));
-	}
-	
 }

@@ -54,10 +54,10 @@ class PageController extends Controller
 
     public function mainfun($value='')
 	{
-    $subjects = Subject::all();
+    //$subjects = Subject::all();
     $teacher=Teacher::where('status',0)->get();
 
-		return view('Frontend.main',compact('subjects','teacher'));
+	return view('Frontend.main',compact('teacher'));
 	}
 
 	 
@@ -75,58 +75,42 @@ class PageController extends Controller
 
 	public function contactfun($value='')
 	{
-    $subjects = Subject::all();
-
-		return view('Frontend.contact',compact('subjects'));
+		return view('Frontend.contact');
 	}
 
 	public function registerfun($value='')
 	{
-    $subjects = Subject::all();
-
-		return view('Frontend.register',compact('subjects'));
+		return view('Frontend.register');
 	}
 
 
 	public function loginfun($value='')
 	{
-    $subjects = Subject::all();
-
-		return view('Frontend.login',compact('subjects'));
+		return view('Frontend.login');
 	}
 
 	
 
 	public function freecoursefun($value='')
 	{
-    $subjects = Subject::all();
-
-		return view('Frontend.freecourse',compact('subjects'));
+		return view('Frontend.freecourse');
 	}
 
 	public function aboutfun($value='')
 	{
-    $subjects = Subject::all();
-
-		return view('Frontend.about',compact('subjects'));
+		return view('Frontend.about');
 	}
 	public function coursesfun($value='')
 	{
-    $subjects = Subject::all();
-
-		return view('Frontend.courses',compact('subjects'));
+		return view('Frontend.courses');
 	}
 	public function coursedetailsfun($value='')
 	{
-    $subjects = Subject::all();
-
-		return view('Frontend.coursedetails',compact('subjects'));
+		return view('Frontend.coursedetails');
 	}
 	public function elementsfun($value='')
 	{
-    $subjects = Subject::all();
-		
-		return view('Frontend.elements',compact('subjects'));
+		return view('Frontend.elements');
 	}
 
 	public function subjectjoin($id1,$id2){
@@ -139,5 +123,20 @@ class PageController extends Controller
         $subject_join->save();
         return back();
 	}
+	public function searchfun(Request $request,$value='')
+	{
 
+		$search_text=$request->searchbox;
+		//dd($search_text);
+		$teacher=User::Where('name','LIKE','%'.$search_text.'%')->get();
+		//dd($teacher);	
+     	 $userList=array();
+      	foreach($teacher as $user){
+       	 	if ($user->hasRole('Teacher')){
+            	$teacherlist[] = $user;
+        	}
+      	}
+		return view('Frontend.main2',compact('teacherlist'));
+	}
+	
 }

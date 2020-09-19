@@ -24,10 +24,8 @@
     <div class="container"> 
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
                     class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="{{route('dashboardpage')}}">{{Auth::user()->name}} </a>
-                    <form class="form-inline my-2 my-lg-2" type="get" action="{{url('search')}}">
-                    <input type="search" name="query" class="form-control mr-sm-2" placeholder="Search here">
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button> 
-                  </form>
+
+                    
                 <div class="nav-collapse">
                   <ul class="nav pull-right">
                     <li class="dropdown">

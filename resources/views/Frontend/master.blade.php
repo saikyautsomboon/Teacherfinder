@@ -26,22 +26,21 @@
       <div class="main_menu">
         <div class="search_input" id="search_input_box">
           <div class="container">
-            <form class="d-flex justify-content-between" method="post" action="/search" role="search">
-              {{ csrf_field() }}
-              <input
-                type="text"
-                class="form-control"
-                name="q"
-                id="search_input"
-                placeholder="Search Here"
-              />
-              <button type="submit" class="btn btn-default mr-5">Search</button>
-              <span
-                class="glyphicon glyphicon-search ml-5"
-                id="close_search"
-                title="Close Search"
-              ></span>
-            </form>
+
+              <form class="form-inline my-2 my-lg-2" type="post" action="{{route('searchpage')}}" method="post">
+                @csrf
+                  <input type="text" name="searchbox" class="form-control mr-sm-2" placeholder="Search here">
+                
+                  <button type="submit" class="btn btn-default mr-5">Search</button>
+                  
+                  <span
+                  class="glyphicon glyphicon-search ml-5"
+                  id="close_search"
+                  title="Close Search"
+                  ></span>
+               
+              </form>
+          
           </div>
         </div>
 
@@ -89,6 +88,7 @@
                     >SUBJECT</a
                   >
                   <ul class="dropdown-menu">
+
                 @foreach($subjects as $subject)
                     
                     <li class="nav-item">

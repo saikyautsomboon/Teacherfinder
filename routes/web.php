@@ -22,6 +22,7 @@ Route::get('blog','PageController@blogfun')->name('blogpage');
 Route::get('blogdetail','PageController@blogdetailfun')->name('blogdetailpage');
 Route::get('contact','PageController@contactfun')->name('contactpage');
 Route::get('loginpage','PageController@loginfun')->name('loginpage');
+Route::get('main2','PageController@main2page');
 //Route::get('teacherregister','PageController@teacherregisterfun')->name('teacherregisterpage');
 Route::get('freecourse','PageController@freecoursefun')->name('freecoursepage');
 
@@ -69,7 +70,8 @@ Route::get('elements','PageController@elementsfun')->name('elementspage');
 Route::get('profolio','PageController@profoliofun')->name('profoliopage');
 
 Auth::routes();
-Route::get('search','BackendController@searchfun');
+//Route::get('search','BackendController@searchfun');
+Route::post('search','PageController@searchfun')->name('searchpage');
 Route::get('registerpage','PageController@registerfun')->name('registerpage');
 Route::get('/home', 'HomeController@index')->name('home');
 
