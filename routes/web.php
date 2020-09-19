@@ -54,8 +54,10 @@ Route::middleware('role:Teacher')->group(function ()
 	/*Route::get('teacherdetail','BackendController@teacherdetailfun')->name('teacherdetail');*/
 	Route::get('teachers','PageController@teachersfun')->name('teacherpage');
 	Route::get('stdrequestlist/{id}','PageController@stdrequestlistfun')->name('studentrequestlistpage');
-	Route::get('studentlist','PageController@studentlistfun')->name('studentlistpage');
+	Route::get('studentlist/{id}','PageController@studentlistfun')->name('studentlistpage');
 	Route::resource('subject_teachers','SubjectTeacherController');
+	Route::get('acceptstd/{id}','PageController@acceptstd')->name('acceptstd');
+	Route::resource('subjectjoins','SubjectjoinController');
 
 });
 

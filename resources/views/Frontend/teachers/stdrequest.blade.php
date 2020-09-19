@@ -33,19 +33,17 @@
               <td>{{$subjectjoin->user->email}}</td>
               <td>{{$subjectjoin->user->phone}}</td>
               <td>{{$subjectjoin->subject->name}}</td>
-              <td><a href="{{-- {{route('accept',$teacher->id)}} --}}" class="btn btn-info mx-2 mb-3">Accept</a></td>  
-            @endforeach
-              {{--  {{ <form action="{{route('teacher.destroy',$teacherlist->id)}}" method="POST" class="d-inline-block"><br>
+              <td><a href="{{route('acceptstd',$subjectjoin->id)}}" class="btn btn-info mx-2 mb-3">Accept</a> 
+
+
+               <form action="{{route('subjectjoins.destroy',$subjectjoin->id)}}" method="POST" class=""><br>
                   @csrf
-                  @method('DELETE') --}} 
-                 
-                
-                {{-- </form> --}}
-
-
-                {{-- </td>
+                  @method('DELETE')
+                  <input type="submit" class="btn btn-danger mx-2 mb-3" value="Delete"> 
+                </form> 
+                 </td>
             </tr>
-            @endforeach  --}}
+            @endforeach 
 
             </tbody>
           </table>

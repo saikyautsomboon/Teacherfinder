@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Subjectjoin extends Model
 {
     protected $fillable = [
-        'subject_jd','teacher_id','user_id',
+        'subject_jd','teacher_id','user_id','status',
     ];
     public function teacher($value='')
     {

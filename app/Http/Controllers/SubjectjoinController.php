@@ -80,6 +80,7 @@ class SubjectjoinController extends Controller
      */
     public function destroy(Subjectjoin $subjectjoin)
     {
-        //
+        $subjectjoin->delete();
+        return back();
     }
 }

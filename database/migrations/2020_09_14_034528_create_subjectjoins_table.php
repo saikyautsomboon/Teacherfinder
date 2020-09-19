@@ -18,6 +18,8 @@ class CreateSubjectjoinsTable extends Migration
             $table->unsignedBigInteger('subject_jd');
             $table->unsignedBigInteger('teacher_id');
             $table->unsignedBigInteger('user_id');
+            $table->tinyInteger('status')->deafult(0);
+
             $table->timestamps();
 
             $table->foreign('subject_jd')
