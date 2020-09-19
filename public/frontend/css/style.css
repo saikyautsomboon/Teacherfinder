@@ -410,7 +410,7 @@ button:focus {
       right: 0;
       top: 0;
       bottom: 0;
-      background: rgba(100, 60, 71, 0.8); }
+      background: rgba(100, 100, 71, 0.6); }
     .banner_area .banner_inner .banner_content {
       position: relative;
       z-index: 2;

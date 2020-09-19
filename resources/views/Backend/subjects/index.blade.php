@@ -19,6 +19,7 @@
     					<th>No</th>
     					<th>Name</th>
                         <th>Description</th>
+                        <th>Photo</th>
     					<th>Actions</th>
     					
 
@@ -31,6 +32,7 @@
     					<td>{{$i++}}</td>
     					<td>{{$subject->name}}</td>
                         <td>{{$subject->description}}</td>
+                        <td><img src="{{asset($subject->photo)}}" width="100" height="100"></td>
                         <td >
                             
                                 

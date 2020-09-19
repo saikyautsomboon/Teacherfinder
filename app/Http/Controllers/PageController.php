@@ -29,18 +29,33 @@ class PageController extends Controller
     	/*$id=Auth::user()->id;
     	$user=User::find($id);*/
     	//dd($id);
-    	$subjectjoins=Subjectjoin::where('teacher_id',$id)->get();
+    	$subjectjoins=Subjectjoin::where('teacher_id',$id)
+    							 ->where('status',0)->get();
     	//dd($subjectjoin);
     	return view('Frontend.teachers.stdrequest',compact('subjectjoins'));
     }
 
-    public function studentlistfun()
+    public function studentlistfun($id)
     {   
-    	/*$id=Auth::user()->id;
-    	$user=User::find($id);*/
+    	//$id=Auth::user()->id;
+    	/*$user=User::find($id);*/
     	//dd($users);
-    	return view('Frontend.teachers.studentlist'/*,compact('user')*/);
+    	$subjectacc=Subjectjoin::where('teacher_id',$id)
+    							 ->where('status',1)->get();
+    	
+    	return view('Frontend.teachers.studentlist',compact('subjectacc'));
     }
+
+
+    public function acceptstd(Request $Request,$id)
+	{
+		$teacher=Subjectjoin::find($id);
+		$teacher->status=1;
+		$teacher->save();
+		
+		return back();
+		//dd($user);
+	}
 
 
      public function teacherfun($value='')

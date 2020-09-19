@@ -1,6 +1,6 @@
 @extends('Frontend.teachers.master')
 @section('content')
-<main id="main">
+<main id="main" style="margin-top: -590px;">
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -45,9 +45,9 @@
           </div>
         </div>
       </div>
-      <a href="{{route('subject_teachers.index')}}" class="btn btn-info" style="margin-left: 280px;">Add New subject</a>
-      <a href="{{route('studentrequestlistpage',$user->teacher->id)}}" class="btn btn-info" style="margin-left: 280px;">Student request list</a>
-      <a href="{{route('studentlistpage')}}" class="btn btn-info" style="margin-left: 280px;">your Student list</a>
+      <a href="{{route('subject_teachers.index')}}" class="btn btn-info" style="margin-left: 280px;margin-top: 50px;">Add New subject</a>
+      <a href="{{route('studentrequestlistpage',$user->teacher->id)}}" class="btn btn-info" style="margin-left: 280px;margin-top: 50px;">Student request list</a>
+      <a href="{{route('studentlistpage',$user->teacher->id)}}" class="btn btn-info" style="margin-left: 280px;margin-top: 50px;">your Student list</a>
       
     </section>
 

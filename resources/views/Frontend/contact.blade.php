@@ -26,32 +26,23 @@
     <!--================Contact Area =================-->
     <section class="contact_area section_gap">
       <div class="container">
-        <div
-          id="mapBox"
-          class="mapBox"
-          data-lat="40.701083"
-          data-lon="-74.1522848"
-          data-zoom="13"
-          data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia."
-          data-mlat="40.701083"
-          data-mlon="-74.1522848"
-        ></div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59484.2442583393!2d99.57460571015017!3d21.280757310658412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30d4415cf792df8d%3A0x77ab811d8ded7cea!2z4YCA4YC74YCt4YCv4YCE4YC64YC44YCQ4YCv4YC2!5e0!3m2!1smy!2smm!4v1600487563085!5m2!1smy!2smm" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <div class="row">
           <div class="col-lg-3">
             <div class="contact_info">
               <div class="info_item">
                 <i class="ti-home"></i>
-                <h6>California, United States</h6>
-                <p>Santa monica bullevard</p>
+                <h6>Keng Tung, Myanmar</h6>
+                <p>Eastern Shan State </p>
               </div>
               <div class="info_item">
                 <i class="ti-headphone"></i>
-                <h6><a href="#">00 (440) 9865 562</a></h6>
+                <h6><a href="#">00 (095) 9683978928</a></h6>
                 <p>Mon to Fri 9am to 6 pm</p>
               </div>
               <div class="info_item">
                 <i class="ti-email"></i>
-                <h6><a href="#">support@colorlib.com</a></h6>
+                <h6><a href="#">support@aungthura5827@gmail.com</a></h6>
                 <p>Send us your query anytime!</p>
               </div>
             </div>

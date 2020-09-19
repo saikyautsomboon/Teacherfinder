@@ -23,7 +23,8 @@ class StudentController extends Controller
         }
       }
       // dd($userList);
-         return view('Backend.student',compact('userList'));
+      /*$userrequestlists=User::where('status',0)->get();*/
+         return view('Backend.student',compact('userList'/*,'userrequestlists'*/));
     }
 
     /**
@@ -89,6 +90,6 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        //
+        
     }
 }

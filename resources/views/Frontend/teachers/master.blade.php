@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Rapid Bootstrap Template - Index</title>
+  <title>Teacher detail page </title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -111,7 +111,7 @@
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="section-bg">
+  <footer id="footer" class="section-bg" >
     <div class="footer-top">
       <div class="container">
 

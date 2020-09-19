@@ -109,7 +109,7 @@
 <!-- /subnavbar -->
   @yield('content')
 <!-- /extra -->
-<div class="extra">
+<div class="extra" style="margin-top: 500px;">
   <div class="extra-inner">
     <div class="container">
       <div class="row">
