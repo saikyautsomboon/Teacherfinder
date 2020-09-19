@@ -21,16 +21,16 @@
                   @if(Auth::user()->getRoleNames()[0] == 'User')
 
                      <a href="{{route('tregister.create')}}" class="primary-btn2 mt-3">Request to become Teacher</a>
-                     <a href="{{route('freecoursepage')}}" class="primary-btn ml-sm-3 ml-0">see free course</a>
+                     {{-- <a href="{{route('freecoursepage')}}" class="primary-btn ml-sm-3 ml-0">see free course</a> --}}
                  @endif
                   @if(Auth::user()->getRoleNames()[0] == 'Teacher')
                    <a href="{{route('teacherpage')}}" class="primary-btn2 mt-3">view your detail</a>
-                  <a href="{{route('freecoursepage')}}" class="primary-btn ml-sm-3 ml-0">see free course</a>
+                  {{-- <a href="{{route('freecoursepage')}}" class="primary-btn ml-sm-3 ml-0">see free course</a> --}}
                  
                  @endif 
                   @else
                     <a href="{{route('tregister.create')}}" class="primary-btn2 mt-3">Request to become Teacher</a>
-                     <a href="{{route('freecoursepage')}}" class="primary-btn ml-sm-3 ml-0">see free course</a>
+                    {{--  <a href="{{route('freecoursepage')}}" class="primary-btn ml-sm-3 ml-0">see free course</a> --}}
                  @endif
           
                  </div>
