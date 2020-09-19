@@ -44,12 +44,22 @@ class SubjectController extends Controller
     $request->validate([
         "name" => 'required',
         "description" =>'required',
+        "photo" =>'required',
         
     ]);
+    $photoName=time().'.'.$request->photo->extension();
+
+    $request->photo->move(public_path('subjectimg'),$photoName);//file upload
+
+    $path= 'subjectimg/'.$photoName;
+
+
+
      $subject = new Subject;
     // col name from database
     $subject->name = $request->name;
     $subject->description =$request->description;
+    $subject->photo =$path;
     
     $subject->save();
 
@@ -92,15 +102,23 @@ class SubjectController extends Controller
         $request->validate([
             "name" => 'required',
             "description" => 'required',
+            "photo" => 'required',
 
             
         ]);
+        $photoName=time().'.'.$request->photo->extension();
+
+    $request->photo->move(public_path('subjectimg'),$photoName);//file upload
+
+    $path= 'subjectimg/'.$photoName;
+
 
         
 
         // data update
         $subject->name = $request->name;
         $subject->description = $request->description;
+        $subject->photo = $request->photo;
 
         
         $subject->save();

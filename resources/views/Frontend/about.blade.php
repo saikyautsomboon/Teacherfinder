@@ -36,16 +36,12 @@
               <div class="h_blog_text_inner left right">
                 <h4>Welcome to our Institute</h4>
                 <p>
-                  Subdue whales void god which living don't midst lesser
-                  yielding over lights whose. Cattle greater brought sixth fly
-                  den dry good tree isn't seed stars were.
+                  If you want to make good web application you need to request our institute.
                 </p>
                 <p>
-                  Subdue whales void god which living don't midst lesser yieldi
-                  over lights whose. Cattle greater brought sixth fly den dry
-                  good tree isn't seed stars were the boring.
+                  We can support you with great customer service in time.
                 </p>
-                <a class="primary-btn" href="#">
+                <a class="primary-btn" href="{{route('contactpage')}}">
                   Learn More <i class="ti-arrow-right ml-1"></i>
                 </a>
               </div>
@@ -57,60 +53,7 @@
     <!--================ End About Area =================-->
 
     <!--================ Start Feature Area =================-->
-    <section class="feature_area section_gap_top title-bg">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-5">
-            <div class="main_title">
-              <h2 class="mb-3 text-white">Awesome Feature</h2>
-              <p>
-                Replenish man have thing gathering lights yielding shall you
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="single_feature">
-              <div class="icon"><span class="flaticon-student"></span></div>
-              <div class="desc">
-                <h4 class="mt-3 mb-2">Scholarship Facility</h4>
-                <p>
-                  One make creepeth, man bearing theira firmament won't great
-                  heaven
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="single_feature">
-              <div class="icon"><span class="flaticon-book"></span></div>
-              <div class="desc">
-                <h4 class="mt-3 mb-2">Sell Online Course</h4>
-                <p>
-                  One make creepeth, man bearing theira firmament won't great
-                  heaven
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="single_feature">
-              <div class="icon"><span class="flaticon-earth"></span></div>
-              <div class="desc">
-                <h4 class="mt-3 mb-2">Global Certification</h4>
-                <p>
-                  One make creepeth, man bearing theira firmament won't great
-                  heaven
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
     <!--================ End Feature Area =================-->
 
     <!--================ Start Testimonial Area =================-->
@@ -119,9 +62,9 @@
         <div class="row justify-content-center">
           <div class="col-lg-5">
             <div class="main_title">
-              <h2 class="mb-3">Client say about me</h2>
+              <h2 class="mb-3">Client say about us</h2>
               <p>
-                Replenish man have thing gathering lights yielding shall you
+                Here are some words of my customer's feedback.
               </p>
             </div>
           </div>
@@ -138,9 +81,7 @@
                   <div class="testi_text">
                     <h4>Elite Martin</h4>
                     <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
+                      Can return service in time.
                     </p>
                   </div>
                 </div>
@@ -155,9 +96,7 @@
                   <div class="testi_text">
                     <h4>Davil Saden</h4>
                     <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
+                     Can support customer requirement.
                     </p>
                   </div>
                 </div>
@@ -172,9 +111,7 @@
                   <div class="testi_text">
                     <h4>Elite Martin</h4>
                     <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
+                      Nice customer service.
                     </p>
                   </div>
                 </div>
@@ -189,9 +126,7 @@
                   <div class="testi_text">
                     <h4>Davil Saden</h4>
                     <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
+                      Good design and beautiful.
                     </p>
                   </div>
                 </div>
@@ -200,15 +135,13 @@
             <div class="testi_item">
               <div class="row">
                 <div class="col-lg-4 col-md-6">
-                  <img src="img/testimonials/t1.jpg" alt="" />
+                  <img src="{{asset('frontend/img/testimonials/t1.jpg')}}" alt="" />
                 </div>
                 <div class="col-lg-8">
                   <div class="testi_text">
                     <h4>Elite Martin</h4>
                     <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
+                      Reliable and Trustable.
                     </p>
                   </div>
                 </div>
@@ -217,15 +150,13 @@
             <div class="testi_item">
               <div class="row">
                 <div class="col-lg-4 col-md-6">
-                  <img src="img/testimonials/t2.jpg" alt="" />
+                  <img src="{{asset('frontend/img/testimonials/t2.jpg')}}" alt="" />
                 </div>
                 <div class="col-lg-8">
                   <div class="testi_text">
                     <h4>Davil Saden</h4>
                     <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
+                     Great Team.
                     </p>
                   </div>
                 </div>
