@@ -50,7 +50,7 @@
 
       <nav class="main-nav d-none d-lg-block">
         <ul>
-          <li class="active"><a href="{{route('mainpage')}}">Back to user side</a></li>
+          <li class="active"><a href="{{route('mainpage',Auth::user()->teacher->id)}}">Back to user side</a></li>
           
           <li>
            @guest
