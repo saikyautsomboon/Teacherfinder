@@ -117,7 +117,7 @@
                   <span class="price">Hi</span>
                   <span class="tag mb-4 d-inline-block">Hello User</span>
                   <h4 class="mb-3">
-                    <a href="{{route('coursedetailspage')}}"> {{$subject->name}}</a>
+                    <a href="{{route('coursedetailspage',$subject->id)}}"> {{$subject->name}}</a>
                     <a href="{{route('coursedetailspage',$subject->id)}}">Custom Product Design</a>
                   </h4>
                   <p>
