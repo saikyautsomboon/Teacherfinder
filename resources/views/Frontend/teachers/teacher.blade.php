@@ -10,7 +10,7 @@
 
           <div class="col-lg-5 col-md-6">
             <div class="about-img" data-aos="fade-right" data-aos-delay="100">
-              <img src="{{$user->profile}}"  alt="">
+              <img src="{{asset($user->profile)}}"  alt="">
             </div>
           </div>
 
@@ -66,7 +66,11 @@
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
               
+<<<<<<< HEAD
               
+=======
+              <img src="{{asset($subject->user->profile)}}" style="border-radius: 50%; width:80px; height: 80px" >
+>>>>>>> d7bb63eeed1cb078baf1e2a019a1d4ae8600e3de
               <h4 class="title"><a href="">{{$subject->user->name}}</a></h4>
               <p class="description justify-content-center text-center">I Interested Your {{$subject->teacher->subject->name}}</p>
             </div>
