@@ -52,7 +52,7 @@ Route::middleware('role:Teacher')->group(function ()
 {   
 
 	/*Route::get('teacherdetail','BackendController@teacherdetailfun')->name('teacherdetail');*/
-	Route::get('teachers','PageController@teachersfun')->name('teacherpage');
+	Route::get('teachers/{id}','PageController@teachersfun')->name('teacherpage');
 	Route::get('stdrequestlist/{id}','PageController@stdrequestlistfun')->name('studentrequestlistpage');
 	Route::get('studentlist/{id}','PageController@studentlistfun')->name('studentlistpage');
 	Route::resource('subject_teachers','SubjectTeacherController');

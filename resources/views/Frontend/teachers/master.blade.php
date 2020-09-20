@@ -44,7 +44,7 @@
   <header id="header" class="fixed-top header-transparent">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="{{route('teacherpage')}}">Your Infomation</a></h1>
+      <h1 class="logo mr-auto"><a href="{{route('teacherpage',Auth::user()->teacher->id)}}">Your Infomation</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -65,7 +65,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->teacher->id }}
 
                                 </a>
                                 <img class="img-profile rounded-circle ml-3" src="{{asset(Auth::user()->profile)}}" width="40" height="40">
