@@ -24,7 +24,7 @@ class PageController extends Controller
     	//$teacher=Teacher::where('user_id',$id)->get();
     	//dd($teacher);
     	$subjectacc=Subjectjoin::where('teacher_id',$id)->where('status',0)->get();
-    	//dd($subjectacc);
+
     	return view('Frontend.teachers.teacher',compact('user','subjectacc'));
     }
 
@@ -43,14 +43,12 @@ class PageController extends Controller
     	//dd($users);
     	$subjectacc=Subjectjoin::where('teacher_id',$id)
     							 ->where('status',1)->get();
-
-    	
     	return view('Frontend.teachers.studentlist',compact('subjectacc'));
     }
     public function sturequest($id)
     {   
     	$subjectacc=Subjectjoin::where('teacher_id',$id)
-    							 ->where('status',1)->get();
+    							 ->where('status',0)->get();
     	return view('Frontend.teachers.teacher',compact('subjectacc'));
     }
 

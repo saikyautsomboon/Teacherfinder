@@ -65,14 +65,12 @@
            @foreach($subjectacc as $subject)
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
-
-             
-
+              
               <img src="{{$subject->user->profile}}" style="border-radius: 50%; width:80px; height: 80px" >
               <h4 class="title"><a href="">{{$subject->user->name}}</a></h4>
               <p class="description justify-content-center text-center">I Interested Your {{$subject->teacher->subject->name}}</p>
-            
             </div>
+           
           </div>
             @endforeach
       </div>
