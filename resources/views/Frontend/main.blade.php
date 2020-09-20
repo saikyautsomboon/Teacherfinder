@@ -87,7 +87,7 @@
     <!--================ End Feature Area =================-->
 
     <!--================ Start Popular Courses Area =================-->
-    <div class="popular_courses">
+    {{-- <div class="popular_courses">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-5">
@@ -205,7 +205,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
     <!--================ End Popular Courses Area =================-->
 
 
@@ -457,7 +457,6 @@
             </div>
           </div>
           @endforeach
-
         </div>
       </div>
     </section>
