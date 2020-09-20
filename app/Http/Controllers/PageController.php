@@ -16,13 +16,15 @@ use Auth;
 class PageController extends Controller
 {
 
-    public function teachersfun()
+    public function teachersfun($id)
     {   
-    	$id=Auth::user()->id;
-    	$user=User::find($id);
-    	$subjectacc=Subjectjoin::where('teacher_id',$id)
-    							 ->where('status',0)->get();
-    	//dd($users);
+    	$user_id=Auth::user()->id;
+    	$user=User::find($user_id);
+    	//dd($user);
+    	//$teacher=Teacher::where('user_id',$id)->get();
+    	//dd($teacher);
+    	$subjectacc=Subjectjoin::where('teacher_id',$id)->where('status',0)->get();
+    	//dd($subjectacc);
     	return view('Frontend.teachers.teacher',compact('user','subjectacc'));
     }
 
