@@ -65,7 +65,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->teacher->id }}
+                                    {{ Auth::user()->teacher->user->name }}
 
                                 </a>
                                 <img class="img-profile rounded-circle ml-3" src="{{asset(Auth::user()->profile)}}" width="40" height="40">
