@@ -39,10 +39,9 @@ Route::middleware('role:Admin')->group(function ()
 	Route::get('teacherlist','BackendController@teacherlistfun')->name('teacherlist');
 	Route::get('teacherdetail/{id}','BackendController@teacherdetailfun')->name('teacherdetail');
 	Route::resource('subject_teachers','SubjectTeacherController');
-	//Route::get('accept/{id}','BackendController@accept')->name('accept');
+	
 	Route::get('teacherreq','BackendController@teacherreqfun')->name('teacherreq');	
-	//Route::get('accept/{id}','BackendController@accept')->name('accept');
-	//Route::get('teacherreq','BackendController@teacherreqfun')->name('teacherreq');
+	
 	Route::resource('subjects','SubjectController');
 	Route::resource('students','StudentController');
 	Route::resource('teach','TeacherController');
@@ -72,7 +71,7 @@ Route::get('elements','PageController@elementsfun')->name('elementspage');
 Route::get('profolio','PageController@profoliofun')->name('profoliopage');
 
 Auth::routes();
-//Route::get('search','BackendController@searchfun');
+
 Route::post('search','PageController@searchfun')->name('searchpage');
 Route::get('registerpage','PageController@registerfun')->name('registerpage');
 Route::get('/home', 'HomeController@index')->name('home');

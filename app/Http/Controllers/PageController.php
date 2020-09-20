@@ -20,18 +20,17 @@ class PageController extends Controller
     {   
     	$id=Auth::user()->id;
     	$user=User::find($id);
+    	$subjectacc=Subjectjoin::where('teacher_id',$id)
+    							 ->where('status',0)->get();
     	//dd($users);
-    	return view('Frontend.teachers.teacher',compact('user'));
+    	return view('Frontend.teachers.teacher',compact('user','subjectacc'));
     }
 
     public function stdrequestlistfun($id)
-    {   
-    	/*$id=Auth::user()->id;
-    	$user=User::find($id);*/
-    	//dd($id);
+    {  
     	$subjectjoins=Subjectjoin::where('teacher_id',$id)
     							 ->where('status',0)->get();
-    	//dd($subjectjoin);
+    	
     	return view('Frontend.teachers.stdrequest',compact('subjectjoins'));
     }
 
@@ -42,8 +41,15 @@ class PageController extends Controller
     	//dd($users);
     	$subjectacc=Subjectjoin::where('teacher_id',$id)
     							 ->where('status',1)->get();
+
     	
     	return view('Frontend.teachers.studentlist',compact('subjectacc'));
+    }
+    public function sturequest($id)
+    {   
+    	$subjectacc=Subjectjoin::where('teacher_id',$id)
+    							 ->where('status',1)->get();
+    	return view('Frontend.teachers.teacher',compact('subjectacc'));
     }
 
 
@@ -60,6 +66,7 @@ class PageController extends Controller
 
      public function teacherfun($value='')
     {
+
     	return view('Backend.teacher');
     }
     public function profoliofun($value='')

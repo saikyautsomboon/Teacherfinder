@@ -5,7 +5,7 @@
     <!-- Page Heading -->
   	<div class="row">
   		<div class="col-md-12 mb-3">
-    		<h1 class="h3 mb-0 text-gray-800 d-inline-block">Subjects List With Teacher</h1>
+    		<h1 class="h3 mb-0 text-gray-800 d-inline-block">Add New Subject</h1>
             <a href="{{route('subject_teachers.create')}}" class="btn btn-info float-right">Add New</a>
     		
   		</div>
@@ -17,8 +17,8 @@
     			<thead class="thead-dark">
     				<tr>
     					<th>No</th>
-    					<th>Subject_Id</th>
-                        <th>Teacher_Id</th>
+    					<th>Subject Name</th>
+                        <th>Teacher Name</th>
                         <th>Description</th>
                         <th>Price</th>
                         <th>Pdf</th>
@@ -33,8 +33,8 @@
     				@foreach($subject_teachers as $subject_teacher)
     				<tr>
     					<td>{{$i++}}</td>
-    					<td>{{$subject_teacher->subject_id}}</td>
-                        <td>{{$subject_teacher->teacher_id}}</td>
+    					<td>{{$subject_teacher->subject->name}}</td>
+                        <td>{{$subject_teacher->teacher->user->name}}</td>
                         <td>{{$subject_teacher->description}}</td>
                         <td>{{$subject_teacher->price}}</td>
                         <td>{{$subject_teacher->pdf}}</td>

@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-         $subjects=Subject::all();
+        $subjects=Subject::all();
         view()->share('subjects',$subjects);   
     }
 }

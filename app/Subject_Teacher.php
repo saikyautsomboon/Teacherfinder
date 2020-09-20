@@ -11,11 +11,11 @@ class Subject_Teacher extends Model
     ];
     public function teacher($value='')
     {
-    	return $this->belongTo('App\Teacher');
+    	return $this->belongsTo('App\Teacher');
     }
     public function subject($value='')
     {
-    	return $this->belongTo('App\Subject');
+    	return $this->belongsTo('App\Subject');
     }
     
 
