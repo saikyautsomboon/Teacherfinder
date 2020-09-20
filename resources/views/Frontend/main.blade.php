@@ -87,7 +87,7 @@
     <!--================ End Feature Area =================-->
 
     <!--================ Start Popular Courses Area =================-->
-    {{-- <div class="popular_courses">
+    <div class="popular_courses">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-5">
@@ -117,7 +117,7 @@
                   <span class="price">$25</span>
                   <span class="tag mb-4 d-inline-block">{{$subject->name}}</span>
                   <h4 class="mb-3">
-                    <a href="{{route('coursedetailspage')}}">Custom Product Design</a>
+                    <a href="{{route('coursedetailspage',$subject->id)}}">Custom Product Design</a>
                   </h4>
                   <p>
                     One make creepeth man bearing their one firmament won't fowl
@@ -152,7 +152,7 @@
 
         </div>
       </div>
-    </div> --}}
+    </div>
     <!--================ End Popular Courses Area =================-->
 
 
