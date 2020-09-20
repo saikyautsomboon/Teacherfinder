@@ -114,14 +114,13 @@
 
 
                 <div class="course_content">
-                  <span class="price">$25</span>
-                  <span class="tag mb-4 d-inline-block">{{$subject->name}}</span>
+                  <span class="price">Hi</span>
+                  <span class="tag mb-4 d-inline-block">Hello User</span>
                   <h4 class="mb-3">
-                    <a href="{{route('coursedetailspage')}}">Custom Product Design</a>
+                    <a href="{{route('coursedetailspage')}}"> {{$subject->name}}</a>
                   </h4>
                   <p>
-                    One make creepeth man bearing their one firmament won't fowl
-                    meat over sea
+                    If You like this subject,welcome to join and learn!!
                   </p>
                   <div
                     class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
@@ -300,10 +299,10 @@
           <div class="col-lg-6 col-md-6">
             <div class="single_event position-relative">
               <div class="event_thumb">
-                <img src="{{asset('frontend/img/event/e1.jpg')}}" alt="" />
+                <img src="{{asset('frontend/img/tph.jpg')}}" height="720px" alt="" />
               </div>
               <div class="event_details">
-                <div class="d-flex mb-4">
+                <div class="d-flex mb-4 ">
                   <div class="date"><span>15</span> Jun</div>
 
                   <div class="time-location">
@@ -311,7 +310,7 @@
                       <span class="ti-time mr-2"></span> 12:00 AM - 12:30 AM
                     </p>
                     <p>
-                      <span class="ti-location-pin mr-2"></span> Hilton Quebec
+                      <span class="ti-location-pin mr-2"></span> Yangon
                     </p>
                   </div>
                 </div>
@@ -319,14 +318,13 @@
                   One make creepeth man for so bearing their firmament won't
                   fowl meat over seas great
                 </p>
-                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
               </div>
             </div>
           </div>
           <div class="col-lg-6 col-md-6">
             <div class="single_event position-relative">
               <div class="event_thumb">
-                <img src="{{asset('frontend/img/event/e2.jpg')}}" alt="" />
+                <img src="{{asset('frontend/img/ytmn.jpg')}}" height="720px" alt="" />
               </div>
               <div class="event_details">
                 <div class="d-flex mb-4">
@@ -337,7 +335,7 @@
                       <span class="ti-time mr-2"></span> 12:00 AM - 12:30 AM
                     </p>
                     <p>
-                      <span class="ti-location-pin mr-2"></span> Hilton Quebec
+                      <span class="ti-location-pin mr-2"></span> Yangon
                     </p>
                   </div>
                 </div>
@@ -345,7 +343,7 @@
                   One make creepeth man for so bearing their firmament won't
                   fowl meat over seas great
                 </p>
-                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
+               {{--  <a href="#" class="primary-btn rounded-0 mt-3">View Details</a> --}}
               </div>
             </div>
           </div>
