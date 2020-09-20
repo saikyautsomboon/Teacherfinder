@@ -126,9 +126,10 @@ class PageController extends Controller
 	{
 		return view('Frontend.courses');
 	}
-	public function coursedetailsfun($value='')
+	public function coursedetailsfun($id)
 	{
-		return view('Frontend.coursedetails');
+		$subjectList=Subject::find($id);
+		return view('Frontend.coursedetails',compact('subjectList'));
 	}
 	public function elementsfun($value='')
 	{

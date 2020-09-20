@@ -67,7 +67,7 @@ Route::get('about','PageController@aboutfun')->name('aboutpage');
 Route::get('subjectjoin/{id1}/{id2}','PageController@subjectjoin')->name('subjectjoin');
 
 Route::get('courses','PageController@coursesfun')->name('coursespage');
-Route::get('coursedetails','PageController@coursedetailsfun')->name('coursedetailspage');
+Route::get('coursedetails/{id}','PageController@coursedetailsfun')->name('coursedetailspage');
 Route::get('elements','PageController@elementsfun')->name('elementspage');
 
 Route::get('profolio','PageController@profoliofun')->name('profoliopage');

@@ -13,7 +13,7 @@
                 <div class="page_link">
                   <a href="{{route('mainpage')}}">Home</a>
                   <a href="{{route('coursespage')}}">Courses</a>
-                  <a href="{{route('coursedetailspage')}}">Subjects Details</a>
+                  <a href="">Subjects Details</a>
                 </div>
               </div>
             </div>
@@ -28,10 +28,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 course_details_left">
-                    <div class="main_image">
-                        <img class="img-fluid" src="{{asset('frontend/img/courses/course-details.jpg')}}" alt="">
-                    </div>
-                    <div class="content_wrapper">
+                    <img src="{{asset($subjectList->photo)}}" class="img-fluid w-75">
+                   {{--  <div class="content_wrapper">
                         <h4 class="title">Objectives</h4>
                         <div class="content">
                             When you enter into any new area of science, you almost always find yourself with a
@@ -120,7 +118,8 @@
 
                             </ul>
                         </div>
-                    </div>
+                    </div> --}}
+
                 </div>
 
 
@@ -128,30 +127,19 @@
                     <ul>
                         <li>
                             <a class="justify-content-between d-flex" href="#">
-                                <p>Trainer’s Name</p>
-                                <span class="or">George Mathews</span>
+                                <p>Subject Name :</p>
+                                <span class="or">{{$subjectList->name}}</span>
                             </a>
                         </li>
                         <li>
                             <a class="justify-content-between d-flex" href="#">
-                                <p>Course Fee </p>
-                                <span>$230</span>
+                                <p>Description</p>
+                                <span>{{$subjectList->description}}</span>
                             </a>
                         </li>
-                        <li>
-                            <a class="justify-content-between d-flex" href="#">
-                                <p>Available Seats </p>
-                                <span>15</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="justify-content-between d-flex" href="#">
-                                <p>Schedule </p>
-                                <span>2.00 pm to 4.00 pm</span>
-                            </a>
-                        </li>
+                        
                     </ul>
-                    <a href="#" class="primary-btn2 text-uppercase enroll rounded-0 text-white">Enroll the course</a>
+                   
 
                     <h4 class="title">Reviews</h4>
                     <div class="content">
@@ -193,14 +181,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="feedeback">
-                            <h6>Your Feedback</h6>
-                            <textarea name="feedback" class="form-control" cols="10" rows="10"></textarea>
-                            <div class="mt-10 text-right">
-                                <a href="#" class="primary-btn2 text-right rounded-0 text-white">Submit</a>
-                            </div>
-                        </div>
-                        <div class="comments-area mb-30">
+                       
+                        {{-- <div class="comments-area mb-30">
                             <div class="comment-list">
                                 <div class="single-comment single-reviews justify-content-between d-flex">
                                     <div class="user justify-content-between d-flex">
@@ -273,10 +255,39 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
+
+                </div>
+                <div class="mb-5">
+                    <h3> Teacher List</h3>
                 </div>
             </div>
+            @foreach ($subjectList->teachers as $teacher)
+                    <div class="col-lg-3 col-md-6 col-sm-12 single-trainer">
+                        <div class="thumb d-flex justify-content-sm-center">
+                        </div>
+                        <div class="meta-text text-sm-center">
+                            <img class="" src="{{asset($teacher->user->profile)}}" width="200px" height="200px" alt="" />
+                                <h4>{{$teacher->user->name}}</h4>
+                                
+                                <a href="{{$teacher->user->email}}" target="_blank" style="color: gold;">{{$teacher->user->email}}</a></p>
+                            <div class="mb-4">
+                                <p>
+                                    {{$teacher->subject->name}}
+                                </p>
+                                <p><a href="{{$teacher->porfolio}}" target="_blank" style="color: gold;">{{$teacher->porfolio}}</a></p>
+                                <p><a href="{{route('subjectjoin',[$teacher->id,$teacher->subject->id])}}" class="primary-btn2 mt-3">Hire</a></p>
+                            </div>
+                            <div class="align-items-center justify-content-center d-flex">
+                                <a href="#"><i class="ti-facebook"></i></a>
+                                <a href="#"><i class="ti-twitter"></i></a>
+                                <a href="#"><i class="ti-linkedin"></i></a>
+                                <a href="#"><i class="ti-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
         </div>
     </section>
     <!--================ End Course Details Area =================-->

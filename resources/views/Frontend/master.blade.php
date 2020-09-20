@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="{{asset('frontend/img/favicon.png')}}" type="image/png" />
     <title>TeacherFinder</title>
     <!-- Bootstrap CSS -->
@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="{{asset('frontend/vendors/nice-select/css/nice-select.css')}}" />
     <!-- main css -->
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}" />
+    <!-- Favicons -->
+
   </head>
 
   <body>
@@ -92,9 +94,10 @@
                 @foreach($subjects as $subject)
                     
                     <li class="nav-item">
-                      <a class="nav-link" href="{{route('coursedetailspage')}}">
+                      <a class="nav-link" href="{{route('coursedetailspage',$subject->id)}}">
                         {{$subject->name}}
-                      <i class="icofont-rounded-right float-right"></i></a>
+                      <i class="icofont-rounded-right float-right"></i>
+                    </a>
                     </li>
 
                 
@@ -259,7 +262,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="{{asset('frontend/js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('frontend/js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{asset('frontend/js/popper.js')}}"></script>
     <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('frontend/vendors/nice-select/js/jquery.nice-select.min.js')}}"></script>
@@ -271,5 +274,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
     <script src="{{asset('frontend/js/gmaps.min.js')}}"></script>
     <script src="{{asset('frontend/js/theme.js')}}"></script>
+    <script src="{{asset('frontend/teacher/assets/vendor/jquery/jquery.min.js')}}"></script>
+
   </body>
 </html>

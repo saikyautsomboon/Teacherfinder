@@ -22,5 +22,9 @@ class Subject extends Model
     {
         return $this->belongsTo('App\User');
     }
+    public function teachers($value='')
+    {
+        return $this->hasMany('App\Teacher');
+    }
     
 }

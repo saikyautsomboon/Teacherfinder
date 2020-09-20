@@ -66,9 +66,9 @@
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->teacher->user->name }}
-
+                                    <img class="img-profile rounded-circle ml-3" src="{{asset(Auth::user()->profile)}}" width="40" height="40">
                                 </a>
-                                <img class="img-profile rounded-circle ml-3" src="{{asset(Auth::user()->profile)}}" width="40" height="40">
+                                
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
