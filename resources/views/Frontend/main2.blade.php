@@ -24,7 +24,7 @@
                      
                  @endif
                   @if(Auth::user()->getRoleNames()[0] == 'Teacher')
-                   <a href="{{route('teacherpage')}}" class="primary-btn2 mt-3">view your detail</a>
+                   <a href="{{route('teacherpage',Auth::user()->teacher->id)}}" class="primary-btn2 mt-3">view your detail</a>
                   
                  
                  @endif 
