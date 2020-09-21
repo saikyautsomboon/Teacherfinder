@@ -277,7 +277,11 @@
                                     {{$teacher->subject->name}}
                                 </p>
                                 <p><a href="{{$teacher->porfolio}}" target="_blank" style="color: gold;">{{$teacher->porfolio}}</a></p>
-                                <p><a href="{{route('subjectjoin',[$teacher->id,$teacher->subject->id])}}" class="primary-btn2 mt-3">Hire</a></p>
+                                @role('User')
+                                <p><a href="{{route('subjectjoin',[$teacherlist->id,$teacherlist->subject->id])}}" class="primary-btn2 mt-3">Hire</a></p>
+                                @else
+                                <p><a href="{{ route('loginpage') }}" class="primary-btn2 mt-3">Login</a></p>
+                                @endrole
                             </div>
                             <div class="align-items-center justify-content-center d-flex">
                                 <a href="#"><i class="ti-facebook"></i></a>

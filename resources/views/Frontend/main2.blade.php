@@ -56,7 +56,11 @@
               <a href="{{$user->email}}" target="_blank" style="color: gold;">{{$user->email}}</a></p>
               <div class="mb-4">
                 <p><a href="{{$user->teacher->porfolio}}" target="_blank" style="color: gold;">{{$user->teacher->porfolio}}</a></p>
-                <p><a href="" class="primary-btn2 mt-3">Hire</a></p>
+                @role('User')
+                  <p><a href="{{route('subjectjoin',[$teacherlist->id,$teacherlist->subject->id])}}" class="primary-btn2 mt-3">Hire</a></p>
+                  @else
+                  <p><a href="{{ route('loginpage') }}" class="primary-btn2 mt-3">Login</a></p>
+                  @endrole
               </div>
               <div class="align-items-center justify-content-center d-flex">
                 <a href="#"><i class="ti-facebook"></i></a>
