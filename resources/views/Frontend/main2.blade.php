@@ -44,23 +44,26 @@
 
     <!--================ Start Feature Area =================-->
         <div class="row justify-content-center d-flex align-items-center">
-          @foreach ($teacherlist as $user)
+          @foreach ($userlist as $userlists)
           <div class="col-lg-3 col-md-6 col-sm-12 single-trainer">
             <div class="thumb d-flex justify-content-sm-center">
               
             </div>
             <div class="meta-text text-sm-center">
-              <img class="card-img" src="{{$user->profile}}" width="200px" height="300px" alt="" />
-              <h4>{{$user->name}}</h4>
+              <img class="card-img" src="{{$userlists->profile}}" width="200px" height="300px" alt="" />
+              <h4>{{$userlists->name}}</h4>
               <p class="designation" style="color: gold;">{{-- {{$teacherlist->user->email}} --}}
-              <a href="{{$user->email}}" target="_blank" style="color: gold;">{{$user->email}}</a></p>
+              <a href="{{$userlists->email}}" target="_blank" style="color: gold;">{{$userlists->email}}</a></p>
               <div class="mb-4">
-                <p><a href="{{$user->teacher->porfolio}}" target="_blank" style="color: gold;">{{$user->teacher->porfolio}}</a></p>
+                <p><a href="{{$userlists->teacher->porfolio}}" target="_blank" style="color: gold;">{{$userlists->teacher->porfolio}}</a></p>
+
+                
                 @role('User')
-                  <p><a href="{{route('subjectjoin',[$teacherlist->id,$teacherlist->subject->id])}}" class="primary-btn2 mt-3">Hire</a></p>
-                  @else
-                  <p><a href="{{ route('loginpage') }}" class="primary-btn2 mt-3">Login</a></p>
-                  @endrole
+                 <p><a href="{{route('subjectjoin',[$userlists->teacher->id,$userlists->teacher->subject->id])}}" class="primary-btn2 mt-3">Hire</a></p>
+                @else
+                <a href="{{route('loginpage')}}" class="btn btn-info float-right buy_now">Login</a>
+          
+                @endrole
               </div>
               <div class="align-items-center justify-content-center d-flex">
                 <a href="#"><i class="ti-facebook"></i></a>

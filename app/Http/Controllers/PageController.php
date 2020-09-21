@@ -156,10 +156,10 @@ class PageController extends Controller
      	 $userList=array();
       	foreach($teacher as $user){
        	 	if ($user->hasRole('Teacher')){
-            	$teacherlist[] = $user;
+            	$userlist[] = $user;
         	}
       	}
-		return view('Frontend.main2',compact('teacherlist'));
+		return view('Frontend.main2',compact('userlist'));
 	}
 	
 }

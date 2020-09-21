@@ -29,11 +29,11 @@
         <div class="search_input" id="search_input_box">
           <div class="container">
 
-              <form class="form-inline my-2 my-lg-2" type="post" action="{{route('searchpage')}}" method="post">
+              <form class="form-inline my-2 my-lg-2" type="post" action="{{route('searchpage')}}" method="get">
                 @csrf
                   <input type="text" name="searchbox" class="form-control mr-sm-2" placeholder="Search here">
                 
-                  <button type="submit" class="btn btn-default mr-5 float-right">Search</button>
+                  <button type="submit" class="btn btn-default mr-5">Search</button>
                   
                   <span
                   class="glyphicon glyphicon-search ml-5"

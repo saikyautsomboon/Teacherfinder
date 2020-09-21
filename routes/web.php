@@ -74,7 +74,7 @@ Route::get('profolio','PageController@profoliofun')->name('profoliopage');
 
 Auth::routes();
 
-Route::post('search','PageController@searchfun')->name('searchpage');
+Route::get('search','PageController@searchfun')->name('searchpage');
 Route::get('registerpage','PageController@registerfun')->name('registerpage');
 Route::get('/home', 'HomeController@index')->name('home');
 

@@ -278,7 +278,7 @@
                                 </p>
                                 <p><a href="{{$teacher->porfolio}}" target="_blank" style="color: gold;">{{$teacher->porfolio}}</a></p>
                                 @role('User')
-                                <p><a href="{{route('subjectjoin',[$teacherlist->id,$teacherlist->subject->id])}}" class="primary-btn2 mt-3">Hire</a></p>
+                                <p><a href="{{route('subjectjoin',[$teacher->id,$teacher->subject->id])}}" class="primary-btn2 mt-3">Hire</a></p>
                                 @else
                                 <p><a href="{{ route('loginpage') }}" class="primary-btn2 mt-3">Login</a></p>
                                 @endrole
