@@ -73,15 +73,15 @@
   <div class="subnavbar-inner">
     <div class="container">
       <ul class="mainnav">
-        <li class="@if(\Route::current()->uri == 'teacherlist'){{'active'}}@endif"><a href="{{route('teacherlist')}}"><span>Teacher</span>
-            {{ \App\Teacher::where('status',0)->count() }}
+        <li class="@if(\Route::current()->uri == 'teacherlist'){{'active'}}@endif" ><a href="{{route('teacherlist')}}"><span style="font-size: 20px">Teacher</span>
+            <span style="font-size: 20px;margin-top: 10px">{{ \App\Teacher::where('status',0)->count() }}</span>
           </a>
         </li>
-        <li class="@if(\Route::current()->uri == 'teacherreq'){{'active'}}@endif"><a href="{{route('teacherreq')}}"><span>Teacher Request</span> 
-            {{ \App\Teacher::where('status',1)->count() }}
+        <li class="@if(\Route::current()->uri == 'teacherreq'){{'active'}}@endif"><a href="{{route('teacherreq')}}"><span style="font-size: 20px">Teacher Request</span> 
+            <span style="font-size: 20px;margin-top: 10px">{{ \App\Teacher::where('status',1)->count() }}</span>
           </a>
          </li>
-        <li class="@if(\Route::current()->uri == 'students'){{'active'}}@endif"><a href="{{route('students.index')}}"><span>Students</span> 
+        <li class="@if(\Route::current()->uri == 'students'){{'active'}}@endif"><a href="{{route('students.index')}}"><span style="font-size: 20px">Students</span> 
           @php 
 
           $users=\App\User::all();
@@ -94,11 +94,11 @@
           $user_count=count($userList);
           @endphp
 
-            {{$user_count}}
+            <span style="font-size: 20px;margin-top: 10px">{{$user_count}}</span>
           </a>
         </li>
-        <li class="@if(\Route::current()->uri == 'subjects'){{'active'}}@endif"><a href="{{route('subjects.index')}}"><span>Subject</span>
-            {{ \App\Subject::all()->count() }}
+        <li class="@if(\Route::current()->uri == 'subjects'){{'active'}}@endif"><a href="{{route('subjects.index')}}"><span style="font-size: 20px">Subject</span>
+            <span style="font-size: 20px;margin-top: 10px">{{ \App\Subject::all()->count() }}</span>
          </a></li>
       </ul>
     </div>

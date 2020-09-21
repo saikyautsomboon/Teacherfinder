@@ -33,7 +33,7 @@
                 @csrf
                   <input type="text" name="searchbox" class="form-control mr-sm-2" placeholder="Search here">
                 
-                  <button type="submit" class="btn btn-default mr-5">Search</button>
+                  <button type="submit" class="btn btn-default mr-5 float-right">Search</button>
                   
                   <span
                   class="glyphicon glyphicon-search ml-5"

@@ -105,7 +105,7 @@
           <div class="col-lg-12">
           
             <div class="owl-carousel active_course">
-        @foreach ($subjects as $subject)
+              @foreach ($subjects as $subject)
 
               <div class="single_course">
                 <div class="course_head">
@@ -124,25 +124,25 @@
                     If You like this subject,welcome to join and learn!!
                   </p>
                   <div
-                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                  class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
                   >
-                    <div class="authr_meta">
-                      <img src="{{asset('frontend/img/courses/author1.png')}}" alt="" />
-                      <span class="d-inline-block ml-2">Cameron</span>
-                    </div>
-                    <div class="mt-lg-0 mt-3">
-                      <span class="meta_info mr-4">
-                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
-                      </span>
-                      <span class="meta_info"
-                        ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
-                      >
-                    </div>
+                  <div class="authr_meta">
+                    <img src="{{asset('frontend/img/courses/author1.png')}}" alt="" />
+                    <span class="d-inline-block ml-2">Cameron</span>
+                  </div>
+                  <div class="mt-lg-0 mt-3">
+                    <span class="meta_info mr-4">
+                      <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                    </span>
+                    <span class="meta_info"
+                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                    >
                   </div>
                 </div>
-
               </div>
-        @endforeach
+
+            </div>
+                @endforeach
 
 
              
@@ -375,34 +375,63 @@
           </div>
         </div>
         
+        <div class="row">
+          <!-- single course -->
+            
+          <div class="col-lg-12">
+          
+            <div class="owl-carousel active_course">
+             @foreach ($teacher as $teacherlist)
 
-        <div class="row justify-content-center d-flex align-items-center">
-          @foreach ($teacher as $teacherlist)
-          <div class="col-lg-3 col-md-6 col-sm-12 single-trainer">
-            <div class="thumb d-flex justify-content-sm-center">
-              
-            </div>
-            <div class="meta-text text-sm-center">
-              <img class="card-img" src="{{$teacherlist->user->profile}}" width="200px" height="200px" alt="" />
-              <h4>{{$teacherlist->user->name}}</h4>
-              <p class="designation" style="color: gold;">{{-- {{$teacherlist->user->email}} --}}
-              <a href="{{$teacherlist->user->email}}" target="_blank" style="color: gold;">{{$teacherlist->user->email}}</a></p>
-              <div class="mb-4">
-                <p>
-                 {{$teacherlist->subject->name}}
-                </p>
-                <p><a href="{{$teacherlist->porfolio}}" target="_blank" style="color: gold;">{{$teacherlist->porfolio}}</a></p>
-                <p><a href="{{route('subjectjoin',[$teacherlist->id,$teacherlist->subject->id])}}" class="primary-btn2 mt-3">Hire</a></p>
+              <div class="single_course">
+                <div class="course_head">
+                  <img src="{{$teacherlist->user->profile}}" width="60" height="300px">
+                </div>
+
+
+                <div class="course_content">
+                  
+                  <span class="tag mb-4 d-inline-block">{{$teacherlist->user->name}}</span>
+                  <h4 class="mb-3">
+                    <a href="{{$teacherlist->user->email}}">{{$teacherlist->user->email}}</a>
+                    <a href="{{route('coursedetailspage',$subject->id)}}"></a>
+                  </h4>
+                  <p>
+                    {{$teacherlist->subject->name}}
+                  </p>
+                  <p><a href="{{$teacherlist->porfolio}}" target="_blank" style="color: gold;">{{$teacherlist->porfolio}}</a></p>
+                  <div
+                  class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                  >
+                  <div class="authr_meta">
+                    <img src="{{asset('frontend/img/courses/author1.png')}}" alt="" />
+                    <span class="d-inline-block ml-2">{{$teacherlist->user->name}}</span>
+                  </div>
+                  <div class="mt-lg-0 mt-3">
+                    <span class="meta_info mr-4">
+                      <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                    </span>
+                    <span class="meta_info"
+                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                    >
+                  </div>
+                  @role('User')
+                  <p><a href="{{route('subjectjoin',[$teacherlist->id,$teacherlist->subject->id])}}" class="primary-btn2 mt-3">Hire</a></p>
+                  @else
+                  <p><a href="{{ route('loginpage') }}" class="primary-btn2 mt-3">Login</a></p>
+                  @endrole
+                </div>
               </div>
-              <div class="align-items-center justify-content-center d-flex">
-                <a href="#"><i class="ti-facebook"></i></a>
-                <a href="#"><i class="ti-twitter"></i></a>
-                <a href="#"><i class="ti-linkedin"></i></a>
-                <a href="#"><i class="ti-pinterest"></i></a>
-              </div>
+
             </div>
+                @endforeach
+
+
+             
+            </div>
+            
           </div>
-          @endforeach
+
         </div>
       </div>
     </section>
