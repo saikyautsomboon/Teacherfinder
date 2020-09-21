@@ -123,13 +123,7 @@
 
               <div class="col-sm-12">
 
-                <div class="footer-info">
-                  <div class="col-sm-12">
-                    <div class="feedeback">
-                      <h6>Students Request</h6>   
-                    </div>
-                  </div>
-                </div>
+                
 
                 <div class="footer-newsletter">
                   <div class="footer-links">
