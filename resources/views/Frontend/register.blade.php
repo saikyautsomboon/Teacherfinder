@@ -131,7 +131,7 @@
           </form>
 
           <div class=" mt-3 text-center ">
-            <a href="#" class="loginLink text-decoration-none">Have an account? Go to login</a>
+            <a href="{{ route('loginpage') }}" class="loginLink text-decoration-none">Have an account? Go to login</a>
           </div>
       </div>
     </div>
